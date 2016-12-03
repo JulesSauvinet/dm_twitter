@@ -1,4 +1,5 @@
 import time
+from source.controller.DataManagement.MyTwitterAPI import MyTwitterAPI
 from source.controller.DataManagement.MongoDBHandler import MongoDBHandler
 from source.controller.EventDetection.OptimisedEventDetectorMEDBased import OptimisedEventDetectorMEDBased
 #---------------------------------------------------------------------------------------------------------------------------------------------
