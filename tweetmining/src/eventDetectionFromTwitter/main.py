@@ -22,8 +22,7 @@ DISTANCE_RESOLUTION=100
 SCALE_NUMBER=4
 MIN_SIMILARITY=0
 
-#le nombre de tweets geolocalisés
-NUMBER_OF_TWEETS=71812
+NUMBER_OF_TWEETS=56021
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def getTweetsFromTwitterAndSave(count=100,export=False) :

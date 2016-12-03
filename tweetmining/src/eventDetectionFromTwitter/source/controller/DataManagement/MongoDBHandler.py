@@ -3,7 +3,8 @@ from pymongo import MongoClient
 
 from ...model.Tweet import Tweet
 from ...model.Position import Position
-from TransformationUtilities import getTweetFromJSONFile
+from TransformationUtilities import getTweetFromJSONFile, getTweetFromCSVLine
+
 
 class MongoDBHandler :
     def __init__(self,port=27017,database_name='Twitter') :
@@ -28,14 +29,28 @@ class MongoDBHandler :
         jsonFilePaths=os.listdir(jsonDirectoryPath)
         i=1
         for jsonFilePath in jsonFilePaths :
-            if (i%100==0) : print i
+            if (i%100==0) : print(i)
             i+=1
             path=os.path.join(jsonDirectoryPath,jsonFilePath)
             try :
                 tweet=getTweetFromJSONFile(path)
                 if (not ensureHavePosition or tweet.position) : self.saveTweet(tweet)
             except ValueError :
-                print jsonFilePath
+                print(jsonFilePath)
+
+    def saveTweetsFromCSVRepository(self,csvPath,ensureHavePosition=True) :
+        with open(csvPath) as f:
+            tweets = f.readlines()
+            i = 0
+            for tweetLine in tweets :
+                #print (tweetLine)
+                if i != 0 :
+                    try :
+                        tweet=getTweetFromCSVLine(tweetLine)
+                        if (not ensureHavePosition or tweet.position) : self.saveTweet(tweet)
+                    except ValueError :
+                        print tweet
+                i += 1
             
         
     @staticmethod

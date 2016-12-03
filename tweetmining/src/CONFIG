@@ -1,0 +1,2 @@
+A ADAPTER EN FONCTION DE LA CONFIG MONGO
+mongod --config "C:\Users\jules\Documents\mongodb\mongod.cfg"
