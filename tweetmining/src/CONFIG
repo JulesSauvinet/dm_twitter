@@ -1,2 +1,13 @@
+Il faut mettre les chemins des fichiers de tweets en fonction du PC (en dur pour l'instant)
+
 A ADAPTER EN FONCTION DE LA CONFIG MONGO
-mongod --config "C:\Users\jules\Documents\mongodb\mongod.cfg"
+mongod --config "C:\Users\jules\Documents\mongodb\mongod.cfg" pour donner le dossier
+de la base mongo et du dossier de logs
+
+IL FAUT faire gaffe, il y a des doublons de tweets dans les fichiers ... (ouais ils nous ont
+filé des données pouraves encore une fois, merci!)
+
+donc trier avant les doublons
+645030952079597568
+
+TODO SORT BY DAY ET PARTITIONNER? COMPRENDRE L'ALGO? S'EN INSPIRER?

@@ -1,6 +1,7 @@
 import json
 from ...model.Tweet import Tweet
 from ...model.Position import Position
+from datetime import date, datetime
 import moment
 
 #-------------------------------------------------------------
@@ -31,13 +32,13 @@ def getTweetFromJSONFile(jsonFilePath) :
 #-------------------------------------------------------------
 def getTweetFromCSVLine(tweetLine) :
     attributes = tweetLine.split(",")
-    _id=attributes[0]+attributes[1]+attributes[2]+attributes[3]
+    _id=attributes[0]
     #print _id
     userId=attributes[10]
     text=attributes[9]
     #------------------------------------------------
     s=attributes[5]+attributes[4]+attributes[3]+"T"+attributes[2]+attributes[1]
-    timestring = s
+    timestring = datetime(int(attributes[5]),int(attributes[4]),int(attributes[3]),int(attributes[2]),int(attributes[1]))
     time = timestring #moment.date(timestring, '%Y%m%dT%H%M')
     #-----Position ----------------------------------
     position=None

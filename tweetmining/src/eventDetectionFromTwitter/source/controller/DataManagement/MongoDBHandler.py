@@ -75,7 +75,7 @@ class MongoDBHandler :
         time=document["time"]
         position=None
         if (document["position"]) :
-            position=Position(document["position"][0],document["position"][1])
+            position=Position(float(document["position"][0]),float(document["position"][1]))
         return Tweet(_id,userId,text,hashtags,time,position)
         
         

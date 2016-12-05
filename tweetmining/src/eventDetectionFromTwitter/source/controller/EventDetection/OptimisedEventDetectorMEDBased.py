@@ -113,13 +113,13 @@ class OptimisedEventDetectorMEDBased :
 
         #Creating the input file
         print "\tBuilding similarity matrix ..."        
-        self.build(minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,similarityFilePath=weightsFilePath)
+        #self.build(minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,similarityFilePath=weightsFilePath)
 
         #Creating the output file (command execution)
         print "\tClustering ..."
-        command = "java -jar ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(weightsFilePath,clusterFilePath)
-        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-        process.wait()
+        #command = "java -jar eventDetectionFromTwitter/ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(weightsFilePath,clusterFilePath)
+        #process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+        #process.wait()
         
         #Get The events
         print "\tReading clusters from a file ..."
@@ -146,24 +146,26 @@ class OptimisedEventDetectorMEDBased :
         print "\t\tPass 1 - Get General Information"
         #Pass 1 - Get General Information
         minTime=maxTime=tweets[0].time
-        minLat=maxLat=tweets[0].position.latitude
-        minLon=maxLon=tweets[0].position.longitude
+        minLat=maxLat=float(tweets[0].position.latitude)
+        minLon=maxLon=float(tweets[0].position.longitude)
         for tweet in tweets :
-            if (tweet.position.latitude<minLat) : minLat=tweet.position.latitude
-            elif (tweet.position.latitude>maxLat) : maxLat=tweet.position.latitude
-            if (tweet.position.longitude<minLon) : minLon=tweet.position.longitude
-            elif (tweet.position.longitude>maxLon) : maxLon=tweet.position.longitude
+            if (float(tweet.position.latitude<minLat)) : minLat=float(tweet.position.latitude)
+            elif (float(tweet.position.latitude>maxLat)) : maxLat=float(tweet.position.latitude)
+            if (float(tweet.position.longitude)<minLon) : minLon=float(tweet.position.longitude)
+            elif (float(tweet.position.longitude)>maxLon) : maxLon=float(tweet.position.longitude)
             if (tweet.time<minTime) : minTime=tweet.time
             if (tweet.time>maxTime) : maxTime=tweet.time
         minDistance=distanceResolution
-        leftUpperCorner =Position(minLat+deltaDlat/2,minLon+deltaDlon/2)
-        rightLowerCorner=Position(int(maxLat/deltaDlat)*deltaDlat+deltaDlat/2,int(maxLon/deltaDlon)*deltaDlon+deltaDlon/2)
+        leftUpperCorner =Position(float(minLat)+float(deltaDlat)/2,float(minLon)+float(deltaDlon)/2)
+        x = int(float(maxLat)/float(deltaDlat))*float(deltaDlat)+float(deltaDlat)/2
+        y = int(float(maxLon)/deltaDlon)*deltaDlon+deltaDlon/2
+        rightLowerCorner=Position(x,y)
         maxDistance=leftUpperCorner.approxDistance(rightLowerCorner)
         scalesMaxDistances=getScalesMaxDistances(minDistance,maxDistance,scaleNumber)
         temporalSeriesSize=int(2**math.ceil(math.log(int((maxTime-minTime).total_seconds()/timeResolution)+1,2)))
         haarTransformeSize=min(pow(2,scaleNumber),temporalSeriesSize)
         maximalSupportableScale=min(scaleNumber,int(math.log(haarTransformeSize,2)))
-        totalArea=(maxLat-minLat)*(maxLon-minLon)*DEG_LATITUDE_IN_METER*DEG_LATITUDE_IN_METER
+        totalArea=(float(maxLat)-float(minLat))*(float(maxLon)-float(minLon))*DEG_LATITUDE_IN_METER*DEG_LATITUDE_IN_METER
 
         print "\t\tPass 2 - Construct TFVectors, IDFVector, tweetsPerTermMap, timeSerieMap and cellOfTweet"
         #Pass 2 - Construct TFVectors, IDFVector, tweetsPerTermMap, timeSerieMap and cellOfTweet
@@ -177,7 +179,7 @@ class OptimisedEventDetectorMEDBased :
         for tweet in tweets :
             TFVector={}
             text=tweet.text
-            cell=(int((tweet.position.latitude-minLat)/deltaDlat),int((tweet.position.longitude-minLon)/deltaDlon))
+            cell=(int((float(tweet.position.latitude)-minLat)/deltaDlat),int((float(tweet.position.longitude)-minLon)/deltaDlon))
             cellOfTweet.append(cell)
             timeIndex=int((tweet.time-minTime).total_seconds()/timeResolution)
             

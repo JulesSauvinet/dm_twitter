@@ -13,7 +13,7 @@ SCALE_NUMBER=4
 MIN_SIMILARITY=0.5
 
 #le nombre de tweets geolocalises
-NUMBER_OF_TWEETS=71812
+NUMBER_OF_TWEETS=35906
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def getTweetsFromJSONRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets") :
@@ -21,14 +21,14 @@ def getTweetsFromJSONRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documen
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True) :
     mongoDBHandler = MongoDBHandler()
-    getTweetsFromCSVRepositoryAndSave("C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets.csv")
+    #getTweetsFromCSVRepositoryAndSave("C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv")
     staringTime = time.time()
     tweets = mongoDBHandler.getAllTweets(limit=limit)
 
@@ -39,10 +39,18 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
     events = eventDetector.getEvents(minimalTermPerTweet=minimalTermPerTweet,
                                      remove_noise_with_poisson_Law=remove_noise_with_poisson_Law)
 
+
+
     print("")
     print("-" * 40)
     print("{0} Event detected : ".format(len(events)))
     print("-" * 40)
+    for event in events :
+        print("Hashtags de l'event : ")
+        print(event.importantHashtags)
+        print("EventCenter :")
+        print(event.eventCenter)
+        print("*" * 40)
     elapsed_time=(time.time()-staringTime)
     print("-"*40)
     print("Elapsed time : {0}s".format(elapsed_time))
