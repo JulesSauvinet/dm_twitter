@@ -315,30 +315,33 @@ class OptimisedEventDetectorMEDBased:
                 # deleting the timeSerie 1
                 timeSerie.clear()
 
-                for i in range(0, 2):
-                    listOfSum[0] += haarTransform[i]
-                    listOfStd[0] += math.pow(haarTransform[i], 2)
-                currentScale = 1
-                while currentScale < maximalSupportableScale:
-                    listOfSum[currentScale] += listOfSum[currentScale - 1]
-                    listOfStd[currentScale] += listOfStd[currentScale - 1]
-                    for i in range(int(math.pow(2, currentScale)), int(math.pow(2, currentScale + 1))):
-                        listOfSum[currentScale] += haarTransform[i]
-                        listOfStd[currentScale] += math.pow(haarTransform[i], 2)
-                    currentScale += 1
+                if len(haarTransform) < 2:
+                    return;
+                else :
+                    for i in range(0, 2):
+                        listOfSum[0] += haarTransform[i]
+                        listOfStd[0] += math.pow(haarTransform[i], 2)
+                    currentScale = 1
+                    while currentScale < maximalSupportableScale:
+                        listOfSum[currentScale] += listOfSum[currentScale - 1]
+                        listOfStd[currentScale] += listOfStd[currentScale - 1]
+                        for i in range(int(math.pow(2, currentScale)), int(math.pow(2, currentScale + 1))):
+                            listOfSum[currentScale] += haarTransform[i]
+                            listOfStd[currentScale] += math.pow(haarTransform[i], 2)
+                        currentScale += 1
 
-                for currentScale in range(0, maximalSupportableScale):
-                    listOfStd[currentScale] = math.sqrt(
-                        math.pow(2, currentScale + 1) * listOfStd[currentScale] - math.pow(listOfSum[currentScale], 2))
-                while currentScale < scaleNumber:
-                    listOfSum[currentScale] = listOfSum[maximalSupportableScale - 1]
-                    listOfStd[currentScale] = listOfStd[maximalSupportableScale - 1]
-                    currentScale += 1
+                    for currentScale in range(0, maximalSupportableScale):
+                        listOfStd[currentScale] = math.sqrt(
+                            math.pow(2, currentScale + 1) * listOfStd[currentScale] - math.pow(listOfSum[currentScale], 2))
+                    while currentScale < scaleNumber:
+                        listOfSum[currentScale] = listOfSum[maximalSupportableScale - 1]
+                        listOfStd[currentScale] = listOfStd[maximalSupportableScale - 1]
+                        currentScale += 1
 
-                if (cell in haarSerieMap):
-                    haarSerieMap[cell][term] = [haarTransform, listOfSum, listOfStd]
-                else:
-                    haarSerieMap[cell] = {term: [haarTransform, listOfSum, listOfStd]}
+                    if (cell in haarSerieMap):
+                        haarSerieMap[cell][term] = [haarTransform, listOfSum, listOfStd]
+                    else:
+                        haarSerieMap[cell] = {term: [haarTransform, listOfSum, listOfStd]}
 
             # deleting term from timeSerieMap
             timeSerieMap[term].clear()
