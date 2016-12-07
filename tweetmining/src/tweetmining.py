@@ -4,13 +4,13 @@ from eventDetectionFromTwitter.source.controller.DataManagement.MongoDBHandler i
 from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDetectorMEDBased import \
     OptimisedEventDetectorMEDBased
 
-MIN_TERM_OCCURENCE=5
+MIN_TERM_OCCURENCE=15
 REMOVE_NOISE_WITH_POISSON_LAW=False
 
 TIME_RESOLUTION=1800
 DISTANCE_RESOLUTION=100
 SCALE_NUMBER=4
-MIN_SIMILARITY=0.5
+MIN_SIMILARITY=0.8
 
 #le nombre de tweets geolocalises
 NUMBER_OF_TWEETS=35906
@@ -46,14 +46,12 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
     print("{0} Event detected : ".format(len(events)))
     print("-" * 40)
     for event in events :
-        print("Hashtags de l'event : ")
-        print(event.importantHashtags)
-        print("EventCenter :")
-        print(event.eventCenter)
-        print("*" * 40)
+        print(event)
+        print("*" * 80)
     elapsed_time=(time.time()-staringTime)
     print("-"*40)
     print("Elapsed time : {0}s".format(elapsed_time))
     print("-"*40)
 #---------------------------------------------------------------------------------------------------------------------------------------------
-main(limit=NUMBER_OF_TWEETS)
+#les 15000 premiers tweets correspondent au meme jour : le 16 septembre
+main(limit=15185, minimalTermPerTweet=MIN_TERM_OCCURENCE)

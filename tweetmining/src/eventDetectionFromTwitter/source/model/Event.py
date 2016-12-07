@@ -43,14 +43,14 @@ class Event :
     #---------------- Visualize -----------------------------------------------------------------------#
     def __str__(self) :
         NUM_DIGIT=10**2
-        SEPARATOR="\t|"
-        S="|"+SEPARATOR.join([str(self.eventMedianTime),
-                              str(int(self.estimatedEventDuration)),
-                              str(float(int(NUM_DIGIT*self.eventCenter.latitude))/NUM_DIGIT),
-                              str(float(int(NUM_DIGIT*self.eventCenter.longitude))/NUM_DIGIT),
-                              str(float(int(NUM_DIGIT*self.eventRadius))/NUM_DIGIT),
-                              str(self.userNumber),
-                              str(len(self.tweets)),
-                              ",".join(self.importantHashtags)])+SEPARATOR
+        SEPARATOR="\n|"
+        position = Position(self.eventCenter.latitude,self.eventCenter.longitude)
+        S="->"+SEPARATOR.join(["Temps median : " + str(self.eventMedianTime),
+                              "Duree estimee : " + str(int(self.estimatedEventDuration)),
+                              "Position du centre de l'event : " + str(position),
+                              "Rayon de l'event : " + str(float(int(NUM_DIGIT*self.eventRadius))/NUM_DIGIT),
+                              "Nombre de twittos : " + str(self.userNumber),
+                              "Nombre de tweets : " + str(len(self.tweets)),
+                              "Hashtags importants : " + ",".join(self.importantHashtags)])+SEPARATOR
         return S.encode("utf-8")
     #----------------------------------------------------------------------------------------------------#

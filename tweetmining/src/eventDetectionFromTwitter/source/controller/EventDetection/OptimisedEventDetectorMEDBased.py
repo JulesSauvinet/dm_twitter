@@ -113,13 +113,13 @@ class OptimisedEventDetectorMEDBased :
 
         #Creating the input file
         print "\tBuilding similarity matrix ..."        
-        #self.build(minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,similarityFilePath=weightsFilePath)
+        self.build(minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,similarityFilePath=weightsFilePath)
 
         #Creating the output file (command execution)
         print "\tClustering ..."
-        #command = "java -jar eventDetectionFromTwitter/ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(weightsFilePath,clusterFilePath)
-        #process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-        #process.wait()
+        command = "java -jar eventDetectionFromTwitter/ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(weightsFilePath,clusterFilePath)
+        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+        process.wait()
         
         #Get The events
         print "\tReading clusters from a file ..."

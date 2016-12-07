@@ -23,6 +23,7 @@ class MongoDBHandler :
         collection = self.db['tweets']
         documents=collection.find()[0:limit]
         tweets=[MongoDBHandler.getTweetFromDocument(document) for document in documents]
+        #print "tweet3: ", tweets[3]
         return tweets
 
     def saveTweetsFromJSONRepository(self,jsonDirectoryPath,ensureHavePosition=True) :
