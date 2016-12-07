@@ -1,4 +1,7 @@
 import os
+
+from datetime import datetime
+
 from pymongo import MongoClient
 
 from ...model.Tweet import Tweet
@@ -22,6 +25,22 @@ class MongoDBHandler :
     def getAllTweets(self,limit=50) :
         collection = self.db['tweets']
         documents=collection.find()[0:limit]
+        tweets=[MongoDBHandler.getTweetFromDocument(document) for document in documents]
+        #print "tweet3: ", tweets[3]
+        return tweets
+
+    def getAllTweetsOfDate(self,limit=50,date="2015-07-21") :
+        collection = self.db['tweets']
+
+        year = int(date.split("-")[0])
+        month = int(date.split("-")[1])
+        day = int(date.split("-")[2])
+
+        start = datetime(year, month, day, 00, 00, 00)
+        end = datetime(year, month, day, 23, 59, 59)
+
+        documents=collection.find({"time" : {'$lt': end, '$gte': start}})[0:limit]
+
         tweets=[MongoDBHandler.getTweetFromDocument(document) for document in documents]
         #print "tweet3: ", tweets[3]
         return tweets
