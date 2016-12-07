@@ -50,7 +50,7 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
                                                                distanceResolution=DISTANCE_RESOLUTION, scaleNumber=SCALE_NUMBER,
                                                                minSimilarity=MIN_SIMILARITY)
 
-                events = eventDetector.getEvents(i, minimalTermPerTweet=minimalTermPerTweet,
+                events = eventDetector.getEvents(datestring, minimalTermPerTweet=minimalTermPerTweet,
                                                  remove_noise_with_poisson_Law=remove_noise_with_poisson_Law)
 
                 print("")

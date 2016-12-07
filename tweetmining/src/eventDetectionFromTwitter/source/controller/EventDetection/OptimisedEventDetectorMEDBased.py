@@ -28,22 +28,27 @@ class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Event detection
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getEvents(self, num, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False):
+    def getEvents(self, date, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False):
         """
         get the list of important events
         """
 
         print "Detecting events ..."
 
-        realClusters = self.getClusters(num, minimalTermPerTweet=minimalTermPerTweet,
+        realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,
                                         remove_noise_with_poisson_Law=remove_noise_with_poisson_Law)
         events = []
         if realClusters is not None:
-            clustersUniqueId = set(realClusters)
-            print "\tConstructing events from clusters ..."
-            i = 0
-            for clusterId in clustersUniqueId:
-                if (realClusters == clusterId).all() < len(self.tweets) :
+            if len(realClusters > 0):
+                clustersUniqueId = set(realClusters)
+                print "\tConstructing events from clusters ..."
+                i = 0
+                #print "LEN CLUSTERID", len(clustersUniqueId)
+                #print "CLUSTERID", clustersUniqueId
+                #print "tweet len", len(self.tweets)
+                #print "realClusters", realClusters
+                #print "realClusterslen", len(realClusters)
+                for clusterId in clustersUniqueId:
                     tweetsOfClusterId = self.tweets[realClusters == clusterId]
                     event = Event(tweetsOfClusterId)
                     if (self.isEventImportant(event)): events.append(event)
@@ -117,13 +122,13 @@ class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Clustering and Similarity matrix construction
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getClusters(self, num ,minimalTermPerTweet=5, remove_noise_with_poisson_Law=False):
+    def getClusters(self, date ,minimalTermPerTweet=5, remove_noise_with_poisson_Law=False):
         """
         This method use ModularityOptimizer.jar
         """
         realClusters = []
-        weightsFilePath = "input"+str(num)+".txt"
-        clusterFilePath = "output"+str(num)+".txt"
+        weightsFilePath = "input"+date+".txt"
+        clusterFilePath = "output"+date+".txt"
 
         # Creating the input file
         print "\tBuilding similarity matrix ..."
