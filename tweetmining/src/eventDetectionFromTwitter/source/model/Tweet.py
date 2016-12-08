@@ -5,7 +5,8 @@ class Tweet :
         self.id=_id
         self.userId=userId
         self.text=text.replace("\"", "")
-        self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hashtags.replace("\"", "")).split()).split()
+        #self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hashtags.replace("\"", "")).split()).split()
+        self.hashtags=hashtags.replace("\"", "")
         self.time=time
         self.position=position
 

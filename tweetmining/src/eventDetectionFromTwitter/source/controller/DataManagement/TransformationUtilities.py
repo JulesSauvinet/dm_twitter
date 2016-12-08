@@ -48,5 +48,5 @@ def getTweetFromCSVLine(tweetLine) :
         longitude=attributes[7]
         position=Position(latitude,longitude)
 
-    return Tweet(_id,userId,text,text,hashtags,position)
+    return Tweet(_id,userId,text,hashtags,time,position)
 
