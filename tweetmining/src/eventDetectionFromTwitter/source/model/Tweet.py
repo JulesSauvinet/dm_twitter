@@ -2,11 +2,16 @@ import re,string
 
 class Tweet :
     def __init__(self,_id,userId,text,hashtags,time,position=None) :
-        self.id=_id
+        self.id=_id 
         self.userId=userId
         self.text=text.replace("\"", "")
         #self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hashtags.replace("\"", "")).split()).split()
-        self.hashtags=hashtags.replace("\"", "")
+        if (isinstance(hashtags,list)) :
+            self.hashtags=' '.join(re.sub("[@#]", "", hashtags.replace("\"","")).split()).split()
+        else :
+            self.hashtags=hashtags
+        #print "hash_avant",hashtags
+        #print "hash_apres",self.hashtags
         self.time=time
         self.position=position
 
