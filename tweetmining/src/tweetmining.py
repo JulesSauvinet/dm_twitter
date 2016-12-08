@@ -17,12 +17,14 @@ MIN_SIMILARITY=0.8
 NUMBER_OF_TWEETS=35906
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromJSONRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets") :
+#def getTweetsFromJSONRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets") :
+def getTweetsFromJSONRepositoryAndSave(repositoryPath="C:\\Users\\Marine\\dm_twitter\\tweetmining\\data") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv") :
+#def getTweetsFromCSVRepositoryAndSave(repositoryPath="C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="C:\\Users\\Marine\\dm_twitter\\tweetmining\\data\\smallTweets3.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
@@ -32,6 +34,7 @@ firstdate = "2015-07-21"
 def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True,date="2015-07-21") :
 
     #getTweetsFromCSVRepositoryAndSave("C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv")
+    getTweetsFromCSVRepositoryAndSave("C:\\Users\\Marine\\dm_twitter\\tweetmining\\data\\smallTweets3.csv")
 
     for i in range(120):
         mongoDBHandler = MongoDBHandler()

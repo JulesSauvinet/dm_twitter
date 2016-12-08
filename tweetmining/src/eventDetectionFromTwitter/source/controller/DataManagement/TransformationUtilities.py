@@ -36,6 +36,7 @@ def getTweetFromCSVLine(tweetLine) :
     #print _id
     userId=attributes[10]
     text=attributes[9]
+    hashtags=attributes[9]
     #------------------------------------------------
     s=attributes[5]+attributes[4]+attributes[3]+"T"+attributes[2]+attributes[1]
     timestring = datetime(int(attributes[5]),int(attributes[4]),int(attributes[3]),int(attributes[2]),int(attributes[1]))
@@ -47,5 +48,5 @@ def getTweetFromCSVLine(tweetLine) :
         longitude=attributes[7]
         position=Position(latitude,longitude)
 
-    return Tweet(_id,userId,text,text,time,position)
+    return Tweet(_id,userId,text,text,hashtags,position)
 
