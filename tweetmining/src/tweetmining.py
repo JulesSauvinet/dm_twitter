@@ -81,13 +81,14 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
                 print("-"*40)
                 sortieFile.write("----------------------------------------\n")
                 sortieFile.write("Elapsed time : {0}s".format(elapsed_time)+"\n")
-                sortieFile.write("----------------------------------------\n\n\n\n")
+                sortieFile.write("----------------------------------------\n\n\n")
 
     sortieFile.close()
     for f in glob.glob("output*.txt"):
         os.remove(f)
     for f in glob.glob("input*.txt"):
         os.remove(f)
+    print "\n\n\n CLUSTERING FINI... :-)\n\n\n"
 #---------------------------------------------------------------------------------------------------------------------------------------------
 #3000 tweets par jour environ sur sample
 

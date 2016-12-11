@@ -7,7 +7,8 @@ class Tweet :
         self.text=text.replace("\"", "")
         #self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hashtags.replace("\"", "")).split()).split()
         if (isinstance(hashtags,list)) :
-            self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hashtags.replace("\"","")).split()).split()
+            hash = re.sub("#","",hashtags.replace("\"",""))
+            self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hash).split()).split()
         else :
             self.hashtags=hashtags
         #print "hash_avant",hashtags
