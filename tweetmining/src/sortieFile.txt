@@ -1,0 +1,2232 @@
+date : 2015-07-21
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.697000026703s
+----------------------------------------
+date : 2015-07-22
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.253000020981s
+----------------------------------------
+date : 2015-07-23
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-07-23 12:56:00
+|Duree estimee : 780
+|Position du centre de l'event : (-74.1727415455,40.9408194909)
+|Rayon de l'event : 390341.78
+|Nombre de twittos : 40
+|Nombre de tweets : 55
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-07-23 12:56:00
+|Duree estimee : 840
+|Position du centre de l'event : (-73.91754925,41.58501625)
+|Rayon de l'event : 89663.0
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,o,", ,b,j,a,e,l,n
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.561000108719s
+----------------------------------------
+date : 2015-07-24date : 2015-07-25
+----------------------------------------
+6 Event detected : 
+----------------------------------------
+->Temps median : 2015-07-25 09:17:00
+|Duree estimee : 1620
+|Position du centre de l'event : (-74.1111873784,40.8072388243)
+|Rayon de l'event : 394732.8
+|Nombre de twittos : 38
+|Nombre de tweets : 74
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-07-25 09:07:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.5232885,41.074515)
+|Rayon de l'event : 336366.5
+|Nombre de twittos : 5
+|Nombre de tweets : 6
+|Hashtags importants : #,o, ,b,n,e,s,r,",j
+|
+********************************************************************************
+->Temps median : 2015-07-25 09:16:00
+|Duree estimee : 1440
+|Position du centre de l'event : (-73.9900391667,40.7465898333)
+|Rayon de l'event : 2822.88
+|Nombre de twittos : 5
+|Nombre de tweets : 6
+|Hashtags importants : a,#, ,e,r,n,i,o,",k
+|
+********************************************************************************
+->Temps median : 2015-07-25 09:19:00
+|Duree estimee : 300
+|Position du centre de l'event : (-75.1649455,41.32876175)
+|Rayon de l'event : 404840.81
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,i, ,r,",o,n,b,e,h
+|
+********************************************************************************
+->Temps median : 2015-07-25 09:13:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-73.9943876667,41.351879)
+|Rayon de l'event : 39296.31
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : i,#,",n,a, ,r,g,h,t
+|
+********************************************************************************
+->Temps median : 2015-07-25 09:13:00
+|Duree estimee : 840
+|Position du centre de l'event : (-75.3842466667,41.8217113333)
+|Rayon de l'event : 250288.58
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,e,",o, ,i,r,a,h,c
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.619999885559s
+----------------------------------------
+date : 2015-07-26
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.289000034332s
+----------------------------------------
+date : 2015-07-27
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.243999958038s
+----------------------------------------
+date : 2015-07-28
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.289999961853s
+----------------------------------------
+date : 2015-07-29
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-07-29 16:27:00
+|Duree estimee : 720
+|Position du centre de l'event : (-74.1457536889,40.9038957778)
+|Rayon de l'event : 390510.13
+|Nombre de twittos : 28
+|Nombre de tweets : 45
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.547999858856s
+----------------------------------------
+date : 2015-07-30
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.266999959946s
+----------------------------------------
+date : 2015-07-31
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.24799990654s
+----------------------------------------
+date : 2015-08-01
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-01 14:58:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.0693164118,41.0279784706)
+|Rayon de l'event : 397571.35
+|Nombre de twittos : 34
+|Nombre de tweets : 51
+|Hashtags importants : #,r, ,i,e,n,a,o,",b
+|
+********************************************************************************
+->Temps median : 2015-08-01 14:59:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.4903967143,41.0851725714)
+|Rayon de l'event : 351758.92
+|Nombre de twittos : 7
+|Nombre de tweets : 7
+|Hashtags importants : #,e, ,o,",s,j,r,b,n
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.71599984169s
+----------------------------------------
+date : 2015-08-02
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.240000009537s
+----------------------------------------
+date : 2015-08-03
+----------------------------------------
+6 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-03 08:01:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.7072580781,41.5345779844)
+|Rayon de l'event : 329040.67
+|Nombre de twittos : 63
+|Nombre de tweets : 64
+|Hashtags importants : #,r, ,e,i,a,c,o,n,b
+|
+********************************************************************************
+->Temps median : 2015-08-03 08:02:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.0006700244,40.7341127317)
+|Rayon de l'event : 2658.51
+|Nombre de twittos : 36
+|Nombre de tweets : 41
+|Hashtags importants : #, ,r,e,o,n,i,",a,b
+|
+********************************************************************************
+->Temps median : 2015-08-03 07:59:00
+|Duree estimee : 900
+|Position du centre de l'event : (-75.2725221333,41.8376706)
+|Rayon de l'event : 262573.78
+|Nombre de twittos : 15
+|Nombre de tweets : 15
+|Hashtags importants : #,i, ,r,n,e,",o,t,g
+|
+********************************************************************************
+->Temps median : 2015-08-03 07:59:00
+|Duree estimee : 1140
+|Position du centre de l'event : (-74.150163,41.0513542)
+|Rayon de l'event : 65609.72
+|Nombre de twittos : 5
+|Nombre de tweets : 5
+|Hashtags importants : #,e,o, ,l,",s,b,j,a
+|
+********************************************************************************
+->Temps median : 2015-08-03 07:35:00
+|Duree estimee : 420
+|Position du centre de l'event : (-73.972751,40.7754566667)
+|Rayon de l'event : 1469.06
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,o,e,",n, ,r,h,t,a
+|
+********************************************************************************
+->Temps median : 2015-08-03 08:08:00
+|Duree estimee : 900
+|Position du centre de l'event : (-76.3688126667,42.3778526667)
+|Rayon de l'event : 281964.42
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : r,#,e,i,n, ,s,",h,g
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.796000003815s
+----------------------------------------
+date : 2015-08-04
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.240999937057s
+----------------------------------------
+date : 2015-08-05
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.27799987793s
+----------------------------------------
+date : 2015-08-06
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.256999969482s
+----------------------------------------
+date : 2015-08-07date : 2015-08-08
+----------------------------------------
+5 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-08 09:36:00
+|Duree estimee : 1260
+|Position du centre de l'event : (-73.9982138852,40.7585652131)
+|Rayon de l'event : 57506.06
+|Nombre de twittos : 35
+|Nombre de tweets : 61
+|Hashtags importants : #,r, ,e,i,a,o,n,c,"
+|
+********************************************************************************
+->Temps median : 2015-08-08 09:39:00
+|Duree estimee : 840
+|Position du centre de l'event : (-74.13836575,40.7010595)
+|Rayon de l'event : 40360.45
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #, ,n,i,r,o,e,t,a,"
+|
+********************************************************************************
+->Temps median : 2015-08-08 09:46:00
+|Duree estimee : 900
+|Position du centre de l'event : (-73.986009,40.75607325)
+|Rayon de l'event : 2979.03
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : n,#,e,o,y, ,",k,a,c
+|
+********************************************************************************
+->Temps median : 2015-08-08 09:51:00
+|Duree estimee : 1620
+|Position du centre de l'event : (-75.1991653333,41.560518)
+|Rayon de l'event : 271697.17
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,r, ,e,i,o,a,",n,c
+|
+********************************************************************************
+->Temps median : 2015-08-08 09:29:00
+|Duree estimee : 960
+|Position du centre de l'event : (-73.9763376667,40.7546283333)
+|Rayon de l'event : 12604.99
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,o, ,b,",j,r,e,t,n
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.636000156403s
+----------------------------------------
+date : 2015-08-09
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.264999866486s
+----------------------------------------
+date : 2015-08-10date : 2015-08-11date : 2015-08-12
+----------------------------------------
+4 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-12 16:38:00
+|Duree estimee : 840
+|Position du centre de l'event : (-74.0019537568,40.7335044324)
+|Rayon de l'event : 2794.81
+|Nombre de twittos : 21
+|Nombre de tweets : 37
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-08-12 16:35:00
+|Duree estimee : 720
+|Position du centre de l'event : (-74.5508911053,41.3249652632)
+|Rayon de l'event : 344620.86
+|Nombre de twittos : 18
+|Nombre de tweets : 19
+|Hashtags importants : #, ,r,e,i,a,o,n,b,"
+|
+********************************************************************************
+->Temps median : 2015-08-12 16:40:00
+|Duree estimee : 900
+|Position du centre de l'event : (-73.96514575,40.741156)
+|Rayon de l'event : 13269.5
+|Nombre de twittos : 7
+|Nombre de tweets : 8
+|Hashtags importants : #,e, ,a,n,o,r,t,",k
+|
+********************************************************************************
+->Temps median : 2015-08-12 17:26:00
+|Duree estimee : 2640
+|Position du centre de l'event : (-73.955124,40.672668)
+|Rayon de l'event : 1801.64
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,r, ,o,i,b,e,",j,n
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.716000080109s
+----------------------------------------
+date : 2015-08-13date : 2015-08-14
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.290999889374s
+----------------------------------------
+date : 2015-08-15
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.28200006485s
+----------------------------------------
+date : 2015-08-16date : 2015-08-17
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.225999832153s
+----------------------------------------
+date : 2015-08-18date : 2015-08-19
+----------------------------------------
+5 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-19 08:56:00
+|Duree estimee : 1140
+|Position du centre de l'event : (-74.2392783488,40.953389093)
+|Rayon de l'event : 415838.36
+|Nombre de twittos : 27
+|Nombre de tweets : 43
+|Hashtags importants : #,r, ,e,i,o,n,a,b,"
+|
+********************************************************************************
+->Temps median : 2015-08-19 09:00:00
+|Duree estimee : 1440
+|Position du centre de l'event : (-74.005973,40.714353)
+|Rayon de l'event : 0.09
+|Nombre de twittos : 15
+|Nombre de tweets : 21
+|Hashtags importants : #, ,r,e,o,i,n,",b,a
+|
+********************************************************************************
+->Temps median : 2015-08-19 08:54:00
+|Duree estimee : 1260
+|Position du centre de l'event : (-73.977972,40.7583268571)
+|Rayon de l'event : 8937.77
+|Nombre de twittos : 7
+|Nombre de tweets : 7
+|Hashtags importants : #,n,e, ,r,y,o,",a,l
+|
+********************************************************************************
+->Temps median : 2015-08-19 09:00:00
+|Duree estimee : 1080
+|Position du centre de l'event : (-73.994571,40.7510414286)
+|Rayon de l'event : 16698.1
+|Nombre de twittos : 7
+|Nombre de tweets : 7
+|Hashtags importants : #,i, ,n,",o,r,t,a,b
+|
+********************************************************************************
+->Temps median : 2015-08-19 09:00:00
+|Duree estimee : 840
+|Position du centre de l'event : (-74.0089353333,40.7106143333)
+|Rayon de l'event : 7667.21
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,",o, ,e,r,b,a,i,h
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.759999990463s
+----------------------------------------
+date : 2015-08-20
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.270999908447s
+----------------------------------------
+date : 2015-08-21date : 2015-08-22date : 2015-08-23date : 2015-08-24date : 2015-08-25
+----------------------------------------
+5 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-25 08:06:00
+|Duree estimee : 1500
+|Position du centre de l'event : (-74.5316056389,41.2116060139)
+|Rayon de l'event : 348560.39
+|Nombre de twittos : 60
+|Nombre de tweets : 72
+|Hashtags importants : #, ,r,e,i,o,n,a,b,j
+|
+********************************************************************************
+->Temps median : 2015-08-25 08:10:00
+|Duree estimee : 7680
+|Position du centre de l'event : (-73.9975929268,40.7439862683)
+|Rayon de l'event : 3105.85
+|Nombre de twittos : 30
+|Nombre de tweets : 41
+|Hashtags importants : #,r, ,e,i,n,o,",a,c
+|
+********************************************************************************
+->Temps median : 2015-08-25 08:01:00
+|Duree estimee : 1140
+|Position du centre de l'event : (-74.7459088571,41.762574381)
+|Rayon de l'event : 322980.84
+|Nombre de twittos : 21
+|Nombre de tweets : 21
+|Hashtags importants : r,#, ,e,i,a,c,n,o,"
+|
+********************************************************************************
+->Temps median : 2015-08-25 08:08:00
+|Duree estimee : 18660
+|Position du centre de l'event : (-74.4192064,41.3936112)
+|Rayon de l'event : 358427.02
+|Nombre de twittos : 10
+|Nombre de tweets : 10
+|Hashtags importants : #,i, ,n,r,a,e,",c,g
+|
+********************************************************************************
+->Temps median : 2015-08-25 08:00:00
+|Duree estimee : 7800
+|Position du centre de l'event : (-74.223831,40.684146)
+|Rayon de l'event : 55204.96
+|Nombre de twittos : 6
+|Nombre de tweets : 7
+|Hashtags importants : e,#, ,",o,s,r,b,j,n
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.952000141144s
+----------------------------------------
+date : 2015-08-26
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.286000013351s
+----------------------------------------
+date : 2015-08-27date : 2015-08-28
+----------------------------------------
+4 Event detected : 
+----------------------------------------
+->Temps median : 2015-08-28 14:52:00
+|Duree estimee : 960
+|Position du centre de l'event : (-74.1289809821,40.8233617857)
+|Rayon de l'event : 392702.29
+|Nombre de twittos : 36
+|Nombre de tweets : 56
+|Hashtags importants : #,r, ,e,i,o,a,n,c,"
+|
+********************************************************************************
+->Temps median : 2015-08-28 14:49:00
+|Duree estimee : 600
+|Position du centre de l'event : (-73.9364300769,40.7400154615)
+|Rayon de l'event : 22479.38
+|Nombre de twittos : 13
+|Nombre de tweets : 13
+|Hashtags importants : #, ,i,o,r,e,n,b,",s
+|
+********************************************************************************
+->Temps median : 2015-08-28 14:52:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.9808489,40.7527855)
+|Rayon de l'event : 6705.12
+|Nombre de twittos : 6
+|Nombre de tweets : 10
+|Hashtags importants : #,e,o,n,i, ,r,",t,a
+|
+********************************************************************************
+->Temps median : 2015-08-28 14:56:00
+|Duree estimee : 6660
+|Position du centre de l'event : (-73.96560725,41.256213)
+|Rayon de l'event : 42191.64
+|Nombre de twittos : 3
+|Nombre de tweets : 4
+|Hashtags importants : #,",o,b, ,e,j,s,n,r
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.746999979019s
+----------------------------------------
+date : 2015-08-29date : 2015-08-30
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.249000072479s
+----------------------------------------
+date : 2015-08-31
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.255999803543s
+----------------------------------------
+date : 2015-09-01date : 2015-09-02
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-02 14:43:00
+|Duree estimee : 840
+|Position du centre de l'event : (-74.15042025,40.909063925)
+|Rayon de l'event : 389973.93
+|Nombre de twittos : 23
+|Nombre de tweets : 40
+|Hashtags importants : #,r, ,e,i,a,n,o,c,"
+|
+********************************************************************************
+->Temps median : 2015-09-02 14:39:00
+|Duree estimee : 720
+|Position du centre de l'event : (-74.2014845882,40.9784937059)
+|Rayon de l'event : 384054.5
+|Nombre de twittos : 16
+|Nombre de tweets : 17
+|Hashtags importants : #, ,i,o,r,n,",e,b,j
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.670000076294s
+----------------------------------------
+date : 2015-09-03date : 2015-09-04
+----------------------------------------
+3 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-04 09:54:00
+|Duree estimee : 960
+|Position du centre de l'event : (-74.1792894,40.9670624462)
+|Rayon de l'event : 395212.44
+|Nombre de twittos : 37
+|Nombre de tweets : 65
+|Hashtags importants : #,r, ,e,i,n,o,a,",s
+|
+********************************************************************************
+->Temps median : 2015-09-04 10:00:00
+|Duree estimee : 1200
+|Position du centre de l'event : (-73.9963006,40.7287672)
+|Rayon de l'event : 5682.74
+|Nombre de twittos : 8
+|Nombre de tweets : 10
+|Hashtags importants : #,r,y,e,o,n, ,",a,k
+|
+********************************************************************************
+->Temps median : 2015-09-04 09:53:00
+|Duree estimee : 1140
+|Position du centre de l'event : (-75.1939256667,41.8627823333)
+|Rayon de l'event : 271179.03
+|Nombre de twittos : 6
+|Nombre de tweets : 6
+|Hashtags importants : #,i, ,n,r,o,",b,e,g
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.71799993515s
+----------------------------------------
+date : 2015-09-05date : 2015-09-06
+----------------------------------------
+6 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-06 08:08:00
+|Duree estimee : 1500
+|Position du centre de l'event : (-74.0354432344,40.7937227031)
+|Rayon de l'event : 221189.78
+|Nombre de twittos : 44
+|Nombre de tweets : 64
+|Hashtags importants : #,r, ,e,i,o,n,a,",b
+|
+********************************************************************************
+->Temps median : 2015-09-06 08:00:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.7904902564,41.6871748718)
+|Rayon de l'event : 317721.28
+|Nombre de twittos : 39
+|Nombre de tweets : 39
+|Hashtags importants : #, ,r,e,o,i,a,b,n,j
+|
+********************************************************************************
+->Temps median : 2015-09-06 08:01:00
+|Duree estimee : 1200
+|Position du centre de l'event : (-74.5332395806,41.3118998065)
+|Rayon de l'event : 348000.49
+|Nombre de twittos : 31
+|Nombre de tweets : 31
+|Hashtags importants : r,#, ,e,a,i,c,n,",o
+|
+********************************************************************************
+->Temps median : 2015-09-06 07:59:00
+|Duree estimee : 1680
+|Position du centre de l'event : (-74.3480764348,41.0461546957)
+|Rayon de l'event : 367610.09
+|Nombre de twittos : 21
+|Nombre de tweets : 23
+|Hashtags importants : #,i, ,e,r,n,",t,o,h
+|
+********************************************************************************
+->Temps median : 2015-09-06 07:52:00
+|Duree estimee : 1140
+|Position du centre de l'event : (-73.9783946667,40.7481483333)
+|Rayon de l'event : 5639.76
+|Nombre de twittos : 6
+|Nombre de tweets : 6
+|Hashtags importants : #,o,n, ,e,r,a,",y,i
+|
+********************************************************************************
+->Temps median : 2015-09-06 07:54:00
+|Duree estimee : 900
+|Position du centre de l'event : (-75.8866605,42.314523)
+|Rayon de l'event : 253492.01
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,a,e,o,r, ,l,n,s,t
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 1.16199994087s
+----------------------------------------
+date : 2015-09-07date : 2015-09-08
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.308000087738s
+----------------------------------------
+date : 2015-09-09
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.299999952316s
+----------------------------------------
+date : 2015-09-10date : 2015-09-11
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.256000041962s
+----------------------------------------
+date : 2015-09-12date : 2015-09-13
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.262000083923s
+----------------------------------------
+date : 2015-09-14date : 2015-09-15
+----------------------------------------
+3 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-15 07:54:00
+|Duree estimee : 2640
+|Position du centre de l'event : (-74.4605268958,41.4449098333)
+|Rayon de l'event : 353679.73
+|Nombre de twittos : 41
+|Nombre de tweets : 48
+|Hashtags importants : #, ,r,i,e,o,a,n,c,"
+|
+********************************************************************************
+->Temps median : 2015-09-15 07:54:00
+|Duree estimee : 420
+|Position du centre de l'event : (-74.921956,41.34095075)
+|Rayon de l'event : 303138.28
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,e, ,o,",j,a,c,b,n
+|
+********************************************************************************
+->Temps median : 2015-09-15 12:55:00
+|Duree estimee : 18480
+|Position du centre de l'event : (-73.8955336667,40.810238)
+|Rayon de l'event : 6968.27
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,r, ,i,n,a,e,o,",b
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.628000020981s
+----------------------------------------
+date : 2015-09-16
+----------------------------------------
+22 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-16 13:48:00
+|Duree estimee : 20340
+|Position du centre de l'event : (-74.0087078317,40.8338158077)
+|Rayon de l'event : 62837.6
+|Nombre de twittos : 68
+|Nombre de tweets : 208
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-09-16 12:39:00
+|Duree estimee : 44460
+|Position du centre de l'event : (-73.9967631026,40.7356062692)
+|Rayon de l'event : 23791.3
+|Nombre de twittos : 58
+|Nombre de tweets : 78
+|Hashtags importants : #,n,e, ,a,",o,y,f,l
+|
+********************************************************************************
+->Temps median : 2015-09-16 13:49:00
+|Duree estimee : 20760
+|Position du centre de l'event : (-74.3632986053,41.2648294474)
+|Rayon de l'event : 367847.32
+|Nombre de twittos : 50
+|Nombre de tweets : 76
+|Hashtags importants : #, ,r,i,e,o,a,n,s,"
+|
+********************************************************************************
+->Temps median : 2015-09-16 16:59:00
+|Duree estimee : 24180
+|Position du centre de l'event : (-73.9809804,40.7451429538)
+|Rayon de l'event : 22050.52
+|Nombre de twittos : 62
+|Nombre de tweets : 65
+|Hashtags importants : #, ,e,n,a,t,",c,i,o
+|
+********************************************************************************
+->Temps median : 2015-09-16 12:39:00
+|Duree estimee : 18960
+|Position du centre de l'event : (-74.1250364167,41.1841295)
+|Rayon de l'event : 524669.2
+|Nombre de twittos : 26
+|Nombre de tweets : 60
+|Hashtags importants : #,r, ,i,o,e,a,n,",b
+|
+********************************************************************************
+->Temps median : 2015-09-16 12:59:00
+|Duree estimee : 44100
+|Position du centre de l'event : (-73.9756244561,40.7504748947)
+|Rayon de l'event : 14426.28
+|Nombre de twittos : 51
+|Nombre de tweets : 57
+|Hashtags importants : #, ,n,e,",a,c,t,y,i
+|
+********************************************************************************
+->Temps median : 2015-09-16 16:43:00
+|Duree estimee : 18300
+|Position du centre de l'event : (-73.999396381,40.7410213333)
+|Rayon de l'event : 5908.65
+|Nombre de twittos : 36
+|Nombre de tweets : 42
+|Hashtags importants : n,#,e, ,",a,s,y,o,f
+|
+********************************************************************************
+->Temps median : 2015-09-16 13:49:00
+|Duree estimee : 38940
+|Position du centre de l'event : (-74.0028010882,40.7391210588)
+|Rayon de l'event : 2188.41
+|Nombre de twittos : 25
+|Nombre de tweets : 34
+|Hashtags importants : #,s, ,e,n,o,",a,i,f
+|
+********************************************************************************
+->Temps median : 2015-09-16 20:35:00
+|Duree estimee : 26820
+|Position du centre de l'event : (-73.9849607778,40.7494244074)
+|Rayon de l'event : 6947.53
+|Nombre de twittos : 27
+|Nombre de tweets : 27
+|Hashtags importants : #, ,e,n,a,r,o,",s,c
+|
+********************************************************************************
+->Temps median : 2015-09-16 15:06:00
+|Duree estimee : 36720
+|Position du centre de l'event : (-74.1999023043,41.2388326087)
+|Rayon de l'event : 382051.76
+|Nombre de twittos : 20
+|Nombre de tweets : 23
+|Hashtags importants : #,i, ,n,r,",o,a,b,t
+|
+********************************************************************************
+->Temps median : 2015-09-16 20:31:00
+|Duree estimee : 39600
+|Position du centre de l'event : (-74.0005995,40.7470814091)
+|Rayon de l'event : 1953.44
+|Nombre de twittos : 19
+|Nombre de tweets : 22
+|Hashtags importants : n,#,s, ,a,y,",e,o,w
+|
+********************************************************************************
+->Temps median : 2015-09-16 15:18:00
+|Duree estimee : 24900
+|Position du centre de l'event : (-73.7569396842,40.7681970526)
+|Rayon de l'event : 209185.83
+|Nombre de twittos : 18
+|Nombre de tweets : 19
+|Hashtags importants : #,n,e,o, ,",r,a,t,y
+|
+********************************************************************************
+->Temps median : 2015-09-16 13:53:00
+|Duree estimee : 26040
+|Position du centre de l'event : (-73.9782162632,40.7406608947)
+|Rayon de l'event : 22407.29
+|Nombre de twittos : 17
+|Nombre de tweets : 19
+|Hashtags importants : #, ,n,e,a,r,y,o,t,c
+|
+********************************************************************************
+->Temps median : 2015-09-16 12:33:00
+|Duree estimee : 8040
+|Position du centre de l'event : (-73.9872406429,40.7506256429)
+|Rayon de l'event : 4833.97
+|Nombre de twittos : 14
+|Nombre de tweets : 14
+|Hashtags importants : #,e, ,r,a,n,o,t,y,"
+|
+********************************************************************************
+->Temps median : 2015-09-16 12:41:00
+|Duree estimee : 6780
+|Position du centre de l'event : (-73.9917635833,40.7153405833)
+|Rayon de l'event : 4416.03
+|Nombre de twittos : 3
+|Nombre de tweets : 12
+|Hashtags importants : #,r, ,n,i,o,e,b,",h
+|
+********************************************************************************
+->Temps median : 2015-09-16 15:14:00
+|Duree estimee : 6840
+|Position du centre de l'event : (-73.9651985833,40.6853329167)
+|Rayon de l'event : 7024.96
+|Nombre de twittos : 12
+|Nombre de tweets : 12
+|Hashtags importants : o,#,r,n, ,",b,l,e,y
+|
+********************************************************************************
+->Temps median : 2015-09-16 12:41:00
+|Duree estimee : 44100
+|Position du centre de l'event : (-73.9969197273,40.744626)
+|Rayon de l'event : 1622.56
+|Nombre de twittos : 11
+|Nombre de tweets : 11
+|Hashtags importants : #, ,n,y,e,o,a,l,s,w
+|
+********************************************************************************
+->Temps median : 2015-09-16 13:56:00
+|Duree estimee : 20340
+|Position du centre de l'event : (-73.9909303636,40.9068084545)
+|Rayon de l'event : 52932.37
+|Nombre de twittos : 10
+|Nombre de tweets : 11
+|Hashtags importants : #,",o, ,e,j,a,b,n,i
+|
+********************************************************************************
+->Temps median : 2015-09-16 15:03:00
+|Duree estimee : 22980
+|Position du centre de l'event : (-77.24779525,42.848563)
+|Rayon de l'event : 291745.34
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #,e,r, ,i,s,o,",h,n
+|
+********************************************************************************
+->Temps median : 2015-09-16 22:28:00
+|Duree estimee : 11220
+|Position du centre de l'event : (-73.9286896667,40.7369663333)
+|Rayon de l'event : 17472.51
+|Nombre de twittos : 6
+|Nombre de tweets : 6
+|Hashtags importants : #,e, ,a,o,n,r,",i,y
+|
+********************************************************************************
+->Temps median : 2015-09-16 20:35:00
+|Duree estimee : 4740
+|Position du centre de l'event : (-73.9921425,40.74725)
+|Rayon de l'event : 1813.49
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #, ,n,e,s,a,w,",o,p
+|
+********************************************************************************
+->Temps median : 2015-09-16 22:26:00
+|Duree estimee : 2280
+|Position du centre de l'event : (-73.920591,40.6400876667)
+|Rayon de l'event : 9087.24
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,o,n, ,i,l,t,y,",a
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 6.14199995995s
+----------------------------------------
+date : 2015-09-17
+----------------------------------------
+20 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-17 08:01:00
+|Duree estimee : 15540
+|Position du centre de l'event : (-74.6180388986,41.4656074348)
+|Rayon de l'event : 336298.73
+|Nombre de twittos : 61
+|Nombre de tweets : 69
+|Hashtags importants : #,r, ,e,i,a,o,n,c,b
+|
+********************************************************************************
+->Temps median : 2015-09-17 12:09:00
+|Duree estimee : 28500
+|Position du centre de l'event : (-74.0020760909,40.7333226212)
+|Rayon de l'event : 1896.31
+|Nombre de twittos : 34
+|Nombre de tweets : 66
+|Hashtags importants : #,r, ,e,o,i,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-09-17 19:50:00
+|Duree estimee : 15300
+|Position du centre de l'event : (-73.9882040571,40.7395108)
+|Rayon de l'event : 6631.33
+|Nombre de twittos : 34
+|Nombre de tweets : 35
+|Hashtags importants : #,n, ,a,e,",s,y,o,t
+|
+********************************************************************************
+->Temps median : 2015-09-17 11:56:00
+|Duree estimee : 16800
+|Position du centre de l'event : (-73.9928091111,40.7424507037)
+|Rayon de l'event : 12216.75
+|Nombre de twittos : 19
+|Nombre de tweets : 27
+|Hashtags importants : e,#,n, ,a,r,",s,l,f
+|
+********************************************************************************
+->Temps median : 2015-09-17 07:45:00
+|Duree estimee : 16860
+|Position du centre de l'event : (-73.9803326087,40.7572443043)
+|Rayon de l'event : 11994.28
+|Nombre de twittos : 19
+|Nombre de tweets : 23
+|Hashtags importants : #, ,n,e,r,a,y,c,",o
+|
+********************************************************************************
+->Temps median : 2015-09-17 15:46:00
+|Duree estimee : 15360
+|Position du centre de l'event : (-74.2836827826,41.1397196522)
+|Rayon de l'event : 374286.51
+|Nombre de twittos : 22
+|Nombre de tweets : 23
+|Hashtags importants : t,#,",b, ,n,e,i,o,a
+|
+********************************************************************************
+->Temps median : 2015-09-17 15:48:00
+|Duree estimee : 840
+|Position du centre de l'event : (-73.9531130952,41.0276199048)
+|Rayon de l'event : 155723.16
+|Nombre de twittos : 16
+|Nombre de tweets : 21
+|Hashtags importants : #, ,r,i,e,a,o,c,b,n
+|
+********************************************************************************
+->Temps median : 2015-09-17 11:54:00
+|Duree estimee : 17040
+|Position du centre de l'event : (-73.9574322353,40.7237100588)
+|Rayon de l'event : 25343.75
+|Nombre de twittos : 17
+|Nombre de tweets : 17
+|Hashtags importants : t,#, ,",o,b,a,s,i,l
+|
+********************************************************************************
+->Temps median : 2015-09-17 19:50:00
+|Duree estimee : 15420
+|Position du centre de l'event : (-73.9883909375,40.7492821875)
+|Rayon de l'event : 7255.75
+|Nombre de twittos : 16
+|Nombre de tweets : 16
+|Hashtags importants : #,e,n, ,",a,y,f,s,o
+|
+********************************************************************************
+->Temps median : 2015-09-17 07:53:00
+|Duree estimee : 15360
+|Position du centre de l'event : (-74.9343901333,41.4739388)
+|Rayon de l'event : 301233.85
+|Nombre de twittos : 15
+|Nombre de tweets : 15
+|Hashtags importants : #,i, ,e,n,r,",o,a,j
+|
+********************************************************************************
+->Temps median : 2015-09-17 23:36:00
+|Duree estimee : 720
+|Position du centre de l'event : (-73.9918688571,40.7393726429)
+|Rayon de l'event : 5444.59
+|Nombre de twittos : 14
+|Nombre de tweets : 14
+|Hashtags importants : #, ,a,e,n,y,i,r,",l
+|
+********************************************************************************
+->Temps median : 2015-09-17 15:40:00
+|Duree estimee : 43800
+|Position du centre de l'event : (-73.9759255385,40.7551192308)
+|Rayon de l'event : 12505.86
+|Nombre de twittos : 12
+|Nombre de tweets : 13
+|Hashtags importants : #, ,e,n,y,r,o,t,i,c
+|
+********************************************************************************
+->Temps median : 2015-09-17 19:52:00
+|Duree estimee : 14820
+|Position du centre de l'event : (-73.989450625,40.74683025)
+|Rayon de l'event : 5339.46
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #,e,a, ,o,r,n,i,t,"
+|
+********************************************************************************
+->Temps median : 2015-09-17 23:37:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.985609375,40.750526625)
+|Rayon de l'event : 3239.62
+|Nombre de twittos : 7
+|Nombre de tweets : 8
+|Hashtags importants : s,n,#, ,",a,i,e,t,r
+|
+********************************************************************************
+->Temps median : 2015-09-17 15:52:00
+|Duree estimee : 44760
+|Position du centre de l'event : (-74.0006196667,40.7305705)
+|Rayon de l'event : 1427.41
+|Nombre de twittos : 6
+|Nombre de tweets : 6
+|Hashtags importants : #,n, ,y,e,f,",a,s,d
+|
+********************************************************************************
+->Temps median : 2015-09-17 15:46:00
+|Duree estimee : 28860
+|Position du centre de l'event : (-73.99996,40.7373736)
+|Rayon de l'event : 1232.36
+|Nombre de twittos : 5
+|Nombre de tweets : 5
+|Hashtags importants : ",#,j,o,b,e,a, ,s,n
+|
+********************************************************************************
+->Temps median : 2015-09-17 11:59:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.98960475,40.747402)
+|Rayon de l'event : 2633.05
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #, ,n,t,y,e,s,a,",f
+|
+********************************************************************************
+->Temps median : 2015-09-17 23:36:00
+|Duree estimee : 540
+|Position du centre de l'event : (-73.99319275,40.73821075)
+|Rayon de l'event : 2203.18
+|Nombre de twittos : 3
+|Nombre de tweets : 4
+|Hashtags importants : #, ,n,o,y,a,t,e,l,"
+|
+********************************************************************************
+->Temps median : 2015-09-17 12:01:00
+|Duree estimee : 300
+|Position du centre de l'event : (-73.9173066667,40.8094143333)
+|Rayon de l'event : 10025.0
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,i, ,",n,r,h,o,s,e
+|
+********************************************************************************
+->Temps median : 2015-09-17 12:06:00
+|Duree estimee : 28560
+|Position du centre de l'event : (-73.850109,40.768923)
+|Rayon de l'event : 8714.67
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,e,n, ,s,",b,o,j,g
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 2.10199999809s
+----------------------------------------
+date : 2015-09-18
+----------------------------------------
+9 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-18 10:38:00
+|Duree estimee : 33480
+|Position du centre de l'event : (-74.1273511,40.7969277091)
+|Rayon de l'event : 392996.92
+|Nombre de twittos : 54
+|Nombre de tweets : 110
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-09-18 15:17:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.9941320588,40.7341195588)
+|Rayon de l'event : 9651.18
+|Nombre de twittos : 19
+|Nombre de tweets : 34
+|Hashtags importants : #,e, ,n,a,o,t,r,",c
+|
+********************************************************************************
+->Temps median : 2015-09-18 15:18:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.9914917143,40.736792)
+|Rayon de l'event : 47383.3
+|Nombre de twittos : 14
+|Nombre de tweets : 21
+|Hashtags importants : #,r, ,e,i,a,o,n,c,"
+|
+********************************************************************************
+->Temps median : 2015-09-18 20:30:00
+|Duree estimee : 2820
+|Position du centre de l'event : (-73.9808513684,40.7440845789)
+|Rayon de l'event : 15011.96
+|Nombre de twittos : 19
+|Nombre de tweets : 19
+|Hashtags importants : #,n, ,e,c,a,o,i,",y
+|
+********************************************************************************
+->Temps median : 2015-09-18 17:13:00
+|Duree estimee : 37620
+|Position du centre de l'event : (-73.9258325,40.740929125)
+|Rayon de l'event : 95486.35
+|Nombre de twittos : 15
+|Nombre de tweets : 16
+|Hashtags importants : e,#, ,r,a,n,o,i,",s
+|
+********************************************************************************
+->Temps median : 2015-09-18 15:14:00
+|Duree estimee : 37020
+|Position du centre de l'event : (-74.5044386429,41.1417937143)
+|Rayon de l'event : 349976.17
+|Nombre de twittos : 12
+|Nombre de tweets : 14
+|Hashtags importants : #,i, ,n,r,",o,h,g,b
+|
+********************************************************************************
+->Temps median : 2015-09-18 10:13:00
+|Duree estimee : 900
+|Position du centre de l'event : (-73.99405925,40.7193168333)
+|Rayon de l'event : 4598.94
+|Nombre de twittos : 12
+|Nombre de tweets : 12
+|Hashtags importants : #, ,e,n,r,a,c,t,",y
+|
+********************************************************************************
+->Temps median : 2015-09-18 10:25:00
+|Duree estimee : 37920
+|Position du centre de l'event : (-74.407293625,41.26254125)
+|Rayon de l'event : 360221.05
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #,",o, ,e,b,s,j,r,i
+|
+********************************************************************************
+->Temps median : 2015-09-18 20:33:00
+|Duree estimee : 37200
+|Position du centre de l'event : (-73.9877802,40.7482682)
+|Rayon de l'event : 6655.14
+|Nombre de twittos : 5
+|Nombre de tweets : 5
+|Hashtags importants : #,n, ,y,e,o,r,i,c,g
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 1.3029999733s
+----------------------------------------
+date : 2015-09-19
+----------------------------------------
+11 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-19 14:14:00
+|Duree estimee : 1080
+|Position du centre de l'event : (-74.2052701408,40.9375347042)
+|Rayon de l'event : 386437.04
+|Nombre de twittos : 43
+|Nombre de tweets : 71
+|Hashtags importants : #,r, ,e,i,o,a,n,",c
+|
+********************************************************************************
+->Temps median : 2015-09-19 14:12:00
+|Duree estimee : 32520
+|Position du centre de l'event : (-73.9793063462,40.8206585769)
+|Rayon de l'event : 61483.05
+|Nombre de twittos : 25
+|Nombre de tweets : 26
+|Hashtags importants : #,e, ,n,y,",a,o,t,r
+|
+********************************************************************************
+->Temps median : 2015-09-19 20:31:00
+|Duree estimee : 11100
+|Position du centre de l'event : (-73.9763096471,40.7502496471)
+|Rayon de l'event : 7124.33
+|Nombre de twittos : 16
+|Nombre de tweets : 17
+|Hashtags importants : #,e, ,n,a,r,t,y,",o
+|
+********************************************************************************
+->Temps median : 2015-09-19 04:45:00
+|Duree estimee : 7680
+|Position du centre de l'event : (-73.9645484,40.7662558)
+|Rayon de l'event : 11194.45
+|Nombre de twittos : 11
+|Nombre de tweets : 15
+|Hashtags importants : #, ,e,a,r,n,t,c,i,s
+|
+********************************************************************************
+->Temps median : 2015-09-19 14:16:00
+|Duree estimee : 35700
+|Position du centre de l'event : (-73.9698418889,40.7413001111)
+|Rayon de l'event : 6341.29
+|Nombre de twittos : 6
+|Nombre de tweets : 9
+|Hashtags importants : #,n, ,o,r,e,a,i,t,l
+|
+********************************************************************************
+->Temps median : 2015-09-19 05:26:00
+|Duree estimee : 5100
+|Position du centre de l'event : (-73.9301371667,40.7155266667)
+|Rayon de l'event : 9507.83
+|Nombre de twittos : 6
+|Nombre de tweets : 6
+|Hashtags importants : #,e,o, ,r,n,",a,y,m
+|
+********************************************************************************
+->Temps median : 2015-09-19 20:27:00
+|Duree estimee : 840
+|Position du centre de l'event : (-73.9153756667,40.969549)
+|Rayon de l'event : 19765.37
+|Nombre de twittos : 5
+|Nombre de tweets : 6
+|Hashtags importants : #, ,e,r,a,o,i,n,k,t
+|
+********************************************************************************
+->Temps median : 2015-09-19 04:41:00
+|Duree estimee : 7080
+|Position du centre de l'event : (-74.2734478,41.386674)
+|Rayon de l'event : 171794.57
+|Nombre de twittos : 5
+|Nombre de tweets : 5
+|Hashtags importants : #,i, ,e,",n,r,g,o,a
+|
+********************************************************************************
+->Temps median : 2015-09-19 04:41:00
+|Duree estimee : 3540
+|Position du centre de l'event : (-74.32620125,41.54292275)
+|Rayon de l'event : 168244.21
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,o,s,e,n, ,",a,i,b
+|
+********************************************************************************
+->Temps median : 2015-09-19 14:15:00
+|Duree estimee : 120
+|Position du centre de l'event : (-74.09567225,40.7618795)
+|Rayon de l'event : 45226.71
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,i, ,n,",r,g,h,s,b
+|
+********************************************************************************
+->Temps median : 2015-09-19 20:24:00
+|Duree estimee : 360
+|Position du centre de l'event : (-73.9700066667,40.8515683333)
+|Rayon de l'event : 11550.67
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #, ,r,i,n,b,o,",a,e
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 1.4960000515s
+----------------------------------------
+date : 2015-09-20
+----------------------------------------
+7 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-20 08:49:00
+|Duree estimee : 26280
+|Position du centre de l'event : (-74.1124873709,40.7952036026)
+|Rayon de l'event : 394641.96
+|Nombre de twittos : 51
+|Nombre de tweets : 151
+|Hashtags importants : #,r, ,e,i,o,a,n,",c
+|
+********************************************************************************
+->Temps median : 2015-09-20 15:33:00
+|Duree estimee : 26460
+|Position du centre de l'event : (-73.9840069697,40.7224350606)
+|Rayon de l'event : 22976.26
+|Nombre de twittos : 33
+|Nombre de tweets : 33
+|Hashtags importants : #,n, ,e,",r,y,c,i,a
+|
+********************************************************************************
+->Temps median : 2015-09-20 08:44:00
+|Duree estimee : 32460
+|Position du centre de l'event : (-74.4360822667,41.3533306667)
+|Rayon de l'event : 356705.63
+|Nombre de twittos : 13
+|Nombre de tweets : 15
+|Hashtags importants : #,i, ,r,",o,n,e,h,b
+|
+********************************************************************************
+->Temps median : 2015-09-20 08:37:00
+|Duree estimee : 26220
+|Position du centre de l'event : (-74.2905203333,40.8892972667)
+|Rayon de l'event : 478719.48
+|Nombre de twittos : 15
+|Nombre de tweets : 15
+|Hashtags importants : #,e, ,o,n,",r,t,a,i
+|
+********************************************************************************
+->Temps median : 2015-09-20 21:04:00
+|Duree estimee : 2040
+|Position du centre de l'event : (-73.9707646667,40.74244175)
+|Rayon de l'event : 13860.46
+|Nombre de twittos : 12
+|Nombre de tweets : 12
+|Hashtags importants : #,e, ,n,a,y,o,s,i,"
+|
+********************************************************************************
+->Temps median : 2015-09-20 15:36:00
+|Duree estimee : 26460
+|Position du centre de l'event : (-74.9740855,41.230368875)
+|Rayon de l'event : 297876.77
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #, ,o,s,b,e,r,i,j,"
+|
+********************************************************************************
+->Temps median : 2015-09-20 08:41:00
+|Duree estimee : 26700
+|Position du centre de l'event : (-74.39490675,41.5123065)
+|Rayon de l'event : 161552.34
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,o,",a,e, ,n,r,b,i
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 1.82100009918s
+----------------------------------------
+date : 2015-09-21
+----------------------------------------
+9 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-21 17:24:00
+|Duree estimee : 30360
+|Position du centre de l'event : (-74.0649903535,40.7836537576)
+|Rayon de l'event : 399925.52
+|Nombre de twittos : 40
+|Nombre de tweets : 99
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-09-21 09:15:00
+|Duree estimee : 1500
+|Position du centre de l'event : (-74.11440972,40.86117856)
+|Rayon de l'event : 394146.0
+|Nombre de twittos : 17
+|Nombre de tweets : 25
+|Hashtags importants : #,r, ,e,i,a,o,n,b,s
+|
+********************************************************************************
+->Temps median : 2015-09-21 09:24:00
+|Duree estimee : 29400
+|Position du centre de l'event : (-73.9833088182,40.7479075909)
+|Rayon de l'event : 8844.5
+|Nombre de twittos : 21
+|Nombre de tweets : 22
+|Hashtags importants : #, ,e,n,t,a,o,r,i,y
+|
+********************************************************************************
+->Temps median : 2015-09-21 17:26:00
+|Duree estimee : 30240
+|Position du centre de l'event : (-74.1581446875,41.0253440625)
+|Rayon de l'event : 388646.02
+|Nombre de twittos : 15
+|Nombre de tweets : 16
+|Hashtags importants : #,i, ,e,r,n,",s,o,t
+|
+********************************************************************************
+->Temps median : 2015-09-21 17:32:00
+|Duree estimee : 900
+|Position du centre de l'event : (-73.9773269375,40.748587625)
+|Rayon de l'event : 11175.41
+|Nombre de twittos : 14
+|Nombre de tweets : 16
+|Hashtags importants : #, ,e,n,a,c,l,i,s,t
+|
+********************************************************************************
+->Temps median : 2015-09-21 09:29:00
+|Duree estimee : 29820
+|Position du centre de l'event : (-74.055906,41.16288075)
+|Rayon de l'event : 76635.92
+|Nombre de twittos : 7
+|Nombre de tweets : 8
+|Hashtags importants : #,",o,a,n, ,b,l,t,i
+|
+********************************************************************************
+->Temps median : 2015-09-21 17:33:00
+|Duree estimee : 23160
+|Position du centre de l'event : (-73.9719205,40.7642131667)
+|Rayon de l'event : 9508.56
+|Nombre de twittos : 5
+|Nombre de tweets : 6
+|Hashtags importants : #,e,r, ,",o,n,i,k,y
+|
+********************************************************************************
+->Temps median : 2015-09-21 09:24:00
+|Duree estimee : 840
+|Position du centre de l'event : (-73.9792578,40.7477776)
+|Rayon de l'event : 6729.31
+|Nombre de twittos : 5
+|Nombre de tweets : 5
+|Hashtags importants : #,o,n,e,r, ,t,a,",i
+|
+********************************************************************************
+->Temps median : 2015-09-21 23:58:00
+|Duree estimee : 240
+|Position du centre de l'event : (-73.990693,40.68928175)
+|Rayon de l'event : 3625.69
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,n, ,e,a,o,c,",i,l
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 1.1890001297s
+----------------------------------------
+date : 2015-09-22
+----------------------------------------
+7 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-22 14:53:00
+|Duree estimee : 6660
+|Position du centre de l'event : (-74.0007160667,40.7334800667)
+|Rayon de l'event : 4883.48
+|Nombre de twittos : 22
+|Nombre de tweets : 30
+|Hashtags importants : #, ,r,o,e,i,n,",a,b
+|
+********************************************************************************
+->Temps median : 2015-09-22 14:50:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.1589695926,41.0485674815)
+|Rayon de l'event : 388462.81
+|Nombre de twittos : 21
+|Nombre de tweets : 27
+|Hashtags importants : #,r, ,i,e,n,o,a,",b
+|
+********************************************************************************
+->Temps median : 2015-09-22 22:50:00
+|Duree estimee : 24360
+|Position du centre de l'event : (-73.9915836471,40.74246)
+|Rayon de l'event : 5547.82
+|Nombre de twittos : 17
+|Nombre de tweets : 17
+|Hashtags importants : #,n, ,c,e,i,a,t,",y
+|
+********************************************************************************
+->Temps median : 2015-09-22 00:07:00
+|Duree estimee : 840
+|Position du centre de l'event : (-73.9856746154,40.7284607692)
+|Rayon de l'event : 7827.4
+|Nombre de twittos : 11
+|Nombre de tweets : 13
+|Hashtags importants : #, ,e,o,c,n,a,r,l,t
+|
+********************************************************************************
+->Temps median : 2015-09-22 14:49:00
+|Duree estimee : 900
+|Position du centre de l'event : (-73.9746287778,40.7537855556)
+|Rayon de l'event : 6199.2
+|Nombre de twittos : 9
+|Nombre de tweets : 9
+|Hashtags importants : #, ,e,o,a,n,r,c,i,"
+|
+********************************************************************************
+->Temps median : 2015-09-22 00:14:00
+|Duree estimee : 540
+|Position du centre de l'event : (-73.97023675,40.74462275)
+|Rayon de l'event : 2156.2
+|Nombre de twittos : 3
+|Nombre de tweets : 4
+|Hashtags importants : n,r,o,#,e, ,a,y,i,s
+|
+********************************************************************************
+->Temps median : 2015-09-22 14:59:00
+|Duree estimee : 10200
+|Position du centre de l'event : (-73.989359,40.747847)
+|Rayon de l'event : 3744.2
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #, ,n,e,o,c,y,r,i,h
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.975999832153s
+----------------------------------------
+date : 2015-09-23
+----------------------------------------
+5 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-23 14:03:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.2887759216,41.0546001176)
+|Rayon de l'event : 374115.53
+|Nombre de twittos : 38
+|Nombre de tweets : 51
+|Hashtags importants : #,r, ,e,i,a,n,o,c,"
+|
+********************************************************************************
+->Temps median : 2015-09-23 14:04:00
+|Duree estimee : 720
+|Position du centre de l'event : (-74.0560440769,40.7062252308)
+|Rayon de l'event : 104361.55
+|Nombre de twittos : 13
+|Nombre de tweets : 13
+|Hashtags importants : #, ,i,n,r,o,e,",b,j
+|
+********************************************************************************
+->Temps median : 2015-09-23 22:20:00
+|Duree estimee : 660
+|Position du centre de l'event : (-73.962699875,40.757905375)
+|Rayon de l'event : 9709.27
+|Nombre de twittos : 6
+|Nombre de tweets : 8
+|Hashtags importants : n,#,a, ,e,i,r,o,t,l
+|
+********************************************************************************
+->Temps median : 2015-09-23 14:06:00
+|Duree estimee : 30120
+|Position du centre de l'event : (-73.984707,40.7422144286)
+|Rayon de l'event : 2838.3
+|Nombre de twittos : 7
+|Nombre de tweets : 7
+|Hashtags importants : #, ,e,n,o,a,i,r,y,l
+|
+********************************************************************************
+->Temps median : 2015-09-23 14:01:00
+|Duree estimee : 720
+|Position du centre de l'event : (-74.018288,41.3570036667)
+|Rayon de l'event : 39375.72
+|Nombre de twittos : 3
+|Nombre de tweets : 3
+|Hashtags importants : #,a, ,",e,c,n,i,j,o
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.680000066757s
+----------------------------------------
+date : 2015-09-24
+----------------------------------------
+3 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-24 13:34:00
+|Duree estimee : 840
+|Position du centre de l'event : (-74.1429354194,40.9187655323)
+|Rayon de l'event : 390758.65
+|Nombre de twittos : 40
+|Nombre de tweets : 62
+|Hashtags importants : #,r, ,e,i,a,o,n,c,"
+|
+********************************************************************************
+->Temps median : 2015-09-24 13:33:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.018952375,40.75916475)
+|Rayon de l'event : 44321.26
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #, ,i,n,o,r,",b,h,a
+|
+********************************************************************************
+->Temps median : 2015-09-24 22:03:00
+|Duree estimee : 240
+|Position du centre de l'event : (-73.972249,40.738501)
+|Rayon de l'event : 3059.79
+|Nombre de twittos : 3
+|Nombre de tweets : 4
+|Hashtags importants : #,n,e, ,i,r,y,c,o,"
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.677999973297s
+----------------------------------------
+date : 2015-09-25
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.261000156403s
+----------------------------------------
+date : 2015-09-26
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.291999816895s
+----------------------------------------
+date : 2015-09-27
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-27 09:53:00
+|Duree estimee : 1320
+|Position du centre de l'event : (-73.974825294,40.7579429148)
+|Rayon de l'event : 7385.14
+|Nombre de twittos : 23
+|Nombre de tweets : 25
+|Hashtags importants : #,n, ,a,c,e,",t,y,r
+|
+********************************************************************************
+->Temps median : 2015-09-27 20:21:00
+|Duree estimee : 840
+|Position du centre de l'event : (-73.987835429,40.741159261)
+|Rayon de l'event : 9611.82
+|Nombre de twittos : 20
+|Nombre de tweets : 20
+|Hashtags importants : #, ,n,a,o,e,t,r,",y
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.65700006485s
+----------------------------------------
+date : 2015-09-28
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.286000013351s
+----------------------------------------
+date : 2015-09-29
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.288000106812s
+----------------------------------------
+date : 2015-09-30
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.270999908447s
+----------------------------------------
+date : 2015-10-01
+----------------------------------------
+3 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-01 20:02:00
+|Duree estimee : 120
+|Position du centre de l'event : (-73.9665552771,40.6886188992)
+|Rayon de l'event : 33813.92
+|Nombre de twittos : 8
+|Nombre de tweets : 24
+|Hashtags importants : #, ,n,o,l,e,i,a,y,w
+|
+********************************************************************************
+->Temps median : 2015-10-01 19:57:00
+|Duree estimee : 67260
+|Position du centre de l'event : (-73.9943094625,40.736830885)
+|Rayon de l'event : 1770.16
+|Nombre de twittos : 7
+|Nombre de tweets : 8
+|Hashtags importants : #, ,i,r,y,e,n,o,a,c
+|
+********************************************************************************
+->Temps median : 2015-10-01 01:41:00
+|Duree estimee : 2460
+|Position du centre de l'event : (-73.9886384125,40.7519120313)
+|Rayon de l'event : 2150.22
+|Nombre de twittos : 5
+|Nombre de tweets : 8
+|Hashtags importants : #,e,n, ,t,r,y,i,o,a
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.557000160217s
+----------------------------------------
+date : 2015-10-02
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.282999992371s
+----------------------------------------
+date : 2015-10-03
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.236999988556s
+----------------------------------------
+date : 2015-10-04
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.289000034332s
+----------------------------------------
+date : 2015-10-05
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-05 21:54:00
+|Duree estimee : 77880
+|Position du centre de l'event : (-73.9741084005,40.75454451)
+|Rayon de l'event : 12313.54
+|Nombre de twittos : 19
+|Nombre de tweets : 22
+|Hashtags importants : #, ,n,e,r,a,o,y,i,c
+|
+********************************************************************************
+->Temps median : 2015-10-05 00:19:00
+|Duree estimee : 1200
+|Position du centre de l'event : (-73.98718591,40.7534394985)
+|Rayon de l'event : 3157.09
+|Nombre de twittos : 12
+|Nombre de tweets : 20
+|Hashtags importants : #, ,t,r,e,a,n,i,y,o
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.637000083923s
+----------------------------------------
+date : 2015-10-06
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.302000045776s
+----------------------------------------
+date : 2015-10-07
+----------------------------------------
+4 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-07 16:18:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.1944391131,40.9541659836)
+|Rayon de l'event : 384932.03
+|Nombre de twittos : 33
+|Nombre de tweets : 61
+|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|
+********************************************************************************
+->Temps median : 2015-10-07 16:18:00
+|Duree estimee : 720
+|Position du centre de l'event : (-75.1758926125,41.915553075)
+|Rayon de l'event : 273006.15
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #, ,r,i,e,o,",n,h,s
+|
+********************************************************************************
+->Temps median : 2015-10-07 16:12:00
+|Duree estimee : 1260
+|Position du centre de l'event : (-74.5826558429,41.0753257714)
+|Rayon de l'event : 341636.72
+|Nombre de twittos : 6
+|Nombre de tweets : 7
+|Hashtags importants : #,",e,o, ,b,a,j,r,h
+|
+********************************************************************************
+->Temps median : 2015-10-07 16:24:00
+|Duree estimee : 1320
+|Position du centre de l'event : (-73.9911665929,40.7421658829)
+|Rayon de l'event : 3869.55
+|Nombre de twittos : 7
+|Nombre de tweets : 7
+|Hashtags importants : #,a, ,e,n,t,i,r,y,l
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.678999900818s
+----------------------------------------
+date : 2015-10-08
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-08 12:31:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.09586468,40.9129832022)
+|Rayon de l'event : 395973.59
+|Nombre de twittos : 38
+|Nombre de tweets : 45
+|Hashtags importants : #, ,r,i,e,o,a,n,",b
+|
+********************************************************************************
+->Temps median : 2015-10-08 12:31:00
+|Duree estimee : 660
+|Position du centre de l'event : (-73.9755655,41.205418975)
+|Rayon de l'event : 43737.8
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,o,a, ,t,",e,i,r,b
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.641000032425s
+----------------------------------------
+date : 2015-10-09
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-09 09:21:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.0629868,41.0981432925)
+|Rayon de l'event : 398869.93
+|Nombre de twittos : 36
+|Nombre de tweets : 53
+|Hashtags importants : #,r, ,e,i,a,o,n,",c
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.56200003624s
+----------------------------------------
+date : 2015-10-10
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.318000078201s
+----------------------------------------
+date : 2015-10-11
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.293999910355s
+----------------------------------------
+date : 2015-10-12
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.276999950409s
+----------------------------------------
+date : 2015-10-13
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.286000013351s
+----------------------------------------
+date : 2015-10-14
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-14 14:19:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.4686695235,41.1123744196)
+|Rayon de l'event : 398352.51
+|Nombre de twittos : 42
+|Nombre de tweets : 51
+|Hashtags importants : #, ,r,e,i,a,o,n,",c
+|
+********************************************************************************
+->Temps median : 2015-10-14 14:21:00
+|Duree estimee : 360
+|Position du centre de l'event : (-73.9882531,40.7682555)
+|Rayon de l'event : 4204.55
+|Nombre de twittos : 5
+|Nombre de tweets : 5
+|Hashtags importants : o,#,", ,e,b,j,l,n,w
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.555999994278s
+----------------------------------------
+date : 2015-10-15
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.249000072479s
+----------------------------------------
+date : 2015-10-16
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.412999868393s
+----------------------------------------
+date : 2015-10-17
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.262000083923s
+----------------------------------------
+date : 2015-10-18
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.299000024796s
+----------------------------------------
+date : 2015-10-19
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-19 15:16:00
+|Duree estimee : 1440
+|Position du centre de l'event : (-74.1813286941,40.9416419431)
+|Rayon de l'event : 386429.78
+|Nombre de twittos : 44
+|Nombre de tweets : 51
+|Hashtags importants : #, ,r,i,e,o,n,a,",b
+|
+********************************************************************************
+->Temps median : 2015-10-19 15:16:00
+|Duree estimee : 600
+|Position du centre de l'event : (-73.949945325,41.291662775)
+|Rayon de l'event : 47148.51
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,e, ,a,",n,t,b,o,i
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.703000068665s
+----------------------------------------
+date : 2015-10-20
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-20 15:59:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.1441688367,40.832956598)
+|Rayon de l'event : 390987.24
+|Nombre de twittos : 40
+|Nombre de tweets : 49
+|Hashtags importants : #, ,r,e,o,i,a,n,",b
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.661000013351s
+----------------------------------------
+date : 2015-10-21
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.259000062943s
+----------------------------------------
+date : 2015-10-22
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.376999855042s
+----------------------------------------
+date : 2015-10-23
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-23 17:41:00
+|Duree estimee : 960
+|Position du centre de l'event : (-74.2005043829,40.8714314415)
+|Rayon de l'event : 384613.59
+|Nombre de twittos : 34
+|Nombre de tweets : 41
+|Hashtags importants : #,r, ,i,e,o,n,a,",c
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.552999973297s
+----------------------------------------
+date : 2015-10-24
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.278000116348s
+----------------------------------------
+date : 2015-10-25
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.27799987793s
+----------------------------------------
+date : 2015-10-26date : 2015-10-27
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.272000074387s
+----------------------------------------
+date : 2015-10-28
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.288000106812s
+----------------------------------------
+date : 2015-10-29
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-29 09:00:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.9827833732,40.8373092829)
+|Rayon de l'event : 56758.54
+|Nombre de twittos : 31
+|Nombre de tweets : 41
+|Hashtags importants : #, ,r,i,e,o,n,a,",b
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.625999927521s
+----------------------------------------
+date : 2015-10-30
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-10-30 12:17:00
+|Duree estimee : 840
+|Position du centre de l'event : (-74.1980798707,41.0203372293)
+|Rayon de l'event : 384259.55
+|Nombre de twittos : 28
+|Nombre de tweets : 41
+|Hashtags importants : #,r, ,e,i,o,a,n,",c
+|
+********************************************************************************
+->Temps median : 2015-10-30 12:20:00
+|Duree estimee : 720
+|Position du centre de l'event : (-74.235442925,41.728063975)
+|Rayon de l'event : 120951.38
+|Nombre de twittos : 3
+|Nombre de tweets : 4
+|Hashtags importants : #,o, ,n,",e,a,b,j,s
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.631999969482s
+----------------------------------------
+date : 2015-10-31
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.241000175476s
+----------------------------------------
+date : 2015-11-01
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.282999992371s
+----------------------------------------
+date : 2015-11-02
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.283999919891s
+----------------------------------------
+date : 2015-11-03
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.276999950409s
+----------------------------------------
+date : 2015-11-04date : 2015-11-05
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-11-05 10:23:00
+|Duree estimee : 2820
+|Position du centre de l'event : (-74.10947824,40.8952841)
+|Rayon de l'event : 394545.93
+|Nombre de twittos : 25
+|Nombre de tweets : 35
+|Hashtags importants : #,r, ,e,i,a,o,n,",c
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.427999973297s
+----------------------------------------
+date : 2015-11-06
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.298000097275s
+----------------------------------------
+date : 2015-11-07
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.283999919891s
+----------------------------------------
+date : 2015-11-08date : 2015-11-09
+----------------------------------------
+2 Event detected : 
+----------------------------------------
+->Temps median : 2015-11-09 10:57:00
+|Duree estimee : 1080
+|Position du centre de l'event : (-74.344033363,41.0127001783)
+|Rayon de l'event : 573763.72
+|Nombre de twittos : 38
+|Nombre de tweets : 46
+|Hashtags importants : #,r, ,e,i,o,n,a,",s
+|
+********************************************************************************
+->Temps median : 2015-11-09 10:58:00
+|Duree estimee : 780
+|Position du centre de l'event : (-73.86770875,41.598852175)
+|Rayon de l'event : 34556.91
+|Nombre de twittos : 4
+|Nombre de tweets : 4
+|Hashtags importants : #,o, ,a,",c,b,e,j,l
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.509999990463s
+----------------------------------------
+date : 2015-11-10
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.286000013351s
+----------------------------------------
+date : 2015-11-11
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.269999980927s
+----------------------------------------
+date : 2015-11-12date : 2015-11-13
+----------------------------------------
+1 Event detected : 
+----------------------------------------
+->Temps median : 2015-11-13 10:19:00
+|Duree estimee : 1020
+|Position du centre de l'event : (-74.3791356023,41.1439004386)
+|Rayon de l'event : 363788.39
+|Nombre de twittos : 32
+|Nombre de tweets : 44
+|Hashtags importants : #, ,r,e,i,o,n,a,",b
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 0.613000154495s
+----------------------------------------
+date : 2015-11-14
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.289999961853s
+----------------------------------------
+date : 2015-11-15
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.257999897003s
+----------------------------------------
+date : 2015-11-16
+----------------------------------------
+0 Event detected : 
+----------------------------------------
+----------------------------------------
+Elapsed time : 0.256000041962s
+----------------------------------------
+date : 2015-11-17

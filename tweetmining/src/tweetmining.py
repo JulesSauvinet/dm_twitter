@@ -1,6 +1,8 @@
 import time
+import os,glob
 from datetime import timedelta, datetime
 
+import eventDetectionFromTwitter.source.model.Event
 from eventDetectionFromTwitter.source.controller.DataManagement.MongoDBHandler import MongoDBHandler
 from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDetectorMEDBased import \
     OptimisedEventDetectorMEDBased
@@ -36,6 +38,8 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
     #getTweetsFromCSVRepositoryAndSave("C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv")
     getTweetsFromCSVRepositoryAndSave("C:\\Users\\Marine\\dm_twitter\\tweetmining\\data\\smallTweets3.csv")
 
+    sortieFile = open("sortieFile.txt","w")
+    
     for i in range(120):
         mongoDBHandler = MongoDBHandler()
         date_1 = datetime.strptime(date, "%Y-%m-%d")
@@ -44,6 +48,7 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
         datestring = end_date.strftime('%Y-%m-%d')
 
         print "date : ", datestring
+        sortieFile.write("date : " + datestring)
         staringTime = time.time()
         tweets = mongoDBHandler.getAllTweetsOfDate(limit=limit,date=datestring)
 
@@ -56,17 +61,33 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
                 events = eventDetector.getEvents(datestring, minimalTermPerTweet=minimalTermPerTweet,
                                                  remove_noise_with_poisson_Law=remove_noise_with_poisson_Law)
 
-                print("")
+                print("")     
                 print("-" * 40)
                 print("{0} Event detected : ".format(len(events)))
                 print("-" * 40)
+                sortieFile.write("\n")
+                sortieFile.write("----------------------------------------\n")
+                sortieFile.write("{0} Event detected : ".format(len(events))+"\n")
+                sortieFile.write("----------------------------------------\n")
+                
                 for event in events :
                     print(event)
                     print("*" * 80)
+                    sortieFile.write(event.__str__()+"\n")
+                    sortieFile.write("********************************************************************************\n")
                 elapsed_time=(time.time()-staringTime)
                 print("-"*40)
                 print("Elapsed time : {0}s".format(elapsed_time))
                 print("-"*40)
+                sortieFile.write("----------------------------------------\n")
+                sortieFile.write("Elapsed time : {0}s".format(elapsed_time)+"\n")
+                sortieFile.write("----------------------------------------\n")
+
+    sortieFile.close()
+    for f in glob.glob("output*.txt"):
+        os.remove(f)
+    for f in glob.glob("input*.txt"):
+        os.remove(f)
 #---------------------------------------------------------------------------------------------------------------------------------------------
 #3000 tweets par jour environ sur sample
 
