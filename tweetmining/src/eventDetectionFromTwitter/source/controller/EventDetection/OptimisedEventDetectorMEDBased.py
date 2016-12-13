@@ -28,7 +28,7 @@ class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Event detection
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getEvents(self, date, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False):
+    def getEvents(self, date, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False,elasticity=False):
         """
         get the list of important events
         """
@@ -36,7 +36,7 @@ class OptimisedEventDetectorMEDBased:
         print "Detecting events ..."
 
         realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,
-                                        remove_noise_with_poisson_Law=remove_noise_with_poisson_Law)
+                                        remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=False)
         events = []
         if realClusters is not None:
             if len(realClusters > 0):
@@ -122,7 +122,7 @@ class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Clustering and Similarity matrix construction
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getClusters(self, date ,minimalTermPerTweet=5, remove_noise_with_poisson_Law=False):
+    def getClusters(self, date ,minimalTermPerTweet=5, remove_noise_with_poisson_Law=False,elasticity=False):
         """
         This method use ModularityOptimizer.jar
         """
@@ -133,7 +133,7 @@ class OptimisedEventDetectorMEDBased:
         # Creating the input file
         print "\tBuilding similarity matrix ..."
         self.build(minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,
-                   similarityFilePath=weightsFilePath)
+                   similarityFilePath=weightsFilePath,elasticity=False)
 
         # Creating the output file (command execution)
         print "\tClustering ..."
@@ -150,7 +150,7 @@ class OptimisedEventDetectorMEDBased:
                 return np.array(realClusters)
         return np.array(realClusters)
 
-    def build(self, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt"):
+    def build(self, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt",elasticity=False):
         """
         Return an upper sparse triangular matrix of similarity j>i
         """
@@ -161,7 +161,7 @@ class OptimisedEventDetectorMEDBased:
         tweets = self.tweets
         minSimilarity = self.minSimilarity
 
-        numberOfTweets = len(tweets)
+        numberOfTweets = len(tweets)		
         floatNumberOfTweets = float(numberOfTweets)
         deltaDlat = float(distanceResolution) / DEG_LATITUDE_IN_METER
         deltaDlon = float(distanceResolution) / DEG_LATITUDE_IN_METER
@@ -267,29 +267,33 @@ class OptimisedEventDetectorMEDBased:
             termToDelete = False
 
             # Eliminate term that appear less than minimalTermPerTweet
-            if (numberOfTweetOfThisTerm < minimalTermPerTweet):
-                termToDelete = True
+            if (elasticity==False) :
+                if (numberOfTweetOfThisTerm < minimalTermPerTweet):
+					termToDelete = True
+            else :
+				if (numberOfTweetOfThisTerm < minimalTermPerTweet*numberOfTweets):
+					termToDelete = True			
 
             # Eliminate terms that have poisson distribution in space
-            elif (remove_noise_with_poisson_Law):
-                tweetsOfTerm = list(tweetsPerTermMap[term])
-                numberOfTweetsPerThres = [0] * len(S_FOR_FILTERING)
-                for indiceI in range(numberOfTweetOfThisTerm):
-                    tweetI = tweets[tweetsOfTerm[indiceI]]
-                    positionI = tweetI.position
-                    for indiceJ in range(indiceI + 1, numberOfTweetOfThisTerm):
-                        tweetJ = tweets[tweetsOfTerm[indiceJ]]
-                        positionJ = tweetJ.position
-                        k = len(S_FOR_FILTERING) - 1
-                        distanceIJ = positionI.approxDistance(positionJ)
-                        while (k >= 0 and distanceIJ <= S_FOR_FILTERING[k]):
-                            numberOfTweetsPerThres[k] += 1
-                            k -= 1
-                LValuesPerThres = [
-                    math.sqrt(((2 * totalArea * numPerThres) / numberOfTweetOfThisTerm) / math.pi) - thres for
-                    thres, numPerThres in zip(S_FOR_FILTERING, numberOfTweetsPerThres)]
-                meanLValue = sum(LValuesPerThres) / len(LValuesPerThres)
-                if (meanLValue < THRESHOLD_FOR_FILTERING): termToDelete = True
+				elif (remove_noise_with_poisson_Law):
+					tweetsOfTerm = list(tweetsPerTermMap[term])
+					numberOfTweetsPerThres = [0] * len(S_FOR_FILTERING)
+					for indiceI in range(numberOfTweetOfThisTerm):
+						tweetI = tweets[tweetsOfTerm[indiceI]]
+						positionI = tweetI.position
+						for indiceJ in range(indiceI + 1, numberOfTweetOfThisTerm):
+							tweetJ = tweets[tweetsOfTerm[indiceJ]]
+							positionJ = tweetJ.position
+							k = len(S_FOR_FILTERING) - 1
+							distanceIJ = positionI.approxDistance(positionJ)
+							while (k >= 0 and distanceIJ <= S_FOR_FILTERING[k]):
+								numberOfTweetsPerThres[k] += 1
+								k -= 1
+					LValuesPerThres = [
+						math.sqrt(((2 * totalArea * numPerThres) / numberOfTweetOfThisTerm) / math.pi) - thres for
+						thres, numPerThres in zip(S_FOR_FILTERING, numberOfTweetsPerThres)]
+					meanLValue = sum(LValuesPerThres) / len(LValuesPerThres)
+					if (meanLValue < THRESHOLD_FOR_FILTERING): termToDelete = True
 
             # Delete term
             if (termToDelete):

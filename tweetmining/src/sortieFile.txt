@@ -3,7 +3,7 @@ date : 2015-07-21
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.270999908447s
+Elapsed time : 0.443000078201s
 ----------------------------------------
 
 
@@ -12,7 +12,7 @@ date : 2015-07-22
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.240000009537s
+Elapsed time : 0.239000082016s
 ----------------------------------------
 
 
@@ -26,7 +26,7 @@ date : 2015-07-23
 |Rayon de l'event : 390341.78
 |Nombre de twittos : 40
 |Nombre de tweets : 55
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#veterans,#hospitality,#jerseycity,#retail,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-07-23 12:56:00
@@ -35,11 +35,11 @@ date : 2015-07-23
 |Rayon de l'event : 89663.0
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,o,", ,b,j,a,e,l,n
+|Hashtags importants : #job,#education,#virtualnjcity,#brooklyn,#legal,#newyork,#elizabethtown,#rhfajobs
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.638000011444s
+Elapsed time : 0.684000015259s
 ----------------------------------------
 
 
@@ -53,16 +53,7 @@ date : 2015-07-24date : 2015-07-25
 |Rayon de l'event : 394732.8
 |Nombre de twittos : 38
 |Nombre de tweets : 74
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
-|
-********************************************************************************
-->Temps median : 2015-07-25 09:07:00
-|Duree estimee : 900
-|Position du centre de l'event : (-74.5232885,41.074515)
-|Rayon de l'event : 336366.5
-|Nombre de twittos : 5
-|Nombre de tweets : 6
-|Hashtags importants : #,o, ,b,n,e,s,r,",j
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#retail,#marketing,#hospitality,#internship,#it
 |
 ********************************************************************************
 ->Temps median : 2015-07-25 09:16:00
@@ -71,7 +62,16 @@ date : 2015-07-24date : 2015-07-25
 |Rayon de l'event : 2822.88
 |Nombre de twittos : 5
 |Nombre de tweets : 6
-|Hashtags importants : a,#, ,e,r,n,i,o,",k
+|Hashtags importants : #newyork,#manhattan,#centralpark,#valigiaaduepiazze,#verano,#gallery,#graffitis,#exibition,#usa,#summer
+|
+********************************************************************************
+->Temps median : 2015-07-25 09:07:00
+|Duree estimee : 900
+|Position du centre de l'event : (-74.5232885,41.074515)
+|Rayon de l'event : 336366.5
+|Nombre de twittos : 5
+|Nombre de tweets : 6
+|Hashtags importants : #jobs,#job,#veterans,#hospitality,#newyork,#brooklyn,#regions,#retail,#queens,#forhoneoye
 |
 ********************************************************************************
 ->Temps median : 2015-07-25 09:19:00
@@ -80,7 +80,7 @@ date : 2015-07-24date : 2015-07-25
 |Rayon de l'event : 404840.81
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,i, ,r,",o,n,b,e,h
+|Hashtags importants : #job,#hiring,#construction,#virtualnycity,#kellyservices,#amherst,#bronx,#kellyjobs
 |
 ********************************************************************************
 ->Temps median : 2015-07-25 09:13:00
@@ -89,7 +89,7 @@ date : 2015-07-24date : 2015-07-25
 |Rayon de l'event : 39296.31
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : i,#,",n,a, ,r,g,h,t
+|Hashtags importants : #hiring,#education,#albany,#virtualnycity,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-07-25 09:13:00
@@ -98,11 +98,11 @@ date : 2015-07-24date : 2015-07-25
 |Rayon de l'event : 250288.58
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,e,",o, ,i,r,a,h,c
+|Hashtags importants : #job,#engineering,#healthcare,#rockhill,#rochester,#socialmedia
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.621999979019s
+Elapsed time : 0.75s
 ----------------------------------------
 
 
@@ -111,7 +111,7 @@ date : 2015-07-26
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.289000034332s
+Elapsed time : 0.282999992371s
 ----------------------------------------
 
 
@@ -120,7 +120,7 @@ date : 2015-07-27
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.236999988556s
+Elapsed time : 0.234999895096s
 ----------------------------------------
 
 
@@ -129,7 +129,7 @@ date : 2015-07-28
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.302999973297s
+Elapsed time : 0.302000045776s
 ----------------------------------------
 
 
@@ -143,11 +143,11 @@ date : 2015-07-29
 |Rayon de l'event : 390510.13
 |Nombre de twittos : 28
 |Nombre de tweets : 45
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #hiring,#job,#careerarc,#newyork,#jobs,#retail,#sales,#it,#internship,#brooklyn
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.552999973297s
+Elapsed time : 0.549000024796s
 ----------------------------------------
 
 
@@ -156,7 +156,7 @@ date : 2015-07-30
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.25s
+Elapsed time : 0.272000074387s
 ----------------------------------------
 
 
@@ -165,7 +165,7 @@ date : 2015-07-31
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.238000154495s
+Elapsed time : 0.236999988556s
 ----------------------------------------
 
 
@@ -179,7 +179,7 @@ date : 2015-08-01
 |Rayon de l'event : 397571.35
 |Nombre de twittos : 34
 |Nombre de tweets : 51
-|Hashtags importants : #,r, ,i,e,n,a,o,",b
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#sales,#internship,#retail,#albany,#manhattan
 |
 ********************************************************************************
 ->Temps median : 2015-08-01 14:59:00
@@ -188,11 +188,11 @@ date : 2015-08-01
 |Rayon de l'event : 351758.92
 |Nombre de twittos : 7
 |Nombre de tweets : 7
-|Hashtags importants : #,e, ,o,",s,j,r,b,n
+|Hashtags importants : #job,#newyork,#jobs,#accounting,#customerservice,#jerseycity,#nettempsjobs,#nursing,#healthcare,#dialysis
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.74599981308s
+Elapsed time : 0.701000213623s
 ----------------------------------------
 
 
@@ -201,7 +201,7 @@ date : 2015-08-02
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.233000040054s
+Elapsed time : 0.239000082016s
 ----------------------------------------
 
 
@@ -215,7 +215,7 @@ date : 2015-08-03
 |Rayon de l'event : 329040.67
 |Nombre de twittos : 63
 |Nombre de tweets : 64
-|Hashtags importants : #,r, ,e,i,a,c,o,n,b
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#jerseycity,#rochester,#albany,#veterans,#bronx,#retail
 |
 ********************************************************************************
 ->Temps median : 2015-08-03 08:02:00
@@ -224,7 +224,7 @@ date : 2015-08-03
 |Rayon de l'event : 2658.51
 |Nombre de twittos : 36
 |Nombre de tweets : 41
-|Hashtags importants : #, ,r,e,o,n,i,",a,b
+|Hashtags importants : #newyork,#job,#hiring,#careerarc,#jobs,#it,#businessmgmt,#hospitality,#sales,#writing
 |
 ********************************************************************************
 ->Temps median : 2015-08-03 07:59:00
@@ -233,7 +233,7 @@ date : 2015-08-03
 |Rayon de l'event : 262573.78
 |Nombre de twittos : 15
 |Nombre de tweets : 15
-|Hashtags importants : #,i, ,r,n,e,",o,t,g
+|Hashtags importants : #hiring,#job,#jerseycity,#rochester,#albany,#cfgjobs,#banking,#construction,#recruiting,#hamilton
 |
 ********************************************************************************
 ->Temps median : 2015-08-03 07:59:00
@@ -242,7 +242,7 @@ date : 2015-08-03
 |Rayon de l'event : 65609.72
 |Nombre de twittos : 5
 |Nombre de tweets : 5
-|Hashtags importants : #,e,o, ,l,",s,b,j,a
+|Hashtags importants : #job,#education,#skillman,#generalscience,#sales,#jerseycity,#workathome,#kellyservices,#labor,#kellyjobs
 |
 ********************************************************************************
 ->Temps median : 2015-08-03 07:35:00
@@ -251,7 +251,7 @@ date : 2015-08-03
 |Rayon de l'event : 1469.06
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,o,e,",n, ,r,h,t,a
+|Hashtags importants : #newyork,#hood,#peeps,#manhattan,#neighborhood,#firsttime
 |
 ********************************************************************************
 ->Temps median : 2015-08-03 08:08:00
@@ -260,11 +260,11 @@ date : 2015-08-03
 |Rayon de l'event : 281964.42
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : r,#,e,i,n, ,s,",h,g
+|Hashtags importants : #hiring,#rochester,#nursing,#generalscience,#sysmex,#internship,#bronx
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.805999994278s
+Elapsed time : 0.933000087738s
 ----------------------------------------
 
 
@@ -273,7 +273,7 @@ date : 2015-08-04
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.238999843597s
+Elapsed time : 0.260999917984s
 ----------------------------------------
 
 
@@ -282,7 +282,7 @@ date : 2015-08-05
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.299999952316s
+Elapsed time : 0.269000053406s
 ----------------------------------------
 
 
@@ -291,7 +291,7 @@ date : 2015-08-06
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.273000001907s
+Elapsed time : 0.276000022888s
 ----------------------------------------
 
 
@@ -305,7 +305,7 @@ date : 2015-08-07date : 2015-08-08
 |Rayon de l'event : 57506.06
 |Nombre de twittos : 35
 |Nombre de tweets : 61
-|Hashtags importants : #,r, ,e,i,a,o,n,c,"
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#brooklyn,#veterans,#hospitality,#sales,#retail
 |
 ********************************************************************************
 ->Temps median : 2015-08-08 09:39:00
@@ -314,7 +314,7 @@ date : 2015-08-07date : 2015-08-08
 |Rayon de l'event : 40360.45
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #, ,n,i,r,o,e,t,a,"
+|Hashtags importants : #hiring,#job,#jobs,#brooklyn,#manhattan,#customerservice,#transportation,#nettempsjobs,#warren,#jerseycity
 |
 ********************************************************************************
 ->Temps median : 2015-08-08 09:46:00
@@ -323,7 +323,7 @@ date : 2015-08-07date : 2015-08-08
 |Rayon de l'event : 2979.03
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : n,#,e,o,y, ,",k,a,c
+|Hashtags importants : #newyork,#thenycnotebook,#nyc,#manhattan,#instagramnyc,#cityscape,#blueskies,#goodmorning,#newyorkcity,#skyline
 |
 ********************************************************************************
 ->Temps median : 2015-08-08 09:51:00
@@ -332,7 +332,7 @@ date : 2015-08-07date : 2015-08-08
 |Rayon de l'event : 271697.17
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,r, ,e,i,o,a,",n,c
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#sales,#retail,#rochester
 |
 ********************************************************************************
 ->Temps median : 2015-08-08 09:29:00
@@ -341,11 +341,11 @@ date : 2015-08-07date : 2015-08-08
 |Rayon de l'event : 12604.99
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,o, ,b,",j,r,e,t,n
+|Hashtags importants : #job,#jobs,#veterans,#brooklyn,#productmgmt,#jerseycity,#bronx,#marketing
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.601999998093s
+Elapsed time : 0.700999975204s
 ----------------------------------------
 
 
@@ -354,7 +354,7 @@ date : 2015-08-09
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.25s
+Elapsed time : 0.273999929428s
 ----------------------------------------
 
 
@@ -368,7 +368,7 @@ date : 2015-08-10date : 2015-08-11date : 2015-08-12
 |Rayon de l'event : 2794.81
 |Nombre de twittos : 21
 |Nombre de tweets : 37
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #newyork,#job,#hiring,#careerarc,#jobs,#internship,#art,#it,#marketing,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-08-12 16:35:00
@@ -377,7 +377,7 @@ date : 2015-08-10date : 2015-08-11date : 2015-08-12
 |Rayon de l'event : 344620.86
 |Nombre de twittos : 18
 |Nombre de tweets : 19
-|Hashtags importants : #, ,r,e,i,a,o,n,b,"
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#retail,#rochester,#veterans,#jerseycity,#brooklyn,#albany
 |
 ********************************************************************************
 ->Temps median : 2015-08-12 16:40:00
@@ -386,7 +386,7 @@ date : 2015-08-10date : 2015-08-11date : 2015-08-12
 |Rayon de l'event : 13269.5
 |Nombre de twittos : 7
 |Nombre de tweets : 8
-|Hashtags importants : #,e, ,a,n,o,r,t,",k
+|Hashtags importants : #newyork,#manhattan,#marketing,#luggagetag,#travellife,#topoftherock,#cupcakes,#subway,#vegandivas,#qotd
 |
 ********************************************************************************
 ->Temps median : 2015-08-12 17:26:00
@@ -395,11 +395,11 @@ date : 2015-08-10date : 2015-08-11date : 2015-08-12
 |Rayon de l'event : 1801.64
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,r, ,o,i,b,e,",j,n
+|Hashtags importants : #brooklyn,#job,#hiring,#careerarc,#jobs,#retail,#projectmgmt,#utilities
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.638000011444s
+Elapsed time : 0.653000116348s
 ----------------------------------------
 
 
@@ -408,7 +408,7 @@ date : 2015-08-13date : 2015-08-14
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.303000211716s
+Elapsed time : 0.355999946594s
 ----------------------------------------
 
 
@@ -417,7 +417,7 @@ date : 2015-08-15
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.266999959946s
+Elapsed time : 0.283999919891s
 ----------------------------------------
 
 
@@ -426,7 +426,7 @@ date : 2015-08-16date : 2015-08-17
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.253999948502s
+Elapsed time : 0.217000007629s
 ----------------------------------------
 
 
@@ -440,7 +440,7 @@ date : 2015-08-18date : 2015-08-19
 |Rayon de l'event : 415838.36
 |Nombre de twittos : 27
 |Nombre de tweets : 43
-|Hashtags importants : #,r, ,e,i,o,n,a,b,"
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#newyork,#retail,#brooklyn,#art,#marketing,#internship
 |
 ********************************************************************************
 ->Temps median : 2015-08-19 09:00:00
@@ -449,7 +449,7 @@ date : 2015-08-18date : 2015-08-19
 |Rayon de l'event : 0.09
 |Nombre de twittos : 15
 |Nombre de tweets : 21
-|Hashtags importants : #, ,r,e,o,i,n,",b,a
+|Hashtags importants : #job,#hiring,#newyork,#jobs,#careerarc,#businessmgmt,#hospitality,#sales,#retail,#accounting
 |
 ********************************************************************************
 ->Temps median : 2015-08-19 08:54:00
@@ -458,7 +458,7 @@ date : 2015-08-18date : 2015-08-19
 |Rayon de l'event : 8937.77
 |Nombre de twittos : 7
 |Nombre de tweets : 7
-|Hashtags importants : #,n,e, ,r,y,o,",a,l
+|Hashtags importants : #newyork,#nyc,#ny,#goldenhour,#gf,#usa,#nybynewyorkers,#newyorkcity,#urban,#brooklyn
 |
 ********************************************************************************
 ->Temps median : 2015-08-19 09:00:00
@@ -467,7 +467,7 @@ date : 2015-08-18date : 2015-08-19
 |Rayon de l'event : 16698.1
 |Nombre de twittos : 7
 |Nombre de tweets : 7
-|Hashtags importants : #,i, ,n,",o,r,t,a,b
+|Hashtags importants : #job,#hiring,#education,#sales,#work4bobs,#virtualnjcity,#nettempsjobs,#it,#virtualnycity,#northbergen
 |
 ********************************************************************************
 ->Temps median : 2015-08-19 09:00:00
@@ -476,11 +476,11 @@ date : 2015-08-18date : 2015-08-19
 |Rayon de l'event : 7667.21
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,",o, ,e,r,b,a,i,h
+|Hashtags importants : #job,#brooklyn,#internship,#retail,#healthcare
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.713999986649s
+Elapsed time : 0.80999994278s
 ----------------------------------------
 
 
@@ -489,7 +489,7 @@ date : 2015-08-20
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.315999984741s
+Elapsed time : 0.254999876022s
 ----------------------------------------
 
 
@@ -503,7 +503,7 @@ date : 2015-08-21date : 2015-08-22date : 2015-08-23date : 2015-08-24date : 2015-
 |Rayon de l'event : 348560.39
 |Nombre de twittos : 60
 |Nombre de tweets : 72
-|Hashtags importants : #, ,r,e,i,o,n,a,b,j
+|Hashtags importants : #jobs,#job,#hiring,#careerarc,#newyork,#jerseycity,#rochester,#internship,#sales,#nettempsjobs
 |
 ********************************************************************************
 ->Temps median : 2015-08-25 08:10:00
@@ -512,7 +512,7 @@ date : 2015-08-21date : 2015-08-22date : 2015-08-23date : 2015-08-24date : 2015-
 |Rayon de l'event : 3105.85
 |Nombre de twittos : 30
 |Nombre de tweets : 41
-|Hashtags importants : #,r, ,e,i,n,o,",a,c
+|Hashtags importants : #newyork,#job,#hiring,#careerarc,#marketing,#retail,#hospitality,#writing,#it,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-08-25 08:01:00
@@ -521,7 +521,7 @@ date : 2015-08-21date : 2015-08-22date : 2015-08-23date : 2015-08-24date : 2015-
 |Rayon de l'event : 322980.84
 |Nombre de twittos : 21
 |Nombre de tweets : 21
-|Hashtags importants : r,#, ,e,i,a,c,n,o,"
+|Hashtags importants : #careerarc,#job,#hiring,#rochester,#jerseycity,#albany,#education,#woodbridge,#internship,#virtualnjcity
 |
 ********************************************************************************
 ->Temps median : 2015-08-25 08:08:00
@@ -530,7 +530,7 @@ date : 2015-08-21date : 2015-08-22date : 2015-08-23date : 2015-08-24date : 2015-
 |Rayon de l'event : 358427.02
 |Nombre de twittos : 10
 |Nombre de tweets : 10
-|Hashtags importants : #,i, ,n,r,a,e,",c,g
+|Hashtags importants : #job,#hiring,#albany,#jerseycity,#education,#finance,#generalscience,#jamaica,#insurance,#customerservice
 |
 ********************************************************************************
 ->Temps median : 2015-08-25 08:00:00
@@ -539,11 +539,11 @@ date : 2015-08-21date : 2015-08-22date : 2015-08-23date : 2015-08-24date : 2015-
 |Rayon de l'event : 55204.96
 |Nombre de twittos : 6
 |Nombre de tweets : 7
-|Hashtags importants : e,#, ,",o,s,r,b,j,n
+|Hashtags importants : #job,#jerseycity,#veterans,#greenjobs,#skillman,#brooklyn,#newyorkcity,#government,#kellyservices,#green
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.950999975204s
+Elapsed time : 1.1400001049s
 ----------------------------------------
 
 
@@ -552,7 +552,7 @@ date : 2015-08-26
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.37700009346s
+Elapsed time : 0.385999917984s
 ----------------------------------------
 
 
@@ -566,7 +566,7 @@ date : 2015-08-27date : 2015-08-28
 |Rayon de l'event : 392702.29
 |Nombre de twittos : 36
 |Nombre de tweets : 56
-|Hashtags importants : #,r, ,e,i,o,a,n,c,"
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#veterans,#hospitality,#bronx,#marketing,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-08-28 14:49:00
@@ -575,7 +575,7 @@ date : 2015-08-27date : 2015-08-28
 |Rayon de l'event : 22479.38
 |Nombre de twittos : 13
 |Nombre de tweets : 13
-|Hashtags importants : #, ,i,o,r,e,n,b,",s
+|Hashtags importants : #job,#hiring,#jobs,#jerseycity,#veterans,#retail,#rosedale,#manhattan,#transportation,#collegepoint
 |
 ********************************************************************************
 ->Temps median : 2015-08-28 14:52:00
@@ -584,7 +584,7 @@ date : 2015-08-27date : 2015-08-28
 |Rayon de l'event : 6705.12
 |Nombre de twittos : 6
 |Nombre de tweets : 10
-|Hashtags importants : #,e,o,n,i, ,r,",t,a
+|Hashtags importants : #newyork,#metropolitanmuseum,#monet,#accounting,#bwood,#beading,#statenislandferry,#fashion,#fashionexhibition,#lagos
 |
 ********************************************************************************
 ->Temps median : 2015-08-28 14:56:00
@@ -593,11 +593,11 @@ date : 2015-08-27date : 2015-08-28
 |Rayon de l'event : 42191.64
 |Nombre de twittos : 3
 |Nombre de tweets : 4
-|Hashtags importants : #,",o,b, ,e,j,s,n,r
+|Hashtags importants : #job,#sales,#bronx,#northbergen
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.742000102997s
+Elapsed time : 0.65499997139s
 ----------------------------------------
 
 
@@ -606,7 +606,7 @@ date : 2015-08-29date : 2015-08-30
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.256000041962s
+Elapsed time : 0.359999895096s
 ----------------------------------------
 
 
@@ -615,7 +615,7 @@ date : 2015-08-31
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.271000146866s
+Elapsed time : 0.252999782562s
 ----------------------------------------
 
 
@@ -629,7 +629,7 @@ date : 2015-09-01date : 2015-09-02
 |Rayon de l'event : 389973.93
 |Nombre de twittos : 23
 |Nombre de tweets : 40
-|Hashtags importants : #,r, ,e,i,a,n,o,c,"
+|Hashtags importants : #careerarc,#job,#hiring,#jobs,#newyork,#brooklyn,#internship,#veterans,#hospitality,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-09-02 14:39:00
@@ -638,11 +638,11 @@ date : 2015-09-01date : 2015-09-02
 |Rayon de l'event : 384054.5
 |Nombre de twittos : 16
 |Nombre de tweets : 17
-|Hashtags importants : #, ,i,o,r,n,",e,b,j
+|Hashtags importants : #job,#hiring,#jobs,#newyork,#marketing,#brooklyn,#realestate,#education,#music,#sales
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.644999980927s
+Elapsed time : 0.579999923706s
 ----------------------------------------
 
 
@@ -656,7 +656,7 @@ date : 2015-09-03date : 2015-09-04
 |Rayon de l'event : 395212.44
 |Nombre de twittos : 37
 |Nombre de tweets : 65
-|Hashtags importants : #,r, ,e,i,n,o,a,",s
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#newyork,#veterans,#marketing,#internship,#businessmgmt,#hospitality
 |
 ********************************************************************************
 ->Temps median : 2015-09-04 10:00:00
@@ -665,7 +665,7 @@ date : 2015-09-03date : 2015-09-04
 |Rayon de l'event : 5682.74
 |Nombre de twittos : 8
 |Nombre de tweets : 10
-|Hashtags importants : #,r,y,e,o,n, ,",a,k
+|Hashtags importants : #newyork,#nyc,#familyholiday,#dress,#rockefellercenter,#friday,#traffic,#happy,#me,#manhattan
 |
 ********************************************************************************
 ->Temps median : 2015-09-04 09:53:00
@@ -674,34 +674,34 @@ date : 2015-09-03date : 2015-09-04
 |Rayon de l'event : 271179.03
 |Nombre de twittos : 6
 |Nombre de tweets : 6
-|Hashtags importants : #,i, ,n,r,o,",b,e,g
+|Hashtags importants : #job,#hiring,#rochester,#education,#bronx,#virtualnjcity,#engineering,#retail,#albany,#brooklynshorepkwy
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.730999946594s
+Elapsed time : 0.733000040054s
 ----------------------------------------
 
 
 date : 2015-09-05date : 2015-09-06
 ----------------------------------------
-6 Event detected : 
+7 Event detected : 
 ----------------------------------------
-->Temps median : 2015-09-06 08:08:00
-|Duree estimee : 1500
-|Position du centre de l'event : (-74.0354432344,40.7937227031)
-|Rayon de l'event : 221189.78
-|Nombre de twittos : 44
-|Nombre de tweets : 64
-|Hashtags importants : #,r, ,e,i,o,n,a,",b
+->Temps median : 2015-09-06 08:07:00
+|Duree estimee : 1620
+|Position du centre de l'event : (-74.0000671667,40.7315922708)
+|Rayon de l'event : 2654.67
+|Nombre de twittos : 33
+|Nombre de tweets : 48
+|Hashtags importants : #newyork,#job,#hiring,#careerarc,#jobs,#sales,#makeup,#veterans,#marketing,#retail
 |
 ********************************************************************************
-->Temps median : 2015-09-06 08:00:00
-|Duree estimee : 1020
-|Position du centre de l'event : (-74.7904902564,41.6871748718)
-|Rayon de l'event : 317721.28
-|Nombre de twittos : 39
-|Nombre de tweets : 39
-|Hashtags importants : #, ,r,e,o,i,a,b,n,j
+->Temps median : 2015-09-06 08:01:00
+|Duree estimee : 960
+|Position du centre de l'event : (-74.7313166047,41.5647348837)
+|Rayon de l'event : 324665.94
+|Nombre de twittos : 42
+|Nombre de tweets : 43
+|Hashtags importants : #job,#jobs,#hiring,#careerarc,#albany,#rochester,#newyork,#retail,#education,#jerseycity
 |
 ********************************************************************************
 ->Temps median : 2015-09-06 08:01:00
@@ -710,7 +710,7 @@ date : 2015-09-05date : 2015-09-06
 |Rayon de l'event : 348000.49
 |Nombre de twittos : 31
 |Nombre de tweets : 31
-|Hashtags importants : r,#, ,e,a,i,c,n,",o
+|Hashtags importants : #hiring,#careerarc,#job,#jerseycity,#albany,#rochester,#retail,#hoboken,#northbergen,#finance
 |
 ********************************************************************************
 ->Temps median : 2015-09-06 07:59:00
@@ -719,7 +719,16 @@ date : 2015-09-05date : 2015-09-06
 |Rayon de l'event : 367610.09
 |Nombre de twittos : 21
 |Nombre de tweets : 23
-|Hashtags importants : #,i, ,e,r,n,",t,o,h
+|Hashtags importants : #hiring,#job,#jerseycity,#manhattan,#healthcare,#nettempsjobs,#retail,#rochester,#education,#virtualnjcity
+|
+********************************************************************************
+->Temps median : 2015-09-06 08:10:00
+|Duree estimee : 660
+|Position du centre de l'event : (-74.1373040833,41.1831703333)
+|Rayon de l'event : 205884.98
+|Nombre de twittos : 10
+|Nombre de tweets : 12
+|Hashtags importants : #jobs,#job,#hiring,#careerarc,#hospitality,#veterans,#brooklyn,#retail,#albany,#woodbridge
 |
 ********************************************************************************
 ->Temps median : 2015-09-06 07:52:00
@@ -728,7 +737,7 @@ date : 2015-09-05date : 2015-09-06
 |Rayon de l'event : 5639.76
 |Nombre de twittos : 6
 |Nombre de tweets : 6
-|Hashtags importants : #,o,n, ,e,r,a,",y,i
+|Hashtags importants : #newyork,#nyc,#amazing,#love,#beautifulworld,#us,#manhattan,#fashion,#thebookofmormon,#rooftop
 |
 ********************************************************************************
 ->Temps median : 2015-09-06 07:54:00
@@ -737,11 +746,11 @@ date : 2015-09-05date : 2015-09-06
 |Rayon de l'event : 253492.01
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,a,e,o,r, ,l,n,s,t
+|Hashtags importants : #job,#transportation,#nassau,#generalscience,#kellyservices,#skillman,#clinicaltrial,#pharmaceutical,#rochester,#kellyjobs
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.986999988556s
+Elapsed time : 1.09099984169s
 ----------------------------------------
 
 
@@ -750,7 +759,7 @@ date : 2015-09-07date : 2015-09-08
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.286999940872s
+Elapsed time : 0.391000032425s
 ----------------------------------------
 
 
@@ -759,7 +768,7 @@ date : 2015-09-09
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.261999845505s
+Elapsed time : 0.289999961853s
 ----------------------------------------
 
 
@@ -768,7 +777,7 @@ date : 2015-09-10date : 2015-09-11
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.263000011444s
+Elapsed time : 0.233000040054s
 ----------------------------------------
 
 
@@ -777,7 +786,7 @@ date : 2015-09-12date : 2015-09-13
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.240999937057s
+Elapsed time : 0.229999780655s
 ----------------------------------------
 
 
@@ -791,7 +800,7 @@ date : 2015-09-14date : 2015-09-15
 |Rayon de l'event : 353679.73
 |Nombre de twittos : 41
 |Nombre de tweets : 48
-|Hashtags importants : #, ,r,i,e,o,a,n,c,"
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#albany,#rochester,#it,#retail,#education
 |
 ********************************************************************************
 ->Temps median : 2015-09-15 07:54:00
@@ -800,7 +809,7 @@ date : 2015-09-14date : 2015-09-15
 |Rayon de l'event : 303138.28
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,e, ,o,",j,a,c,b,n
+|Hashtags importants : #job,#jobs,#jerseycity,#pharmaceutical,#investmentbanking,#clerical,#newyorkcity,#newyork,#rochester
 |
 ********************************************************************************
 ->Temps median : 2015-09-15 12:55:00
@@ -809,11 +818,11 @@ date : 2015-09-14date : 2015-09-15
 |Rayon de l'event : 6968.27
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,r, ,i,n,a,e,o,",b
+|Hashtags importants : #job,#hiring,#careerarc,#bronx,#veterans,#nursing,#jobs,#hospitality,#sales
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.582000017166s
+Elapsed time : 0.579999923706s
 ----------------------------------------
 
 
@@ -827,7 +836,7 @@ date : 2015-09-16
 |Rayon de l'event : 62837.6
 |Nombre de twittos : 68
 |Nombre de tweets : 208
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #job,#hiring,#newyork,#careerarc,#jobs,#accounting,#marketing,#it,#sales,#businessmgmt
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 12:39:00
@@ -836,7 +845,7 @@ date : 2015-09-16
 |Rayon de l'event : 23791.3
 |Nombre de twittos : 58
 |Nombre de tweets : 78
-|Hashtags importants : #,n,e, ,a,",o,y,f,l
+|Hashtags importants : #nyfw,#megamodelnyc,#naeemkhan,#megamodelparis,#megamodelmilan,#megamodeluk,#megamodelmontreal,#fashion,#delpozo,#fashionweek
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 13:49:00
@@ -845,7 +854,7 @@ date : 2015-09-16
 |Rayon de l'event : 367847.32
 |Nombre de twittos : 50
 |Nombre de tweets : 76
-|Hashtags importants : #, ,r,i,e,o,a,n,s,"
+|Hashtags importants : #job,#hiring,#jobs,#careerarc,#hospitality,#veterans,#newyork,#it,#sales,#rochester
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 16:59:00
@@ -854,7 +863,7 @@ date : 2015-09-16
 |Rayon de l'event : 22050.52
 |Nombre de twittos : 62
 |Nombre de tweets : 65
-|Hashtags importants : #, ,e,n,a,t,",c,i,o
+|Hashtags importants : #nyc,#traffic,#streetart,#houseofrob,#pachanyc,#incakola,#photooftheday,#centralpark,#931amor,#absolut
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 12:39:00
@@ -863,7 +872,7 @@ date : 2015-09-16
 |Rayon de l'event : 524669.2
 |Nombre de twittos : 26
 |Nombre de tweets : 60
-|Hashtags importants : #,r, ,i,o,e,a,n,",b
+|Hashtags importants : #job,#hiring,#retail,#careerarc,#jobs,#brooklyn,#newyork,#glenmont,#bronx,#veterans
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 12:59:00
@@ -872,7 +881,7 @@ date : 2015-09-16
 |Rayon de l'event : 14426.28
 |Nombre de twittos : 51
 |Nombre de tweets : 57
-|Hashtags importants : #, ,n,e,",a,c,t,y,i
+|Hashtags importants : #nyc,#traffic,#love,#cre,#newyorkcity,#aa,#ny,#amshooting,#art,#streetart
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 16:43:00
@@ -881,7 +890,7 @@ date : 2015-09-16
 |Rayon de l'event : 5908.65
 |Nombre de twittos : 36
 |Nombre de tweets : 42
-|Hashtags importants : n,#,e, ,",a,s,y,o,f
+|Hashtags importants : #nyfw,#yeezyseason2,#backstage,#dkny,#ssshinatnyfw,#scentofspring,#fashion,#bdgatnyfw,#torysport,#selfie
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 13:49:00
@@ -890,7 +899,7 @@ date : 2015-09-16
 |Rayon de l'event : 2188.41
 |Nombre de twittos : 25
 |Nombre de tweets : 34
-|Hashtags importants : #,s, ,e,n,o,",a,i,f
+|Hashtags importants : #ss16,#nyfw,#nyc,#fashionweek,#delpozo,#garmentdistrict,#presentation,#naeemkhan,#video,#parkchoonmoo
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 20:35:00
@@ -899,7 +908,7 @@ date : 2015-09-16
 |Rayon de l'event : 6947.53
 |Nombre de twittos : 27
 |Nombre de tweets : 27
-|Hashtags importants : #, ,e,n,a,r,o,",s,c
+|Hashtags importants : #nyc,#rebelhearttour,#madisonsquaregarden,#art,#amyschumer,#msg,#foodporn,#travel,#madonna,#opening
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 15:06:00
@@ -908,7 +917,7 @@ date : 2015-09-16
 |Rayon de l'event : 382051.76
 |Nombre de twittos : 20
 |Nombre de tweets : 23
-|Hashtags importants : #,i, ,n,r,",o,a,b,t
+|Hashtags importants : #hiring,#job,#albany,#newyorkcity,#jerseycity,#hospitality,#nursing,#sales,#transportation,#it
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 20:31:00
@@ -917,16 +926,7 @@ date : 2015-09-16
 |Rayon de l'event : 1953.44
 |Nombre de twittos : 19
 |Nombre de tweets : 22
-|Hashtags importants : n,#,s, ,a,y,",e,o,w
-|
-********************************************************************************
-->Temps median : 2015-09-16 15:18:00
-|Duree estimee : 24900
-|Position du centre de l'event : (-73.7569396842,40.7681970526)
-|Rayon de l'event : 209185.83
-|Nombre de twittos : 18
-|Nombre de tweets : 19
-|Hashtags importants : #,n,e,o, ,",r,a,t,y
+|Hashtags importants : #nyfw,#gypsysport,#2016ss,#theblonds,#gala,#fashionblogger,#kanyewest,#lifeofachloegirl,#fasionista,#cancerland
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 13:53:00
@@ -935,7 +935,16 @@ date : 2015-09-16
 |Rayon de l'event : 22407.29
 |Nombre de twittos : 17
 |Nombre de tweets : 19
-|Hashtags importants : #, ,n,e,a,r,y,o,t,c
+|Hashtags importants : #newyork,#nyc,#manhattan,#travel,#usa,#newyorkcity,#timessquare,#oneworldtradecenter,#ayakkab,#travelingram
+|
+********************************************************************************
+->Temps median : 2015-09-16 15:18:00
+|Duree estimee : 24900
+|Position du centre de l'event : (-73.7569396842,40.7681970526)
+|Rayon de l'event : 209185.83
+|Nombre de twittos : 18
+|Nombre de tweets : 19
+|Hashtags importants : #newyork,#traffic,#accounting,#montauk,#vacation,#goaliecoach,#manhattan,#car,#city,#realestate
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 12:33:00
@@ -944,7 +953,7 @@ date : 2015-09-16
 |Rayon de l'event : 4833.97
 |Nombre de twittos : 14
 |Nombre de tweets : 14
-|Hashtags importants : #,e, ,r,a,n,o,t,y,"
+|Hashtags importants : #newyork,#manhattan,#usa,#newyorkcity,#streetdreamsmag,#newjersey,#vermont,#flying,#maps,#iwillalwaysremember
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 12:41:00
@@ -953,7 +962,7 @@ date : 2015-09-16
 |Rayon de l'event : 4416.03
 |Nombre de twittos : 3
 |Nombre de tweets : 12
-|Hashtags importants : #,r, ,n,i,o,e,b,",h
+|Hashtags importants : #internship,#job,#careerarc,#hiring,#brooklyn,#jobs,#midtown,#newyork,#northbergen
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 15:14:00
@@ -962,7 +971,7 @@ date : 2015-09-16
 |Rayon de l'event : 7024.96
 |Nombre de twittos : 12
 |Nombre de tweets : 12
-|Hashtags importants : o,#,r,n, ,",b,l,e,y
+|Hashtags importants : #brooklyn,#brooklynbridge,#muchocoraz,#manhattan,#life,#happyhour,#live,#endofsummer,#nursing,#myrtleave
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 12:41:00
@@ -971,7 +980,7 @@ date : 2015-09-16
 |Rayon de l'event : 1622.56
 |Nombre de twittos : 11
 |Nombre de tweets : 11
-|Hashtags importants : #, ,n,y,e,o,a,l,s,w
+|Hashtags importants : #nyfw,#nyc,#runway,#fashion,#style,#love,#ny,#girlcrush,#sophietheallet,#thesweaterdorkinnewyork
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 13:56:00
@@ -980,7 +989,7 @@ date : 2015-09-16
 |Rayon de l'event : 52932.37
 |Nombre de twittos : 10
 |Nombre de tweets : 11
-|Hashtags importants : #,",o, ,e,j,a,b,n,i
+|Hashtags importants : #job,#jerseycity,#finance,#healthcare,#albany,#sales,#foresthills,#transportation,#nursing,#longislandcity
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 15:03:00
@@ -989,7 +998,7 @@ date : 2015-09-16
 |Rayon de l'event : 291745.34
 |Nombre de twittos : 8
 |Nombre de tweets : 8
-|Hashtags importants : #,e,r, ,i,s,o,",h,n
+|Hashtags importants : #job,#hiring,#rochester,#sales,#marketing,#engineering,#bedminister,#trugreen,#customerservice,#kellyservices
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 22:28:00
@@ -998,7 +1007,7 @@ date : 2015-09-16
 |Rayon de l'event : 17472.51
 |Nombre de twittos : 6
 |Nombre de tweets : 6
-|Hashtags importants : #,e, ,a,o,n,r,",i,y
+|Hashtags importants : #newyork,#blackandwhite,#bayside,#broadway,#afar,#puppiesforsale,#queens,#moma,#mexico,#chinatown
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 20:35:00
@@ -1007,7 +1016,7 @@ date : 2015-09-16
 |Rayon de l'event : 1813.49
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #, ,n,e,s,a,w,",o,p
+|Hashtags importants : #nyfw,#topless,#spring2016,#advice,#eveningwear,#fashion,#runway,#daveys,#whitneymuseum,#pamellaroland
 |
 ********************************************************************************
 ->Temps median : 2015-09-16 22:26:00
@@ -1016,11 +1025,11 @@ date : 2015-09-16
 |Rayon de l'event : 9087.24
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,o,n, ,i,l,t,y,",a
+|Hashtags importants : #brooklyn,#nyc,#rockawaybeach,#studio,#lovemycity,#outstandinginthefield,#islandlink,#mdot,#sunset
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 6.16999983788s
+Elapsed time : 5.73699998856s
 ----------------------------------------
 
 
@@ -1034,7 +1043,7 @@ date : 2015-09-17
 |Rayon de l'event : 336298.73
 |Nombre de twittos : 61
 |Nombre de tweets : 69
-|Hashtags importants : #,r, ,e,i,a,o,n,c,b
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#jerseycity,#retail,#rochester,#albany,#brooklyn,#newyork
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 12:09:00
@@ -1043,7 +1052,7 @@ date : 2015-09-17
 |Rayon de l'event : 1896.31
 |Nombre de twittos : 34
 |Nombre de tweets : 66
-|Hashtags importants : #,r, ,e,o,i,n,a,",c
+|Hashtags importants : #newyork,#job,#hiring,#careerarc,#jobs,#internship,#marketing,#accounting,#sales,#art
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 19:50:00
@@ -1052,7 +1061,7 @@ date : 2015-09-17
 |Rayon de l'event : 6631.33
 |Nombre de twittos : 34
 |Nombre de tweets : 35
-|Hashtags importants : #,n, ,a,e,",s,y,o,t
+|Hashtags importants : #nyc,#madonna,#rebelheart,#msg,#madisonsquaregarden,#night,#manhattan,#yogamen,#yoga,#soho
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 11:56:00
@@ -1061,7 +1070,7 @@ date : 2015-09-17
 |Rayon de l'event : 12216.75
 |Nombre de twittos : 19
 |Nombre de tweets : 27
-|Hashtags importants : e,#,n, ,a,r,",s,l,f
+|Hashtags importants : #nyfw,#ss16,#spring16,#marchesa,#fashion,#orange,#nyfw2015,#fashionblogger,#scxnyfw,#transformation
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 07:45:00
@@ -1070,7 +1079,7 @@ date : 2015-09-17
 |Rayon de l'event : 11994.28
 |Nombre de twittos : 19
 |Nombre de tweets : 23
-|Hashtags importants : #, ,n,e,r,a,y,c,",o
+|Hashtags importants : #nyc,#newyorkcity,#yearsandyears,#jewelry,#terminal5,#fashionjewelry,#traffic,#finejewelry,#capsulenewyork,#timarsmstrong
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 15:46:00
@@ -1079,7 +1088,7 @@ date : 2015-09-17
 |Rayon de l'event : 374286.51
 |Nombre de twittos : 22
 |Nombre de tweets : 23
-|Hashtags importants : t,#,",b, ,n,e,i,o,a
+|Hashtags importants : #tbt,#dgb,#internetkid,#megansgirls,#bulldog,#bandsamakeherdance,#juicy360,#richgirlsbelike,#whobestylingyou,#ungruponormal
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 15:48:00
@@ -1088,7 +1097,7 @@ date : 2015-09-17
 |Rayon de l'event : 155723.16
 |Nombre de twittos : 16
 |Nombre de tweets : 21
-|Hashtags importants : #, ,r,i,e,a,o,c,b,n
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#bronx,#veterans,#retail,#newyorkcity,#hospitality,#it
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 11:54:00
@@ -1097,7 +1106,7 @@ date : 2015-09-17
 |Rayon de l'event : 25343.75
 |Nombre de twittos : 17
 |Nombre de tweets : 17
-|Hashtags importants : t,#, ,",o,b,a,s,i,l
+|Hashtags importants : #tbt,#classic,#bodegas,#clothing,#workharddreambig,#rotanginnyc,#djokovic,#style,#summer,#brooklyn
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 19:50:00
@@ -1106,7 +1115,7 @@ date : 2015-09-17
 |Rayon de l'event : 7255.75
 |Nombre de twittos : 16
 |Nombre de tweets : 16
-|Hashtags importants : #,e,n, ,",a,y,f,s,o
+|Hashtags importants : #nyfw,#fashion,#fashionweek,#ilovenewyork,#marcjacobs,#models,#art,#erleeent,#newyorkcity,#3
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 07:53:00
@@ -1115,7 +1124,7 @@ date : 2015-09-17
 |Rayon de l'event : 301233.85
 |Nombre de twittos : 15
 |Nombre de tweets : 15
-|Hashtags importants : #,i, ,e,n,r,",o,a,j
+|Hashtags importants : #hiring,#job,#jerseycity,#retail,#rochester,#engineering,#kellyjobs,#albany,#rockaway,#virtualnjcity
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 23:36:00
@@ -1124,7 +1133,7 @@ date : 2015-09-17
 |Rayon de l'event : 5444.59
 |Nombre de twittos : 14
 |Nombre de tweets : 14
-|Hashtags importants : #, ,a,e,n,y,i,r,",l
+|Hashtags importants : #nyc,#night,#affordableny,#inside,#club,#allforrio,#family,#happyhappyhappy,#instadaily,#designers
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 15:40:00
@@ -1133,7 +1142,7 @@ date : 2015-09-17
 |Rayon de l'event : 12505.86
 |Nombre de twittos : 12
 |Nombre de tweets : 13
-|Hashtags importants : #, ,e,n,y,r,o,t,i,c
+|Hashtags importants : #newyork,#nyc,#newyorkcity,#travel,#ny,#manhattan,#mylife,#vacation,#travelingram,#iger
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 19:52:00
@@ -1142,7 +1151,7 @@ date : 2015-09-17
 |Rayon de l'event : 5339.46
 |Nombre de twittos : 8
 |Nombre de tweets : 8
-|Hashtags importants : #,e,a, ,o,r,n,i,t,"
+|Hashtags importants : #newyork,#bachelorettenytrip,#yamanashi,#encuentro,#life,#enjoy,#kofu,#atrufamiento,#iwillalwaysremember,#oblige
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 23:37:00
@@ -1151,7 +1160,7 @@ date : 2015-09-17
 |Rayon de l'event : 3239.62
 |Nombre de twittos : 7
 |Nombre de tweets : 8
-|Hashtags importants : s,n,#, ,",a,i,e,t,r
+|Hashtags importants : #nyfw,#ss16,#radiant,#celestinocouture,#girlsonswings,#vibes,#paramounthotel,#celebrating,#narsissist,#below14th
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 15:52:00
@@ -1160,7 +1169,7 @@ date : 2015-09-17
 |Rayon de l'event : 1427.41
 |Nombre de twittos : 6
 |Nombre de tweets : 6
-|Hashtags importants : #,n, ,y,e,f,",a,s,d
+|Hashtags importants : #nyc,#nyfw,#dkny,#mdj,#fashion,#macys,#fashionfriends,#fashiongps,#fashionweek,#streetstyle
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 15:46:00
@@ -1169,7 +1178,7 @@ date : 2015-09-17
 |Rayon de l'event : 1232.36
 |Nombre de twittos : 5
 |Nombre de tweets : 5
-|Hashtags importants : ",#,j,o,b,e,a, ,s,n
+|Hashtags importants : #job,#veterans,#marketing,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 11:59:00
@@ -1178,7 +1187,7 @@ date : 2015-09-17
 |Rayon de l'event : 2633.05
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #, ,n,t,y,e,s,a,",f
+|Hashtags importants : #tbt,#nyfw,#nyc,#throwbackthursday,#ss16,#menswear,#nyfwss16,#ootd,#mensfashion,#nyfw15
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 23:36:00
@@ -1187,7 +1196,7 @@ date : 2015-09-17
 |Rayon de l'event : 2203.18
 |Nombre de twittos : 3
 |Nombre de tweets : 4
-|Hashtags importants : #, ,n,o,y,a,t,e,l,"
+|Hashtags importants : #nyc,#nyfw,#instagood,#city,#love,#brooklyn,#gl,#fashionblogger,#onthetable,#katespade
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 12:01:00
@@ -1196,7 +1205,7 @@ date : 2015-09-17
 |Rayon de l'event : 10025.0
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,i, ,",n,r,h,o,s,e
+|Hashtags importants : #hiring,#job,#newyorkus,#internship,#sales
 |
 ********************************************************************************
 ->Temps median : 2015-09-17 12:06:00
@@ -1205,11 +1214,11 @@ date : 2015-09-17
 |Rayon de l'event : 8714.67
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,e,n, ,s,",b,o,j,g
+|Hashtags importants : #job,#veterans,#sales,#engineering,#nettempsjobs,#queens,#bronx,#flushing
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 2.17199993134s
+Elapsed time : 2.25900006294s
 ----------------------------------------
 
 
@@ -1223,7 +1232,7 @@ date : 2015-09-18
 |Rayon de l'event : 392996.92
 |Nombre de twittos : 54
 |Nombre de tweets : 110
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #job,#hiring,#newyork,#careerarc,#jobs,#sales,#internship,#retail,#marketing,#jerseycity
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 15:17:00
@@ -1232,7 +1241,7 @@ date : 2015-09-18
 |Rayon de l'event : 9651.18
 |Nombre de twittos : 19
 |Nombre de tweets : 34
-|Hashtags importants : #,e, ,n,a,o,t,r,",c
+|Hashtags importants : #nyc,#plazahotel,#korea,#5thavenue,#koreamicenight,#wtc,#koreatourism,#newyorkcity,#neverforget,#freedomtower
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 15:18:00
@@ -1241,7 +1250,7 @@ date : 2015-09-18
 |Rayon de l'event : 47383.3
 |Nombre de twittos : 14
 |Nombre de tweets : 21
-|Hashtags importants : #,r, ,e,i,a,o,n,c,"
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#newyork,#retail,#veterans,#hospitality,#art,#brooklyn
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 20:30:00
@@ -1250,7 +1259,7 @@ date : 2015-09-18
 |Rayon de l'event : 15011.96
 |Nombre de twittos : 19
 |Nombre de tweets : 19
-|Hashtags importants : #,n, ,e,c,a,o,i,",y
+|Hashtags importants : #nyc,#adventuring,#acaibowl,#nyse,#rockefellercenter,#manhattan,#bernie2016,#flashbackfriday,#chrisandv,#sangennaro
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 17:13:00
@@ -1259,7 +1268,7 @@ date : 2015-09-18
 |Rayon de l'event : 95486.35
 |Nombre de twittos : 15
 |Nombre de tweets : 16
-|Hashtags importants : e,#, ,r,a,n,o,i,",s
+|Hashtags importants : #newyork,#2015,#timessquare,#fireworks,#vacation,#flatirondistrict,#thecityofgods,#greatsouthbay,#realestate,#vacay
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 15:14:00
@@ -1268,7 +1277,7 @@ date : 2015-09-18
 |Rayon de l'event : 349976.17
 |Nombre de twittos : 12
 |Nombre de tweets : 14
-|Hashtags importants : #,i, ,n,r,",o,h,g,b
+|Hashtags importants : #hiring,#job,#marketing,#rochester,#bronx,#healthcare,#jerseycity,#retail,#newyorkcity,#businessmgmt
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 10:13:00
@@ -1277,7 +1286,7 @@ date : 2015-09-18
 |Rayon de l'event : 4598.94
 |Nombre de twittos : 12
 |Nombre de tweets : 12
-|Hashtags importants : #, ,e,n,r,a,c,t,",y
+|Hashtags importants : #nyc,#newyorkcity,#classic,#rocketpengwin,#best,#art,#jiujitsu,#ace,#nyfw,#concert
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 10:25:00
@@ -1286,7 +1295,7 @@ date : 2015-09-18
 |Rayon de l'event : 360221.05
 |Nombre de twittos : 8
 |Nombre de tweets : 8
-|Hashtags importants : #,",o, ,e,b,s,j,r,i
+|Hashtags importants : #job,#brooklyn,#flushing,#veterans,#albany,#sales,#jerseycity,#customerservice,#newyorkcity,#rochester
 |
 ********************************************************************************
 ->Temps median : 2015-09-18 20:33:00
@@ -1295,11 +1304,11 @@ date : 2015-09-18
 |Rayon de l'event : 6655.14
 |Nombre de twittos : 5
 |Nombre de tweets : 5
-|Hashtags importants : #,n, ,y,e,o,r,i,c,g
+|Hashtags importants : #nyc,#newyork,#newyorkcity,#washingtonheights,#cigar,#unitedstates,#vogueparis,#newyorkstockexchange,#ny,#usa
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 1.3220000267s
+Elapsed time : 1.40500020981s
 ----------------------------------------
 
 
@@ -1313,7 +1322,7 @@ date : 2015-09-19
 |Rayon de l'event : 386437.04
 |Nombre de twittos : 43
 |Nombre de tweets : 71
-|Hashtags importants : #,r, ,e,i,o,a,n,",c
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#newyork,#marketing,#sales,#retail,#it,#internship
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 14:12:00
@@ -1322,7 +1331,7 @@ date : 2015-09-19
 |Rayon de l'event : 61483.05
 |Nombre de twittos : 25
 |Nombre de tweets : 26
-|Hashtags importants : #,e, ,n,y,",a,o,t,r
+|Hashtags importants : #nyc,#nyfw,#newyorkcity,#topoftherock,#bayplaza,#nofilter,#samanthaisms,#natives,#jmljournal,#lunch
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 20:31:00
@@ -1331,7 +1340,7 @@ date : 2015-09-19
 |Rayon de l'event : 7124.33
 |Nombre de twittos : 16
 |Nombre de tweets : 17
-|Hashtags importants : #,e, ,n,a,r,t,y,",o
+|Hashtags importants : #nyc,#brooklyn,#manhattan,#rebelheartour,#littleitaly,#madonna,#barclayscenter,#mylife,#myboyfriend,#japanese
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 04:45:00
@@ -1340,7 +1349,7 @@ date : 2015-09-19
 |Rayon de l'event : 11194.45
 |Nombre de twittos : 11
 |Nombre de tweets : 15
-|Hashtags importants : #, ,e,a,r,n,t,c,i,s
+|Hashtags importants : #nyc,#art,#fridaynight,#lavonyc,#drawing,#cedricgervais,#charcoal,#summertimesadness,#crowd,#gopro
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 14:16:00
@@ -1349,7 +1358,7 @@ date : 2015-09-19
 |Rayon de l'event : 6341.29
 |Nombre de twittos : 6
 |Nombre de tweets : 9
-|Hashtags importants : #,n, ,o,r,e,a,i,t,l
+|Hashtags importants : #newyork,#sculpture,#midtown,#adrianvillarrojas,#gallery,#mariangoodman,#stone,#maspeth,#exhibition,#sale
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 05:26:00
@@ -1358,7 +1367,7 @@ date : 2015-09-19
 |Rayon de l'event : 9507.83
 |Nombre de twittos : 6
 |Nombre de tweets : 6
-|Hashtags importants : #,e,o, ,r,n,",a,y,m
+|Hashtags importants : #newyork,#mydubai,#travelblogger,#urban,#le21eme,#travels,#followme,#streetphotography,#uaeblogger,#nightlife
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 20:27:00
@@ -1367,7 +1376,7 @@ date : 2015-09-19
 |Rayon de l'event : 19765.37
 |Nombre de twittos : 5
 |Nombre de tweets : 6
-|Hashtags importants : #, ,e,r,a,o,i,n,k,t
+|Hashtags importants : #newyork,#farms,#fishkill,#livemusic,#saturday,#beach,#manhattan,#picture,#usa,#fidi
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 04:41:00
@@ -1376,7 +1385,7 @@ date : 2015-09-19
 |Rayon de l'event : 171794.57
 |Nombre de twittos : 5
 |Nombre de tweets : 5
-|Hashtags importants : #,i, ,e,",n,r,g,o,a
+|Hashtags importants : #job,#hiring,#retail,#education,#greenjobs,#virtualnjcity,#copenhagen,#edgewater,#bayside
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 04:41:00
@@ -1385,7 +1394,7 @@ date : 2015-09-19
 |Rayon de l'event : 168244.21
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,o,s,e,n, ,",a,i,b
+|Hashtags importants : #job,#sales,#greenjobs,#copenhagenmunicipality,#freshmeadows,#transportation,#longislandcity,#novozymes
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 14:15:00
@@ -1394,7 +1403,7 @@ date : 2015-09-19
 |Rayon de l'event : 45226.71
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,i, ,n,",r,g,h,s,b
+|Hashtags importants : #job,#hiring,#veterans,#businessmgmt,#internship,#warren,#it,#flushing
 |
 ********************************************************************************
 ->Temps median : 2015-09-19 20:24:00
@@ -1403,11 +1412,11 @@ date : 2015-09-19
 |Rayon de l'event : 11550.67
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #, ,r,i,n,b,o,",a,e
+|Hashtags importants : #job,#hiring,#veterans,#supplychain,#work4bobs,#clerical,#bronx,#paramus,#northbergen
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 1.64200019836s
+Elapsed time : 1.51200008392s
 ----------------------------------------
 
 
@@ -1421,7 +1430,7 @@ date : 2015-09-20
 |Rayon de l'event : 394641.96
 |Nombre de twittos : 51
 |Nombre de tweets : 151
-|Hashtags importants : #,r, ,e,i,o,a,n,",c
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#sales,#retail,#internship,#it,#hospitality
 |
 ********************************************************************************
 ->Temps median : 2015-09-20 15:33:00
@@ -1430,7 +1439,7 @@ date : 2015-09-20
 |Rayon de l'event : 22976.26
 |Nombre de twittos : 33
 |Nombre de tweets : 33
-|Hashtags importants : #,n, ,e,",r,y,c,i,a
+|Hashtags importants : #nyc,#newyork,#centralpark,#brooklyn,#queens,#friends,#girls,#thecity,#itstimetosaygoodbye,#manhattan
 |
 ********************************************************************************
 ->Temps median : 2015-09-20 08:44:00
@@ -1439,7 +1448,7 @@ date : 2015-09-20
 |Rayon de l'event : 356705.63
 |Nombre de twittos : 13
 |Nombre de tweets : 15
-|Hashtags importants : #,i, ,r,",o,n,e,h,b
+|Hashtags importants : #hiring,#job,#healthcare,#jerseycity,#retail,#albany,#rochester,#veterans,#brooklyn,#northsalem
 |
 ********************************************************************************
 ->Temps median : 2015-09-20 08:37:00
@@ -1448,7 +1457,7 @@ date : 2015-09-20
 |Rayon de l'event : 478719.48
 |Nombre de twittos : 15
 |Nombre de tweets : 15
-|Hashtags importants : #,e, ,o,n,",r,t,a,i
+|Hashtags importants : #newyork,#manhattan,#loveit,#agriculture,#statueofliberty,#soho,#doctor,#chinatown,#beautiful,#happy
 |
 ********************************************************************************
 ->Temps median : 2015-09-20 21:04:00
@@ -1457,7 +1466,7 @@ date : 2015-09-20
 |Rayon de l'event : 13860.46
 |Nombre de twittos : 12
 |Nombre de tweets : 12
-|Hashtags importants : #,e, ,n,a,y,o,s,i,"
+|Hashtags importants : #nyc,#newyork,#priceless,#models,#sangennaro,#iphone,#53pencil,#newyorkcity,#urban,#gay
 |
 ********************************************************************************
 ->Temps median : 2015-09-20 15:36:00
@@ -1466,7 +1475,7 @@ date : 2015-09-20
 |Rayon de l'event : 297876.77
 |Nombre de twittos : 8
 |Nombre de tweets : 8
-|Hashtags importants : #, ,o,s,b,e,r,i,j,"
+|Hashtags importants : #jobs,#job,#nursing,#brooklyn,#sales,#rochester,#hiring,#veterans,#woodbridge,#internship
 |
 ********************************************************************************
 ->Temps median : 2015-09-20 08:41:00
@@ -1475,11 +1484,11 @@ date : 2015-09-20
 |Rayon de l'event : 161552.34
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,o,",a,e, ,n,r,b,i
+|Hashtags importants : #job,#greenjobs,#copenhagenmunicipality,#sales,#transportation,#retail,#regopark
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 1.88599991798s
+Elapsed time : 1.97999978065s
 ----------------------------------------
 
 
@@ -1493,7 +1502,7 @@ date : 2015-09-21
 |Rayon de l'event : 399925.52
 |Nombre de twittos : 40
 |Nombre de tweets : 99
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#marketing,#internship,#retail,#brooklyn,#it
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 09:15:00
@@ -1502,7 +1511,7 @@ date : 2015-09-21
 |Rayon de l'event : 394146.0
 |Nombre de twittos : 17
 |Nombre de tweets : 25
-|Hashtags importants : #,r, ,e,i,a,o,n,b,s
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#veterans,#hospitality,#brooklyn,#newyork,#it,#bronx
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 09:24:00
@@ -1511,7 +1520,7 @@ date : 2015-09-21
 |Rayon de l'event : 8844.5
 |Nombre de twittos : 21
 |Nombre de tweets : 22
-|Hashtags importants : #, ,e,n,t,a,o,r,i,y
+|Hashtags importants : #nyc,#newyork,#centralpark,#photo,#photooftheday,#secretproject,#artistunited,#nycmornings,#mahattan,#daddyyankee
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 17:26:00
@@ -1520,7 +1529,7 @@ date : 2015-09-21
 |Rayon de l'event : 388646.02
 |Nombre de twittos : 15
 |Nombre de tweets : 16
-|Hashtags importants : #,i, ,e,r,n,",s,o,t
+|Hashtags importants : #job,#hiring,#veterans,#jerseycity,#retail,#newyorkcity,#businessmgmt,#sales,#littleneck,#milspouse
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 17:32:00
@@ -1529,7 +1538,7 @@ date : 2015-09-21
 |Rayon de l'event : 11175.41
 |Nombre de twittos : 14
 |Nombre de tweets : 16
-|Hashtags importants : #, ,e,n,a,c,l,i,s,t
+|Hashtags importants : #nyc,#manhattan,#sangennaro,#littleitaly,#brooklyn,#hotelchelsea,#chelseahotel,#september,#christmas,#chelsea
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 09:29:00
@@ -1538,7 +1547,7 @@ date : 2015-09-21
 |Rayon de l'event : 76635.92
 |Nombre de twittos : 7
 |Nombre de tweets : 8
-|Hashtags importants : #,",o,a,n, ,b,l,t,i
+|Hashtags importants : #job,#albany,#education,#elmhurst,#brooklyn,#transportation,#virtualnycity,#skillman,#longislandcity,#pharmaceutical
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 17:33:00
@@ -1547,7 +1556,7 @@ date : 2015-09-21
 |Rayon de l'event : 9508.56
 |Nombre de twittos : 5
 |Nombre de tweets : 6
-|Hashtags importants : #,e,r, ,",o,n,i,k,y
+|Hashtags importants : #newyork,#rayspizza,#graphicdesign,#brooklyn,#manhattan,#model,#luke,#citibike,#timessquare,#september
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 09:24:00
@@ -1556,7 +1565,7 @@ date : 2015-09-21
 |Rayon de l'event : 6729.31
 |Nombre de twittos : 5
 |Nombre de tweets : 5
-|Hashtags importants : #,o,n,e,r, ,t,a,",i
+|Hashtags importants : #newyork,#night,#astoria,#centralparkpolaroids,#aboutlastnight,#neighbourhood,#ootd,#nightout,#fashionweek,#queens
 |
 ********************************************************************************
 ->Temps median : 2015-09-21 23:58:00
@@ -1565,11 +1574,11 @@ date : 2015-09-21
 |Rayon de l'event : 3625.69
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,n, ,e,a,o,c,",i,l
+|Hashtags importants : #nyc,#coneyisland,#beach,#brooklyn,#gingertea,#businessbrunch,#lol,#why,#iphonegraphy,#oatmealcookie
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 1.21499991417s
+Elapsed time : 1.27099990845s
 ----------------------------------------
 
 
@@ -1583,7 +1592,7 @@ date : 2015-09-22
 |Rayon de l'event : 4883.48
 |Nombre de twittos : 22
 |Nombre de tweets : 30
-|Hashtags importants : #, ,r,o,e,i,n,",a,b
+|Hashtags importants : #newyork,#job,#hiring,#jobs,#careerarc,#finance,#retail,#it,#businessmgmt,#marketing
 |
 ********************************************************************************
 ->Temps median : 2015-09-22 14:50:00
@@ -1592,7 +1601,7 @@ date : 2015-09-22
 |Rayon de l'event : 388462.81
 |Nombre de twittos : 21
 |Nombre de tweets : 27
-|Hashtags importants : #,r, ,i,e,n,o,a,",b
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#brooklyn,#nursing,#veterans,#hospitality,#internship,#jerseycity
 |
 ********************************************************************************
 ->Temps median : 2015-09-22 22:50:00
@@ -1601,7 +1610,7 @@ date : 2015-09-22
 |Rayon de l'event : 5547.82
 |Nombre de twittos : 17
 |Nombre de tweets : 17
-|Hashtags importants : #,n, ,c,e,i,a,t,",y
+|Hashtags importants : #nyc,#redvelvet,#internationalsounds,#gridlock,#vacation,#construction,#manhattan,#unitednations,#club,#city
 |
 ********************************************************************************
 ->Temps median : 2015-09-22 00:07:00
@@ -1610,7 +1619,7 @@ date : 2015-09-22
 |Rayon de l'event : 7827.4
 |Nombre de twittos : 11
 |Nombre de tweets : 13
-|Hashtags importants : #, ,e,o,c,n,a,r,l,t
+|Hashtags importants : #nyc,#travelingchef,#brooklyn,#frenchcuisine,#cheflife,#macarons,#noblet,#classic,#manhattan,#icecream
 |
 ********************************************************************************
 ->Temps median : 2015-09-22 14:49:00
@@ -1619,7 +1628,7 @@ date : 2015-09-22
 |Rayon de l'event : 6199.2
 |Nombre de twittos : 9
 |Nombre de tweets : 9
-|Hashtags importants : #, ,e,o,a,n,r,c,i,"
+|Hashtags importants : #nyc,#lunch,#trumptower,#roomservice,#thebeatles,#johnlennon,#worldtrade,#trump,#publicdisplayofyoga,#brooklyn
 |
 ********************************************************************************
 ->Temps median : 2015-09-22 00:14:00
@@ -1628,7 +1637,7 @@ date : 2015-09-22
 |Rayon de l'event : 2156.2
 |Nombre de twittos : 3
 |Nombre de tweets : 4
-|Hashtags importants : n,r,o,#,e, ,a,y,i,s
+|Hashtags importants : #newyork,#ascap,#williamsburg,#365daysofilovenyc,#mccarrenpark,#vintage,#brooklynnewyork
 |
 ********************************************************************************
 ->Temps median : 2015-09-22 14:59:00
@@ -1637,11 +1646,11 @@ date : 2015-09-22
 |Rayon de l'event : 3744.2
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #, ,n,e,o,c,y,r,i,h
+|Hashtags importants : #newyork,#nyc,#newyorkcity,#night,#nycstroll,#lunch,#soho,#traffic,#lights,#french
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.958000183105s
+Elapsed time : 0.869999885559s
 ----------------------------------------
 
 
@@ -1655,7 +1664,7 @@ date : 2015-09-23
 |Rayon de l'event : 374115.53
 |Nombre de twittos : 38
 |Nombre de tweets : 51
-|Hashtags importants : #,r, ,e,i,a,n,o,c,"
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#sales,#marketing,#veterans,#albany,#hospitality
 |
 ********************************************************************************
 ->Temps median : 2015-09-23 14:04:00
@@ -1664,7 +1673,7 @@ date : 2015-09-23
 |Rayon de l'event : 104361.55
 |Nombre de twittos : 13
 |Nombre de tweets : 13
-|Hashtags importants : #, ,i,n,r,o,e,",b,j
+|Hashtags importants : #hiring,#job,#jobs,#nursing,#jerseycity,#bronx,#mayslanding,#internship,#newyorkcity,#retail
 |
 ********************************************************************************
 ->Temps median : 2015-09-23 22:20:00
@@ -1673,7 +1682,7 @@ date : 2015-09-23
 |Rayon de l'event : 9709.27
 |Nombre de twittos : 6
 |Nombre de tweets : 8
-|Hashtags importants : n,#,a, ,e,i,r,o,t,l
+|Hashtags importants : #newyork,#nailpics,#manhattan,#colorgel,#nailstagtam,#nailson7,#deconstructingnyc,#nicenailsaintcheap,#nailed,#nailsart
 |
 ********************************************************************************
 ->Temps median : 2015-09-23 14:06:00
@@ -1682,7 +1691,7 @@ date : 2015-09-23
 |Rayon de l'event : 2838.3
 |Nombre de twittos : 7
 |Nombre de tweets : 7
-|Hashtags importants : #, ,e,n,o,a,i,r,y,l
+|Hashtags importants : #newyork,#nyc,#manhattan,#brooklyn,#babka,#90sec,#touring,#journalist,#newyorkcity,#ny
 |
 ********************************************************************************
 ->Temps median : 2015-09-23 14:01:00
@@ -1691,11 +1700,11 @@ date : 2015-09-23
 |Rayon de l'event : 39375.72
 |Nombre de twittos : 3
 |Nombre de tweets : 3
-|Hashtags importants : #,a, ,",e,c,n,i,j,o
+|Hashtags importants : #job,#veterans,#albany,#physician,#jerseycity,#healthcare,#accounting
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.695000171661s
+Elapsed time : 0.826999902725s
 ----------------------------------------
 
 
@@ -1709,7 +1718,7 @@ date : 2015-09-24
 |Rayon de l'event : 390758.65
 |Nombre de twittos : 40
 |Nombre de tweets : 62
-|Hashtags importants : #,r, ,e,i,a,o,n,c,"
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#sales,#marketing,#hospitality,#retail,#internship
 |
 ********************************************************************************
 ->Temps median : 2015-09-24 13:33:00
@@ -1718,7 +1727,7 @@ date : 2015-09-24
 |Rayon de l'event : 44321.26
 |Nombre de twittos : 8
 |Nombre de tweets : 8
-|Hashtags importants : #, ,i,n,o,r,",b,h,a
+|Hashtags importants : #hiring,#job,#jobs,#accounting,#madison,#queens,#jerseycity,#transportation,#retail,#art
 |
 ********************************************************************************
 ->Temps median : 2015-09-24 22:03:00
@@ -1727,11 +1736,11 @@ date : 2015-09-24
 |Rayon de l'event : 3059.79
 |Nombre de twittos : 3
 |Nombre de tweets : 4
-|Hashtags importants : #,n,e, ,i,r,y,c,o,"
+|Hashtags importants : #newyork,#nyc,#cycling,#nofilter,#skyscape,#empirestatebuilding,#manhattan,#noon,#wandering,#happiness
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.723000049591s
+Elapsed time : 0.655999898911s
 ----------------------------------------
 
 
@@ -1740,7 +1749,7 @@ date : 2015-09-25
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.260999917984s
+Elapsed time : 0.296000003815s
 ----------------------------------------
 
 
@@ -1749,7 +1758,7 @@ date : 2015-09-26
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.318000078201s
+Elapsed time : 0.280999898911s
 ----------------------------------------
 
 
@@ -1763,7 +1772,7 @@ date : 2015-09-27
 |Rayon de l'event : 7385.14
 |Nombre de twittos : 23
 |Nombre de tweets : 25
-|Hashtags importants : #,n, ,a,c,e,",t,y,r
+|Hashtags importants : #nyc,#centralpark,#manhattan,#newyork,#brunch,#cycling,#scranton,#opseididitagain,#citywalk,#chinatown
 |
 ********************************************************************************
 ->Temps median : 2015-09-27 20:21:00
@@ -1772,11 +1781,11 @@ date : 2015-09-27
 |Rayon de l'event : 9611.82
 |Nombre de twittos : 20
 |Nombre de tweets : 20
-|Hashtags importants : #, ,n,a,o,e,t,r,",y
+|Hashtags importants : #nyc,#manhattan,#nofilter,#art,#newyork,#brooklyn,#supermoon,#koreanbbq,#statueofliberty,#bulb
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.690999984741s
+Elapsed time : 0.635999917984s
 ----------------------------------------
 
 
@@ -1785,7 +1794,7 @@ date : 2015-09-28
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.306999921799s
+Elapsed time : 0.273999929428s
 ----------------------------------------
 
 
@@ -1794,7 +1803,7 @@ date : 2015-09-29
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.411999940872s
+Elapsed time : 0.328999996185s
 ----------------------------------------
 
 
@@ -1803,7 +1812,7 @@ date : 2015-09-30
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.521000146866s
+Elapsed time : 0.268000125885s
 ----------------------------------------
 
 
@@ -1817,7 +1826,7 @@ date : 2015-10-01
 |Rayon de l'event : 33813.92
 |Nombre de twittos : 8
 |Nombre de tweets : 24
-|Hashtags importants : #, ,n,o,l,e,i,a,y,w
+|Hashtags importants : #newyork,#brooklyn,#welive,#hiphop,#music,#flatbush,#invotaiononly,#legendary,#downfall,#newzz
 |
 ********************************************************************************
 ->Temps median : 2015-10-01 19:57:00
@@ -1826,7 +1835,7 @@ date : 2015-10-01
 |Rayon de l'event : 1770.16
 |Nombre de twittos : 7
 |Nombre de tweets : 8
-|Hashtags importants : #, ,i,r,y,e,n,o,a,c
+|Hashtags importants : #newyork,#nyc,#newyorkcity,#radiocitymusichall,#hiring,#job,#radiocity,#jobs,#usa,#nycatnight
 |
 ********************************************************************************
 ->Temps median : 2015-10-01 01:41:00
@@ -1835,11 +1844,11 @@ date : 2015-10-01
 |Rayon de l'event : 2150.22
 |Nombre de twittos : 5
 |Nombre de tweets : 8
-|Hashtags importants : #,e,n, ,t,r,y,i,o,a
+|Hashtags importants : #newyork,#nyc,#newyorkcity,#nycatnight,#timessquare,#newyorkatnight,#night,#vacation,#kistyle,#concert
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.516999959946s
+Elapsed time : 0.678999900818s
 ----------------------------------------
 
 
@@ -1848,7 +1857,7 @@ date : 2015-10-02
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.273999929428s
+Elapsed time : 0.424000024796s
 ----------------------------------------
 
 
@@ -1857,7 +1866,7 @@ date : 2015-10-03
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.355999946594s
+Elapsed time : 0.242000102997s
 ----------------------------------------
 
 
@@ -1866,7 +1875,7 @@ date : 2015-10-04
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.285000085831s
+Elapsed time : 0.276000022888s
 ----------------------------------------
 
 
@@ -1880,7 +1889,7 @@ date : 2015-10-05
 |Rayon de l'event : 12313.54
 |Nombre de twittos : 19
 |Nombre de tweets : 22
-|Hashtags importants : #, ,n,e,r,a,o,y,i,c
+|Hashtags importants : #nyc,#newyork,#manhattan,#nycprimeshot,#thebronx,#art,#newyorkcity,#riveravenue,#photowall,#lincolncenter
 |
 ********************************************************************************
 ->Temps median : 2015-10-05 00:19:00
@@ -1889,11 +1898,11 @@ date : 2015-10-05
 |Rayon de l'event : 3157.09
 |Nombre de twittos : 12
 |Nombre de tweets : 20
-|Hashtags importants : #, ,t,r,e,a,n,i,y,o
+|Hashtags importants : #nyc,#newyorkcity,#newyork,#art,#urbanart,#graffiti,#streetart,#nolita,#pasteup,#manhattan
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.628999948502s
+Elapsed time : 0.450000047684s
 ----------------------------------------
 
 
@@ -1902,7 +1911,7 @@ date : 2015-10-06
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.395999908447s
+Elapsed time : 0.306999921799s
 ----------------------------------------
 
 
@@ -1916,7 +1925,7 @@ date : 2015-10-07
 |Rayon de l'event : 384932.03
 |Nombre de twittos : 33
 |Nombre de tweets : 61
-|Hashtags importants : #,r, ,e,i,o,n,a,",c
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#retail,#internship,#veterans,#it,#hospitality
 |
 ********************************************************************************
 ->Temps median : 2015-10-07 16:18:00
@@ -1925,7 +1934,7 @@ date : 2015-10-07
 |Rayon de l'event : 273006.15
 |Nombre de twittos : 8
 |Nombre de tweets : 8
-|Hashtags importants : #, ,r,i,e,o,",n,h,s
+|Hashtags importants : #hiring,#job,#jobs,#customerservice,#rochester,#skilledtrade,#purchasing,#jerseycity,#retail,#cooper
 |
 ********************************************************************************
 ->Temps median : 2015-10-07 16:12:00
@@ -1934,7 +1943,7 @@ date : 2015-10-07
 |Rayon de l'event : 341636.72
 |Nombre de twittos : 6
 |Nombre de tweets : 7
-|Hashtags importants : #,",e,o, ,b,a,j,r,h
+|Hashtags importants : #job,#healthcare,#brooklyn,#fortlee,#jobs,#sales,#internship,#warren
 |
 ********************************************************************************
 ->Temps median : 2015-10-07 16:24:00
@@ -1943,11 +1952,11 @@ date : 2015-10-07
 |Rayon de l'event : 3869.55
 |Nombre de twittos : 7
 |Nombre de tweets : 7
-|Hashtags importants : #,a, ,e,n,t,i,r,y,l
+|Hashtags importants : #newyork,#nyc,#instagram,#picoftheday,#ny,#likes4likes,#instaday,#tagsforlikes,#latte,#lafattifatti
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.697000026703s
+Elapsed time : 0.775000095367s
 ----------------------------------------
 
 
@@ -1961,7 +1970,7 @@ date : 2015-10-08
 |Rayon de l'event : 395973.59
 |Nombre de twittos : 38
 |Nombre de tweets : 45
-|Hashtags importants : #, ,r,i,e,o,a,n,",b
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#retail,#sales,#veterans,#education,#jerseycity
 |
 ********************************************************************************
 ->Temps median : 2015-10-08 12:31:00
@@ -1970,11 +1979,11 @@ date : 2015-10-08
 |Rayon de l'event : 43737.8
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,o,a, ,t,",e,i,r,b
+|Hashtags importants : #job,#veterans,#pilotjobs,#jobs,#hospitality,#aerospace,#parttime,#laguardia,#newyork,#finance
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.671000003815s
+Elapsed time : 0.55999994278s
 ----------------------------------------
 
 
@@ -1988,11 +1997,11 @@ date : 2015-10-09
 |Rayon de l'event : 398869.93
 |Nombre de twittos : 36
 |Nombre de tweets : 53
-|Hashtags importants : #,r, ,e,i,a,o,n,",c
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#newyork,#retail,#veterans,#hospitality,#brooklyn,#albany
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.503000020981s
+Elapsed time : 0.825999975204s
 ----------------------------------------
 
 
@@ -2001,7 +2010,7 @@ date : 2015-10-10
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.322000026703s
+Elapsed time : 0.546000003815s
 ----------------------------------------
 
 
@@ -2010,7 +2019,7 @@ date : 2015-10-11
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.40299987793s
+Elapsed time : 0.37700009346s
 ----------------------------------------
 
 
@@ -2019,7 +2028,7 @@ date : 2015-10-12
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.291000127792s
+Elapsed time : 0.486000061035s
 ----------------------------------------
 
 
@@ -2028,7 +2037,7 @@ date : 2015-10-13
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.405999898911s
+Elapsed time : 0.450999975204s
 ----------------------------------------
 
 
@@ -2042,7 +2051,7 @@ date : 2015-10-14
 |Rayon de l'event : 398352.51
 |Nombre de twittos : 42
 |Nombre de tweets : 51
-|Hashtags importants : #, ,r,e,i,a,o,n,",c
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#veterans,#hospitality,#sales,#retail,#it
 |
 ********************************************************************************
 ->Temps median : 2015-10-14 14:21:00
@@ -2051,11 +2060,11 @@ date : 2015-10-14
 |Rayon de l'event : 4204.55
 |Nombre de twittos : 5
 |Nombre de tweets : 5
-|Hashtags importants : o,#,", ,e,b,j,l,n,w
+|Hashtags importants : #job,#newyork,#engelwood,#retail,#holiday
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.542999982834s
+Elapsed time : 0.647000074387s
 ----------------------------------------
 
 
@@ -2064,7 +2073,7 @@ date : 2015-10-15
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.266000032425s
+Elapsed time : 0.454999923706s
 ----------------------------------------
 
 
@@ -2073,7 +2082,7 @@ date : 2015-10-16
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.268000125885s
+Elapsed time : 0.380000114441s
 ----------------------------------------
 
 
@@ -2082,7 +2091,7 @@ date : 2015-10-17
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.286000013351s
+Elapsed time : 0.354999780655s
 ----------------------------------------
 
 
@@ -2091,7 +2100,7 @@ date : 2015-10-18
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.287000179291s
+Elapsed time : 0.352999925613s
 ----------------------------------------
 
 
@@ -2105,7 +2114,7 @@ date : 2015-10-19
 |Rayon de l'event : 386429.78
 |Nombre de twittos : 44
 |Nombre de tweets : 51
-|Hashtags importants : #, ,r,i,e,o,n,a,",b
+|Hashtags importants : #hiring,#job,#jobs,#careerarc,#newyork,#veterans,#jerseycity,#retail,#healthcare,#it
 |
 ********************************************************************************
 ->Temps median : 2015-10-19 15:16:00
@@ -2114,11 +2123,11 @@ date : 2015-10-19
 |Rayon de l'event : 47148.51
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,e, ,a,",n,t,b,o,i
+|Hashtags importants : #job,#teaneck,#veterans,#albany,#hospitality,#parttime,#rhlegaljobs,#clerical,#newyork,#businessmgmt
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.710000038147s
+Elapsed time : 0.676999807358s
 ----------------------------------------
 
 
@@ -2132,11 +2141,11 @@ date : 2015-10-20
 |Rayon de l'event : 390987.24
 |Nombre de twittos : 40
 |Nombre de tweets : 49
-|Hashtags importants : #, ,r,e,o,i,a,n,",b
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#hospitality,#veterans,#jerseycity,#retail,#sales
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.655999898911s
+Elapsed time : 0.512000083923s
 ----------------------------------------
 
 
@@ -2145,7 +2154,7 @@ date : 2015-10-21
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.286000013351s
+Elapsed time : 0.342000007629s
 ----------------------------------------
 
 
@@ -2154,7 +2163,7 @@ date : 2015-10-22
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.526000022888s
+Elapsed time : 0.316999912262s
 ----------------------------------------
 
 
@@ -2168,11 +2177,11 @@ date : 2015-10-23
 |Rayon de l'event : 384613.59
 |Nombre de twittos : 34
 |Nombre de tweets : 41
-|Hashtags importants : #,r, ,i,e,o,n,a,",c
+|Hashtags importants : #job,#hiring,#careerarc,#newyork,#jobs,#it,#retail,#jerseycity,#sales,#businessmgmt
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.640000104904s
+Elapsed time : 0.467000007629s
 ----------------------------------------
 
 
@@ -2181,7 +2190,7 @@ date : 2015-10-24
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.278000116348s
+Elapsed time : 0.291999816895s
 ----------------------------------------
 
 
@@ -2190,7 +2199,7 @@ date : 2015-10-25
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.375s
+Elapsed time : 0.27999997139s
 ----------------------------------------
 
 
@@ -2199,7 +2208,7 @@ date : 2015-10-26date : 2015-10-27
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.383000135422s
+Elapsed time : 0.349999904633s
 ----------------------------------------
 
 
@@ -2208,7 +2217,7 @@ date : 2015-10-28
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.292999982834s
+Elapsed time : 0.358000040054s
 ----------------------------------------
 
 
@@ -2222,11 +2231,11 @@ date : 2015-10-29
 |Rayon de l'event : 56758.54
 |Nombre de twittos : 31
 |Nombre de tweets : 41
-|Hashtags importants : #, ,r,i,e,o,n,a,",b
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#newyork,#retail,#hospitality,#sales,#customerservice,#veterans
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.667000055313s
+Elapsed time : 0.641000032425s
 ----------------------------------------
 
 
@@ -2240,7 +2249,7 @@ date : 2015-10-30
 |Rayon de l'event : 384259.55
 |Nombre de twittos : 28
 |Nombre de tweets : 41
-|Hashtags importants : #,r, ,e,i,o,a,n,",c
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#retail,#jerseycity,#marketing,#it,#veterans
 |
 ********************************************************************************
 ->Temps median : 2015-10-30 12:20:00
@@ -2249,11 +2258,11 @@ date : 2015-10-30
 |Rayon de l'event : 120951.38
 |Nombre de twittos : 3
 |Nombre de tweets : 4
-|Hashtags importants : #,o, ,n,",e,a,b,j,s
+|Hashtags importants : #job,#newyork,#accounting,#veterans,#jobs,#sales,#intel,#potsdam
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.596999883652s
+Elapsed time : 0.654000043869s
 ----------------------------------------
 
 
@@ -2262,7 +2271,7 @@ date : 2015-10-31
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.267999887466s
+Elapsed time : 0.248000144958s
 ----------------------------------------
 
 
@@ -2271,7 +2280,7 @@ date : 2015-11-01
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.281999826431s
+Elapsed time : 0.349999904633s
 ----------------------------------------
 
 
@@ -2280,7 +2289,7 @@ date : 2015-11-02
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.305999994278s
+Elapsed time : 0.359999895096s
 ----------------------------------------
 
 
@@ -2289,7 +2298,7 @@ date : 2015-11-03
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.300999879837s
+Elapsed time : 0.293999910355s
 ----------------------------------------
 
 
@@ -2303,11 +2312,11 @@ date : 2015-11-04date : 2015-11-05
 |Rayon de l'event : 394545.93
 |Nombre de twittos : 25
 |Nombre de tweets : 35
-|Hashtags importants : #,r, ,e,i,a,o,n,",c
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#retail,#veterans,#it,#hospitality,#sales
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.473999977112s
+Elapsed time : 0.664999961853s
 ----------------------------------------
 
 
@@ -2316,7 +2325,7 @@ date : 2015-11-06
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.302000045776s
+Elapsed time : 0.451000213623s
 ----------------------------------------
 
 
@@ -2325,7 +2334,7 @@ date : 2015-11-07
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.352999925613s
+Elapsed time : 0.44100022316s
 ----------------------------------------
 
 
@@ -2339,7 +2348,7 @@ date : 2015-11-08date : 2015-11-09
 |Rayon de l'event : 573763.72
 |Nombre de twittos : 38
 |Nombre de tweets : 46
-|Hashtags importants : #,r, ,e,i,o,n,a,",s
+|Hashtags importants : #hiring,#job,#careerarc,#jobs,#newyork,#veterans,#sales,#hospitality,#it,#healthcare
 |
 ********************************************************************************
 ->Temps median : 2015-11-09 10:58:00
@@ -2348,11 +2357,11 @@ date : 2015-11-08date : 2015-11-09
 |Rayon de l'event : 34556.91
 |Nombre de twittos : 4
 |Nombre de tweets : 4
-|Hashtags importants : #,o, ,a,",c,b,e,j,l
+|Hashtags importants : #job,#education,#albany,#jobs,#douglaston,#care,#socairo,#healthcare,#newyork,#clerical
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.540999889374s
+Elapsed time : 0.618000030518s
 ----------------------------------------
 
 
@@ -2361,7 +2370,7 @@ date : 2015-11-10
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.350999832153s
+Elapsed time : 0.286000013351s
 ----------------------------------------
 
 
@@ -2370,7 +2379,7 @@ date : 2015-11-11
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.386000156403s
+Elapsed time : 0.335999965668s
 ----------------------------------------
 
 
@@ -2384,11 +2393,11 @@ date : 2015-11-12date : 2015-11-13
 |Rayon de l'event : 363788.39
 |Nombre de twittos : 32
 |Nombre de tweets : 44
-|Hashtags importants : #, ,r,e,i,o,n,a,",b
+|Hashtags importants : #job,#hiring,#newyork,#jobs,#careerarc,#retail,#hospitality,#veterans,#sales,#it
 |
 ********************************************************************************
 ----------------------------------------
-Elapsed time : 0.641999959946s
+Elapsed time : 0.487999916077s
 ----------------------------------------
 
 
@@ -2397,7 +2406,7 @@ date : 2015-11-14
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.34500002861s
+Elapsed time : 0.40700006485s
 ----------------------------------------
 
 
@@ -2406,7 +2415,7 @@ date : 2015-11-15
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.393000125885s
+Elapsed time : 0.394999980927s
 ----------------------------------------
 
 
@@ -2415,7 +2424,7 @@ date : 2015-11-16
 0 Event detected : 
 ----------------------------------------
 ----------------------------------------
-Elapsed time : 0.366999864578s
+Elapsed time : 0.273000001907s
 ----------------------------------------
 
 
