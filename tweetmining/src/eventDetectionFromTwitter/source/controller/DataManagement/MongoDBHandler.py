@@ -1,3 +1,5 @@
+# module de configuration pour l'acces et la persistance de nos tuples dans MongoDB
+
 import os
 
 from datetime import datetime

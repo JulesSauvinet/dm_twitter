@@ -1,3 +1,5 @@
+# module de fonction utile pour la conversion de format des tuples
+
 import json
 from ...model.Tweet import Tweet
 from ...model.Position import Position
