@@ -28,14 +28,14 @@ class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Event detection
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getEvents(self, date, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False,elasticity=False):
+    def getEvents(self, date, minimalTermPerTweet=5, minimalTermPerTweetElasticity=5,remove_noise_with_poisson_Law=False,elasticity=False):
         """
         get the list of important events
         """
 
         print "Detecting events ..."
 
-        realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,
+        realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
                                         remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=False)
         events = []
         if realClusters is not None:
@@ -122,7 +122,7 @@ class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Clustering and Similarity matrix construction
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getClusters(self, date ,minimalTermPerTweet=5, remove_noise_with_poisson_Law=False,elasticity=False):
+    def getClusters(self, date ,minimalTermPerTweet=5, minimalTermPerTweetElasticity=5, remove_noise_with_poisson_Law=False,elasticity=False):
         """
         This method use ModularityOptimizer.jar
         """
@@ -132,8 +132,8 @@ class OptimisedEventDetectorMEDBased:
 
         # Creating the input file
         print "\tBuilding similarity matrix ..."
-        self.build(minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,
-                   similarityFilePath=weightsFilePath,elasticity=False)
+        self.build(minimalTermPerTweet=minimalTermPerTweet, minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
+				   remove_noise_with_poisson_Law=remove_noise_with_poisson_Law, similarityFilePath=weightsFilePath,elasticity=False)
 
         # Creating the output file (command execution)
         print "\tClustering ..."
@@ -150,7 +150,7 @@ class OptimisedEventDetectorMEDBased:
                 return np.array(realClusters)
         return np.array(realClusters)
 
-    def build(self, minimalTermPerTweet=5, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt",elasticity=False):
+    def build(self, minimalTermPerTweet=5, minimalTermPerTweetElasticity=5, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt",elasticity=False):
         """
         Return an upper sparse triangular matrix of similarity j>i
         """
@@ -271,7 +271,7 @@ class OptimisedEventDetectorMEDBased:
                 if (numberOfTweetOfThisTerm < minimalTermPerTweet):
 					termToDelete = True
             else :
-				if (numberOfTweetOfThisTerm < minimalTermPerTweet*numberOfTweets):
+				if ((numberOfTweetOfThisTerm < minimalTermPerTweet*numberOfTweets) or (numberOfTweetOfThisTerm < minimalTermPerTweetElasticity)):
 					termToDelete = True			
 
             # Eliminate terms that have poisson distribution in space

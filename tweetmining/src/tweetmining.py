@@ -7,7 +7,9 @@ from eventDetectionFromTwitter.source.controller.DataManagement.MongoDBHandler i
 from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDetectorMEDBased import \
     OptimisedEventDetectorMEDBased
 
+MIN_TERM_OCCURENCE_E=0.35
 MIN_TERM_OCCURENCE=40
+ELASTICITY=False
 REMOVE_NOISE_WITH_POISSON_LAW=False
 
 TIME_RESOLUTION=1800
@@ -33,7 +35,7 @@ def getTweetsFromCSVRepositoryAndSave(repositoryPath="C:\\Users\\Marine\\dm_twit
 firstdate = "2015-07-21"
 #firstdate = "2015-09-16"
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True,date="2015-07-21",elasticity=False) :
+def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True,date="2015-07-21",elasticity=ELASTICITY) :
 
     #getTweetsFromCSVRepositoryAndSave("C:\\Users\\jules\\Documents\\documents\M2\\datamining\\datas\\tweets\\smallTweets3.csv")
     getTweetsFromCSVRepositoryAndSave("C:\\Users\\Marine\\dm_twitter\\tweetmining\\data\\smallTweets3.csv")
@@ -58,8 +60,8 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
                                                                distanceResolution=DISTANCE_RESOLUTION, scaleNumber=SCALE_NUMBER,
                                                                minSimilarity=MIN_SIMILARITY)
 
-                events = eventDetector.getEvents(datestring, minimalTermPerTweet=minimalTermPerTweet,
-                                                 remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=False)
+                events = eventDetector.getEvents(datestring, minimalTermPerTweet=minimalTermPerTweet,minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
+                                                 remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=ELASTICITY)
 
                 print("")     
                 print("-" * 40)
@@ -93,4 +95,4 @@ def main(limit=3000,minimalTermPerTweet=MIN_TERM_OCCURENCE,remove_noise_with_poi
 #3000 tweets par jour environ sur sample
 
 #first date : "2015-07-21", last : date="2015-16-11" TODO mieux
-main(limit=NUMBER_OF_TWEETS, minimalTermPerTweet=MIN_TERM_OCCURENCE,date=firstdate,elasticity=False)
+main(limit=NUMBER_OF_TWEETS, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,date=firstdate,elasticity=ELASTICITY)

@@ -1,3 +1,9 @@
+# Comme on peut le deviner, une position est definie par une longitude et une latitude
+#
+# Dans ce module, en plus du constructeur, on trouve des méthodes pour calculer la distance entre deux positions
+# (distance euclidienne, distance de p-minkowski - généralisation de la distance euclidienne et distance de Manhattan, et une distance angulaire)
+#
+
 import math,numpy as np
 from ..controller.EventDetection.Utils.Constants import *
 
