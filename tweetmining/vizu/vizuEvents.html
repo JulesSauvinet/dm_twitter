@@ -1,0 +1,225 @@
+<!--python -m http.server-->
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/queue.v1.min.js"></script>
+  <style>
+      body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+        .regions {
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+        .regions:hover {
+            fill: #666;
+        }
+        .hidden {
+            display: none;
+        }
+        .enter {
+            /*fill: green;*/
+          }
+
+        .update {
+          /*fill: #333;*/
+        }
+        div.tooltip {
+            color: #222;
+            background-color: #fff;
+            padding: .5em;
+            text-shadow: #f5f5f5 0 1px 0;
+            border-radius: 2px;
+            opacity: 0.9;
+            position: absolute;
+        }
+        #daydiv {
+            position: absolute;
+            left :50px;
+            top :150px;
+        }
+
+      .axis path,
+      .axis line {
+          fill: none;
+          stroke: none;
+      }
+
+      .axis text {
+          font-size: 12px;
+          fill: #AAAAAA;
+          font-weight: 400;
+      }
+      .legendTitle {
+          font-size: 14px;
+          fill: #4F4F4F;
+          font-weight: 300;
+      }
+
+  </style>
+</head>
+
+<body>
+  <script>
+    var width = 960,
+        height = 600;
+
+    var svg = d3.select( "body" )
+      .append( "svg" )
+      .attr( "width", width )
+      .attr( "height", height );
+
+   var projection = d3.geo.mercator()
+  					.center([-73.935242,40.730610])
+  					.scale(40000)
+  					.translate([(width) / 2-40, (height)/2]);
+
+    var path = d3.geo.path()
+              .projection(projection);
+
+    var color = d3.scale.linear()
+      .interpolate(d3.interpolateHcl)
+      .range(["rgb(237,248,233)", "rgb(0,109,44)"]);
+
+    var tooltip = d3.select('body').append('div')
+                .attr('class', 'hidden tooltip');
+
+ 	var days = [];
+
+    function fillTooltip(d){
+      var mouse = d3.mouse(svg.node()).map(function(d) {
+          return parseInt(d);
+      });
+      var toDisplay =  d.properties.name ;
+        
+      tooltip.classed('hidden', false)
+          .attr('style', 'left:' + (mouse[0] + 15) +
+                  'px; top:' + (mouse[1] - 35) + 'px')
+          .html(toDisplay);
+	 }
+
+    function fillRegions(d, currentDay){
+	}
+
+ 	function updateViz(value, data, events){
+		d3.select('#days').html(days[value-1]);
+		drawMap(value-1, data, events);
+	}
+
+	function drawMap(currentDay, nyc, events) {
+
+      var g = svg.append("g").attr("id", "boroughs");
+	  var carte = g.selectAll(".state")
+	    .data(nyc.features);
+
+	  carte.attr("class", "update regions")
+	    .style("fill", function(d) {
+          	//var color = fillRegions(d,currentDay);
+          	//return color;
+            return "whitesmoke";
+          })
+           .on('mousemove', function(d) {
+              fillTooltip(d);
+          })
+          .on('mouseout', function() {
+              tooltip.classed('hidden', true);
+          });
+
+	  carte.enter()
+          .append("path")
+          .attr("class", function(d,i){
+              return "enter regions state " + d.properties.name;
+          })
+          .attr("d", path)
+          .style("fill", function(d) {
+          	//var color = fillRegions(d,currentDay);
+            return "whitesmoke";
+          })
+           .style("stroke", "black")
+           .style("stroke-width", "1px")
+           .on('mousemove', function(d) {
+              fillTooltip(d);
+          })
+          .on('mouseout', function() {
+              tooltip.classed('hidden', true);
+          });
+
+      carte.exit().remove();
+
+      var nodes = g.selectAll(".circles")
+          .data(events);
+
+      nodes.attr('class', 'circles update')
+        .filter(function(e) {return e.date.split(" ")[0] === d3.select('#days').html();})
+        .append('circle')
+                      .attr("r", 10)
+                      .attr("transform", function(d) {
+                        return "translate(" + projection([
+                          d.position.split(";")[0],
+                          d.position.split(";")[1]
+                        ]) + ")";
+                      })
+                      .style("fill", "red")
+                      .style( "opacity", 0.25);
+
+      nodes.enter()
+              .append("g")
+              .attr('class', 'circles enter')
+              .filter(function(e) {return e.date.split(" ")[0] === d3.select('#days').html();})
+              .append('circle')
+                            .attr("r", 10)
+                            .attr("transform", function(d) {
+                              return "translate(" + projection([
+                                d.position.split(";")[0],
+                                d.position.split(";")[1]
+                              ]) + ")";
+                            })
+                            .style("fill", "red")
+                            .style( "opacity", 0.25);
+
+
+      nodes.exit().remove();
+	}
+
+
+     function processData(error,regionsdata,eventsData) {
+
+       if (error) throw  error;
+
+     	var nbDays=0;
+     	var i =0;
+        console.log(eventsData);
+		eventsData.forEach(function(event) {
+		  var day = event.date.split(" ")[0];
+		 	 if (!days.includes(day)){
+		     	days.push(day);
+		     	nbDays++;
+			 }
+		     i++;
+		});
+
+		d3.select('#slider').attr("max", nbDays);
+		d3.select('#days').html(days[nbDays-1]);
+
+
+
+		drawMap(1, regionsdata, eventsData);
+		//color.domain([0, d3.max(data, function(d) { return parseFloat(d["somme2014"]);})]);
+		d3.select("#slider").on("input", function() {
+			updateViz(+this.value, regionsdata, eventsData);
+		});
+	}
+
+	queue()   // permet de charger les fichiers de manière asynchrone
+	  .defer(d3.json, "nyc.json")
+	  .defer(d3.csv, "vizuFile.csv")
+	  .await(processData);  
+  
+  </script>
+
+  <div id="daydiv">
+  	<input id="slider" type="range" value="1" min="1" max="120" step="1" />
+  	<span id="days"></span>
+  </div>
+
+</body>
