@@ -1,3 +1,6 @@
+# cette classe abstraite permet de construire la matrice de similarité entre n tweets 
+# on renvoie donc une matrice en théorie symétrique de taille n x n
+
 from abc import ABCMeta, abstractmethod
 
 class SimilarityMatrixBuilder :

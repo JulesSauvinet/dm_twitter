@@ -1,3 +1,7 @@
+# cette classe hérite de SimilarityMatrixBuilder
+#
+#
+
 import numpy as np
 from scipy.sparse import dok_matrix,coo_matrix
 from sklearn.neighbors import NearestNeighbors
@@ -14,6 +18,8 @@ class LEDSimilarityMatrixBuilder(SimilarityMatrixBuilder) :
         self.timeThreshold=timeThreshold
         self.distanceThreshold=distanceThreshold
         
+	#
+	# renvoie une matrice triangulaire supérieure
     def build(self,tweets,minimalTermPerTweet=5, remove_noise_with_poisson_Law=False) :
         """
         Return an upper sparse triangular matrix of similarity j>i
@@ -22,6 +28,7 @@ class LEDSimilarityMatrixBuilder(SimilarityMatrixBuilder) :
         distanceThreshold=float(self.distanceThreshold)
         numberOfTweets=len(tweets)
 
+		# initialise M comme une matrice de dimension numberOfTweets x numberOfTweets contenant des floats
         M=dok_matrix((numberOfTweets, numberOfTweets),dtype=np.float)
         print "      Calculating TF-IDF vectors ..."
         TFIDFVectors,TweetPerTermMap=getTweetsTFIDFVectorAndNorm(tweets, minimalTermPerTweet=minimalTermPerTweet, remove_noise_with_poisson_Law=remove_noise_with_poisson_Law)

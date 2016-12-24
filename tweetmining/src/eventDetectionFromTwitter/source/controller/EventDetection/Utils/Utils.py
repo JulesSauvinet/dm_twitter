@@ -1,3 +1,6 @@
+# cette classe sert a visionner les tweets que l'on a
+# on a différentes méthode de plot
+
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import timedelta

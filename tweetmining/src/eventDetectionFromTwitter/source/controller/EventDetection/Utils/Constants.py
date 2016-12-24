@@ -1,3 +1,6 @@
+# ensemble des constantes dont on a besoin
+# rien d'exeptionnel ici
+
 #Earth radius in meter
 EARTH_RADIUS=6378137
 

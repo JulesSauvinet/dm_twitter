@@ -1,3 +1,7 @@
+# cette classe hérite de SimilarityMatrixBuilder
+#
+#
+
 import math,re,numpy as np
 from scipy.sparse import dok_matrix,coo_matrix
 from SimilarityMatrixBuilder import SimilarityMatrixBuilder
