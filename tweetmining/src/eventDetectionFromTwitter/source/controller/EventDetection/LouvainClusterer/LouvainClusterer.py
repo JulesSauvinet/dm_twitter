@@ -1,3 +1,7 @@
+# classe abstraite, les classes JavaBasedLouvainClusterer et OurLouvainClusterer implémentent LouvainClusterer
+# -> classe qui prend en entrée un ensemble de tweets et une matrice de similarité_ qui reste à définir_
+# 			et on récupère en sortie un vecteur de correspondance qui associe a chaque tweet le cluster auquel il appartient
+
 from abc import ABCMeta, abstractmethod
 
 class LouvainClusterer :
