@@ -1,4 +1,6 @@
 <!--python -m http.server-->
+<!--TODO SCALE LES CIRCLES ET UPDATE LES RONDS QUI SONT SOUS LA MAP?-->
+<!--TODO GEOJSON ELARGI DE NYC?-->
 
 <!DOCTYPE html>
 <head>
@@ -38,6 +40,25 @@
             left :50px;
             top :150px;
         }
+        #scalediv {
+            position: absolute;
+            left :50px;
+            top :200px;
+            border : 1pt solid black;
+          padding: 5px;
+          width : 150px;
+        }
+        #scale{
+            font-size: 20px;
+          font-weight: bold;
+        margin: 5px;
+          max-width : 90px;
+        }
+        #scaleBtn{
+          font-size: 16px;
+          padding : 5px;
+          margin : 5px;
+        }
 
       .axis path,
       .axis line {
@@ -62,17 +83,18 @@
 <body>
   <script>
     var width = 960,
-        height = 600;
+        height = 620;
 
     var svg = d3.select( "body" )
       .append( "svg" )
       .attr( "width", width )
       .attr( "height", height );
 
-   var projection = d3.geo.mercator()
+
+    var projection = d3.geo.mercator()
   					.center([-73.935242,40.730610])
-  					.scale(40000)
-  					.translate([(width) / 2-40, (height)/2]);
+  					.scale(60000)
+  					.translate([(width) / 2-40, (height)/2-20]);
 
     var path = d3.geo.path()
               .projection(projection);
@@ -81,16 +103,32 @@
       .interpolate(d3.interpolateHcl)
       .range(["rgb(237,248,233)", "rgb(0,109,44)"]);
 
+
+    var color2 = d3.scale.linear()
+      .interpolate(d3.interpolateHcl)
+      .range(["orange", "red"]).domain([0,50]);
+
+
+    var opacity = d3.scale.linear()
+      .interpolate(d3.interpolateHcl)
+      .range([0,1]).domain([0,100]);
+
     var tooltip = d3.select('body').append('div')
                 .attr('class', 'hidden tooltip');
 
  	var days = [];
 
+    var firedivMap = {"8" : "Staten Island", "15" : "Brooklyn", "11" : "Brooklyn",
+                      "14" : "Queens", "13" : "Queens", "1" : "Manhattan", "3" : "Manhattan/Harlem",
+                       "6" : "Bronx",  "7" : "Bronx" };
+
+    var colordivMap = {"Manhattan/Harlem":	"rgb(255,182,193)","Queens": "rgb(255,255,204)","Staten Island" : "lightgreen", "Brooklyn" : "lightblue", "Manhattan" : "pink", "Bronx" : "whitesmoke"};
+
     function fillTooltip(d){
       var mouse = d3.mouse(svg.node()).map(function(d) {
           return parseInt(d);
       });
-      var toDisplay =  d.properties.name ;
+      var toDisplay =  firedivMap[d.properties.firediv] ;
         
       tooltip.classed('hidden', false)
           .attr('style', 'left:' + (mouse[0] + 15) +
@@ -98,7 +136,22 @@
           .html(toDisplay);
 	 }
 
+     function fillTooltip2(d){
+      var mouse = d3.mouse(svg.node()).map(function(d) {
+          return parseInt(d);
+      });
+      var toDisplay =  "User number  : " +  d.userNumber + "</br>"
+                     + "Tweets number  : " +  d.tweetsNumbert + "</br>"
+                     + "Hashtags  : " +  d.importantHashtags;
+
+      tooltip.classed('hidden', false)
+          .attr('style', 'left:' + (mouse[0] + 15) +
+                  'px; top:' + (mouse[1] - 35) + 'px')
+          .html(toDisplay);
+	 }
+
     function fillRegions(d, currentDay){
+      return colordivMap[firedivMap[d.properties.firediv]];
 	}
 
  	function updateViz(value, data, events){
@@ -106,35 +159,53 @@
 		drawMap(value-1, data, events);
 	}
 
+	function updateScale(value, regions, events){
+        scale = d3.select('#scale')[0][0].value;
+        console.log(scale);
+
+        projection = d3.geo.mercator()
+                        .center([-73.935242,40.730610])
+                        .scale(scale)
+                        .translate([(width) / 2-40, (height)/2-20]);
+
+        path = d3.geo.path()
+                  .projection(projection);
+
+      svg.selectAll(".state").remove();
+
+      drawMap(d3.select('#days')[0][0].value, regions,events)
+    }
+
 	function drawMap(currentDay, nyc, events) {
 
-      var g = svg.append("g").attr("id", "boroughs");
-	  var carte = g.selectAll(".state")
+	  var carte = svg.selectAll(".state")
 	    .data(nyc.features);
 
-	  carte.attr("class", "update regions")
+	  /*carte.attr("class", "update regions")
 	    .style("fill", function(d) {
-          	//var color = fillRegions(d,currentDay);
-          	//return color;
-            return "whitesmoke";
+          	var color = fillRegions(d,currentDay);
+          	return color;
+            //return "whitesmoke";
           })
            .on('mousemove', function(d) {
               fillTooltip(d);
           })
           .on('mouseout', function() {
               tooltip.classed('hidden', true);
-          });
+          });*/
 
 	  carte.enter()
           .append("path")
           .attr("class", function(d,i){
-              return "enter regions state " + d.properties.name;
+              return "enter regions state " + d.properties.firediv;
           })
           .attr("d", path)
           .style("fill", function(d) {
-          	//var color = fillRegions(d,currentDay);
-            return "whitesmoke";
+          	var color = fillRegions(d,currentDay);
+            return color;
+            //return "whitesmoke";
           })
+
            .style("stroke", "black")
            .style("stroke-width", "1px")
            .on('mousemove', function(d) {
@@ -144,51 +215,99 @@
               tooltip.classed('hidden', true);
           });
 
+
       carte.exit().remove();
 
-      var nodes = g.selectAll(".circles")
+
+      events = events.filter(function(e) {
+        return e.date.split(" ")[0] === d3.select('#days').html();
+      });
+
+      var nodes = svg.selectAll(".circles")
           .data(events);
 
-      nodes.attr('class', 'circles update')
-        .filter(function(e) {return e.date.split(" ")[0] === d3.select('#days').html();})
-        .append('circle')
-                      .attr("r", 10)
-                      .attr("transform", function(d) {
-                        return "translate(" + projection([
-                          d.position.split(";")[0],
-                          d.position.split(";")[1]
-                        ]) + ")";
-                      })
-                      .style("fill", "red")
-                      .style( "opacity", 0.25);
+      nodes.attr('class', 'update circles')
+            .attr("r", function(d) {
+                var totPixels = (width * height);
+                var totWorldMeters = 510000000000;
+                var metersPerPixel = (totWorldMeters / totPixels);
+                var scaledRadius;
+
+                //scale the radius given in meters to pixels on the map
+                scaledRadius = (100 * (d.radius/ metersPerPixel));
+                if(scaledRadius < 5) {
+                    scaledRadius = 5;
+                }
+                return scaledRadius;
+              })
+            .attr("transform", function(d) {
+              return "translate(" + projection([
+                d.position.split(";")[0],
+                d.position.split(";")[1]
+              ]) + ")";
+            })
+            .style("fill", function(d) {
+                return color2(d.userNumber);
+            })
+            .style( "opacity", function(d) {
+                return opacity(d.tweetsNumbert);
+            })
+            .on('mousemove', function(d) {
+                fillTooltip2(d);
+            })
+            .on('mouseout', function() {
+                tooltip.classed('hidden', true);
+            });
 
       nodes.enter()
-              .append("g")
-              .attr('class', 'circles enter')
-              .filter(function(e) {return e.date.split(" ")[0] === d3.select('#days').html();})
               .append('circle')
-                            .attr("r", 10)
-                            .attr("transform", function(d) {
-                              return "translate(" + projection([
-                                d.position.split(";")[0],
-                                d.position.split(";")[1]
-                              ]) + ")";
-                            })
-                            .style("fill", "red")
-                            .style( "opacity", 0.25);
+              .attr('class', 'enter circles')
+              .attr("r", function(d) {
+                var totPixels = (width * height);
+                var totWorldMeters = 510000000000;
+                var metersPerPixel = (totWorldMeters / totPixels);
+                var scaledRadius;
 
+                //scale the radius given in meters to pixels on the map
+                scaledRadius = (100 * (d.radius / metersPerPixel));
+                if(scaledRadius < 5) {
+                    scaledRadius = 5;
+                }
+                return scaledRadius;
+              })
+              .attr("transform", function(d) {
+                return "translate(" + projection([
+                  d.position.split(";")[0],
+                  d.position.split(";")[1]
+                ]) + ")";
+              })
+              .style("fill", function(d) {
+                  return color2(d.userNumber);
+              })
+              .style( "opacity", function(d) {
+                  return opacity(d.tweetsNumbert);
+              })
+              .on('mousemove', function(d) {
+                  fillTooltip2(d);
+              })
+              .on('mouseout', function() {
+                  tooltip.classed('hidden', true);
+              });
 
       nodes.exit().remove();
 	}
 
+	var scale = 60000;
 
      function processData(error,regionsdata,eventsData) {
 
        if (error) throw  error;
 
+       scale = d3.select('#scale')[0][0].value;
+
      	var nbDays=0;
      	var i =0;
-        console.log(eventsData);
+        //console.log(eventsData);
 		eventsData.forEach(function(event) {
 		  var day = event.date.split(" ")[0];
 		 	 if (!days.includes(day)){
@@ -199,7 +318,7 @@
 		});
 
 		d3.select('#slider').attr("max", nbDays);
-		d3.select('#days').html(days[nbDays-1]);
+		d3.select('#days').html(days[0]);
 
 
 
@@ -208,10 +327,14 @@
 		d3.select("#slider").on("input", function() {
 			updateViz(+this.value, regionsdata, eventsData);
 		});
+
+       d3.select("#scaleBtn").on("click", function() {
+			updateScale(+d3.select('#scale')[0][0].value, regionsdata, eventsData);
+		});
 	}
 
 	queue()   // permet de charger les fichiers de manière asynchrone
-	  .defer(d3.json, "nyc.json")
+	  .defer(d3.json, "ny_firedivisions.json")
 	  .defer(d3.csv, "vizuFile.csv")
 	  .await(processData);  
   
@@ -220,6 +343,14 @@
   <div id="daydiv">
   	<input id="slider" type="range" value="1" min="1" max="120" step="1" />
   	<span id="days"></span>
+  </div>
+
+  <div id="scalediv">
+  	<input id="scale" type="text" value ="60000"/>
+    <input id="scaleBtn"
+           name="updateButton"
+           type="button"
+           value="update the scale"/>
   </div>
 
 </body>
