@@ -19,6 +19,8 @@ class Tweet :
             self.hashtags=' '.join(re.sub("(@[A-Za-z0-9]+)", "", hashtags.replace("\"", "")).split()).split()
         self.time=time
         self.position=position
+        self.lat = None
+        self.long= None
 
     def delay(self,other) :
         return abs((self.time-other.time).total_seconds())

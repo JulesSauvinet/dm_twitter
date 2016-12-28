@@ -98,7 +98,12 @@ class MongoDBHandler :
         position=None
         if (document["position"]) :
             position=Position(float(document["position"][0]),float(document["position"][1]))
-        return Tweet(_id,userId,text,hashtags,time,position)
+        tweet = Tweet(_id,userId,text,hashtags,time,position)
+
+        if (document["position"]) :
+            tweet.lat = float(document["position"][0])
+            tweet.long = float(document["position"][1])
+        return tweet
         
         
         
