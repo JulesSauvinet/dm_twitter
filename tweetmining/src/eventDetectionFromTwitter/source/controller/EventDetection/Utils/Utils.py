@@ -1,5 +1,5 @@
-# cette classe sert a visionner les tweets que l'on a
-# on a différentes méthode de plot
+# cette classe sert a visionner les tweets que l'on a -> on a différentes méthode de plot
+# ces méthodes ne sont pas utiles pour visualiser nos clusters mais pour visualiser les tweets avant clustering
 
 import numpy as np
 import matplotlib.pyplot as plt
