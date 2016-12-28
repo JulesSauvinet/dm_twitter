@@ -1,3 +1,4 @@
+# coding=utf-8
 # Ce module permet de construire un Tweet, jusque la, rien d'extraordinaire
 #
 # Pour décrire un Tweet on récupère l'identifiant + la personne qui a tweet + le texte + les hashtags + l'heure du tweet 

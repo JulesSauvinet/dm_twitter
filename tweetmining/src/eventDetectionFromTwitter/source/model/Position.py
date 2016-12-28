@@ -1,3 +1,4 @@
+# coding=utf-8
 # Comme on peut le deviner, une position est definie par une longitude et une latitude
 #
 # Dans ce module, en plus du constructeur, on trouve des méthodes pour calculer la distance entre deux positions
@@ -47,3 +48,6 @@ class Position :
     
     def __str__(self) :
         return "({0},{1})".format(self.latitude,self.longitude)
+
+    def str2(self) :
+        return "{0};{1}".format(self.latitude,self.longitude)

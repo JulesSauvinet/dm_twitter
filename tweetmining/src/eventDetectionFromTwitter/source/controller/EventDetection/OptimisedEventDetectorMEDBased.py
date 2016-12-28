@@ -33,27 +33,33 @@ class OptimisedEventDetectorMEDBased:
         get the list of important events
         """
 
-        print "Detecting events ..."
+        #if (self.tweets):
+        if (len(self.tweets)>0):
 
-        realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
-                                        remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=False)
-        events = []
-        if realClusters is not None:
-            if len(realClusters > 0):
-                clustersUniqueId = set(realClusters)
-                print "\tConstructing events from clusters ..."
-                i = 0
-                #print "LEN CLUSTERID", len(clustersUniqueId)
-                #print "CLUSTERID", clustersUniqueId
-                #print "tweet len", len(self.tweets)
-                #print "realClusters", realClusters
-                #print "realClusterslen", len(realClusters)
-                for clusterId in clustersUniqueId:
-                    tweetsOfClusterId = self.tweets[realClusters == clusterId]
-                    event = Event(tweetsOfClusterId)
-                    if (self.isEventImportant(event)): events.append(event)
-        self.events = events
-        return events
+            print "Detecting events ..."
+
+            realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
+                                            remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=False)
+            events = []
+            if realClusters is not None:
+                if len(realClusters > 0):
+                    clustersUniqueId = set(realClusters)
+                    print "\tConstructing events from clusters ..."
+                    i = 0
+                    #print "LEN CLUSTERID", len(clustersUniqueId)
+                    #print "CLUSTERID", clustersUniqueId
+                    #print "tweet len", len(self.tweets)
+                    #print "realClusters", realClusters
+                    #print "realClusterslen", len(realClusters)
+                    for clusterId in clustersUniqueId:
+                        tweetsOfClusterId = self.tweets[realClusters == clusterId]
+                        event = Event(tweetsOfClusterId)
+                        if (self.isEventImportant(event)): events.append(event)
+            self.events = events
+            return events
+        else:
+            print "No events detected because there is no tweets for the date : ", str(date)
+            return []
 
     def isEventImportant(self, event):
         """
@@ -135,19 +141,26 @@ class OptimisedEventDetectorMEDBased:
         self.build(minimalTermPerTweet=minimalTermPerTweet, minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
 				   remove_noise_with_poisson_Law=remove_noise_with_poisson_Law, similarityFilePath=weightsFilePath,elasticity=False)
 
-        # Creating the output file (command execution)
-        print "\tClustering ..."
-        command = "java -jar eventDetectionFromTwitter/ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(
-            weightsFilePath, clusterFilePath)
-        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-        process.wait()
 
-        # Get The events
-        print "\tReading clusters from a file ..."
-        if os.path.exists(clusterFilePath) :
-            with open(clusterFilePath) as f:
-                realClusters = map(int, f.readlines())
-                return np.array(realClusters)
+
+        if os.path.isfile(weightsFilePath):
+            fic = open(weightsFilePath, 'r')
+            read = fic.readlines()
+            nblines = len(read)
+            fic.close()
+            if nblines > 1:
+                # Creating the output file (command execution)
+                print "\tClustering ..."
+                command = "java -jar eventDetectionFromTwitter/ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(
+                    weightsFilePath, clusterFilePath)
+                process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                process.wait()
+
+                # Get The events
+                print "\tReading clusters from a file ..."
+                if os.path.exists(clusterFilePath) :
+                    with open(clusterFilePath) as f:
+                        realClusters = map(int, f.readlines())
         return np.array(realClusters)
 
     def build(self, minimalTermPerTweet=5, minimalTermPerTweetElasticity=5, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt",elasticity=False):

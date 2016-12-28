@@ -26,12 +26,15 @@ print(X)
 
 X = StandardScaler().fit_transform(X)
 print(X)
-# fonction de distance
+#fonction de distance
 def distanceCalc(a,b):
-    return np.sum((a-b)**2)
+    #print "distance : ", np.sqrt((np.sum((a - b) ** 2)))
+    return np.sqrt(np.sum((a-b)**2))
+    #return np.sum((a-b)**2)
 
 # utilisation de la fonction
 db = DBSCAN(eps=0.3, min_samples=10, metric = distanceCalc).fit(X)
+#db = DBSCAN(eps=0.3, min_samples=10).fit(X)
 core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
 core_samples_mask[db.core_sample_indices_] = True
 labels = db.labels_

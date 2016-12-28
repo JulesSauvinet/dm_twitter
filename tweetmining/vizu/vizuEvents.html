@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://d3js.org/queue.v1.min.js"></script>
+  <script src="//d3js.org/topojson.v1.min.js"></script>
   <style>
       body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
         .regions {
@@ -76,6 +77,8 @@
           fill: #4F4F4F;
           font-weight: 300;
       }
+
+      path { fill: none; stroke: black; }
 
   </style>
 </head>
@@ -178,8 +181,16 @@
 
 	function drawMap(currentDay, nyc, events) {
 
-	  var carte = svg.selectAll(".state")
+
+
+        //var map = topojson.feature(nyc, nyc.objects.cty036);
+        //console.log(map);
+
+      var carte = svg.selectAll(".state")
 	    .data(nyc.features);
+       //.data(map.features);
+
+       //.datum(topojson.mesh(nyc, nyc.arcs));
 
 	  /*carte.attr("class", "update regions")
 	    .style("fill", function(d) {
@@ -335,6 +346,7 @@
 
 	queue()   // permet de charger les fichiers de manière asynchrone
 	  .defer(d3.json, "ny_firedivisions.json")
+      //.defer(d3.json, "nyTopo.json")
 	  .defer(d3.csv, "vizuFile.csv")
 	  .await(processData);  
   

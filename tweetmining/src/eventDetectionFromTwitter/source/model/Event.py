@@ -1,3 +1,4 @@
+# coding=utf-8
 # Dans ce module, on definit un evenement.
 # On construit un evenement a partir d'une liste de tweets que l'on tri par ordre croissant de publication
 #
@@ -61,6 +62,20 @@ class Event :
 		# attention si on a moins de topk hashtags on les renvoie tous
         importantHashtags=sorted(list(dictHashtags), key=lambda element : dictHashtags[element], reverse=True)[0:min(topk,len(dictHashtags))]
         return importantHashtags
+
+    # ----------------------------------- Output for vizualisation ------------------------------------#
+    def outForVizu(self):
+        SEPARATOR = ","
+        NUM_DIGIT=10**2
+        position = Position(self.eventCenter.latitude,self.eventCenter.longitude)
+        S = SEPARATOR.join([str(self.eventMedianTime),
+                           str(int(self.estimatedEventDuration)),
+                           position.str2(),
+                           str(float(int(NUM_DIGIT * self.eventRadius)) / NUM_DIGIT),
+                           str(self.userNumber),
+                           str(len(self.tweets)),
+                           "|".join(self.importantHashtags)])
+        return S.encode("utf-8")
 
     #---------------- Visualize -----------------------------------------------------------------------#
     def __str__(self) :
