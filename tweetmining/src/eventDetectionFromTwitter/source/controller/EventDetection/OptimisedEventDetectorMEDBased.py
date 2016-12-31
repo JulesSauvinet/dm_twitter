@@ -254,12 +254,10 @@ class OptimisedEventDetectorMEDBased:
         rightLowerCorner = Position(x, y)
         maxDistance = leftUpperCorner.approxDistance(rightLowerCorner)
         scalesMaxDistances = getScalesMaxDistances(minDistance, maxDistance, scaleNumber)
-        temporalSeriesSize = int(
-            2 ** math.ceil(math.log(int((maxTime - minTime).total_seconds() / timeResolution) + 1, 2)))
+        temporalSeriesSize = int(2 ** math.ceil(math.log(int((maxTime - minTime).total_seconds() / timeResolution) + 1, 2)))
         haarTransformeSize = min(pow(2, scaleNumber), temporalSeriesSize)
         maximalSupportableScale = min(scaleNumber, int(math.log(haarTransformeSize, 2)))
-        totalArea = (float(maxLat) - float(minLat)) * (
-        float(maxLon) - float(minLon)) * DEG_LATITUDE_IN_METER * DEG_LATITUDE_IN_METER
+        totalArea = (float(maxLat) - float(minLat)) * (float(maxLon) - float(minLon)) * DEG_LATITUDE_IN_METER * DEG_LATITUDE_IN_METER
 
         print "\t\tPass 2 - Construct TFVectors, IDFVector, tweetsPerTermMap, timeSerieMap and cellOfTweet"
         # Pass 2 - Construct TFVectors, IDFVector, tweetsPerTermMap, timeSerieMap and cellOfTweet
@@ -476,6 +474,7 @@ class OptimisedEventDetectorMEDBased:
             if(not geolocalisation) :
                 for term in TFIDFVectorIKeySet: neighboors |= tweetsPerTermMap[term]
             else :
+                for term in TFIDFVectorIKeySet: neighboors |= tweetsPerTermMap[term]
                 position=np.array([tweetI.position.latitude,tweetI.position.longitude]).reshape(-1,2)
                 neighboors&=set(spatialIndex.radius_neighbors(position)[1][0])
 

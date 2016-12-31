@@ -18,13 +18,21 @@ Une sortie avec elasticity & élimination par la loi de Poisson & !localisationGe
 "3.Elasticity+Poisson.txt" & "3.vizuFile.txt"
 
 
+--- La geolocalisation découpe les gros evenements en petits evenements plus locaux ---
+--- Et cela fait ressortir des hashtags plus locaux, parfois intéressants -------------
+
+
 Une sortie avec juste !elasticity & localisationGeo :
+"4.geolocalisation.txt" & "4.vizuFile.txt"
 
 
 Une sortie avec !elasticity & élimination par la loi de Poisson & localisationGeo :
+"5.geolocalisation+Poisson.txt" & "5.vizuFile.txt"
 
 
 Une sortie avec juste elasticity & localisationGeo :
+"6.geolocalisation+Elasticity.txt" & "6.vizuFile.txt"
 
 
 Une sortie avec elasticity & élimination par la loi de Poisson & localisationGeo  :
+"7.geolocalisation+Elasticity+Poisson.txt" & "7.vizuFile.txt"

@@ -16,17 +16,17 @@ from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDe
 #REMOVE_NOISE_WITH_POISSON_LAW -> booleen pour savoir si on supprime les termes qui sont régis par une loi de Poisson
 #GEOLOCALISATION -> booleen pour savoir pour si on fait des clusters de densité avant de faire des clusters de similarite
 
-MIN_TERM_OCCURENCE_E=0.20
+MIN_TERM_OCCURENCE_E=0.2
 MIN_TERM_OCCURENCE=20
-ELASTICITY=False
-REMOVE_NOISE_WITH_POISSON_LAW=False
+ELASTICITY=True
+REMOVE_NOISE_WITH_POISSON_LAW=True
 GEOLOCALISATION=True
 
 TIME_RESOLUTION=1800
 DISTANCE_RESOLUTION=100
 SCALE_NUMBER=4
 MIN_SIMILARITY=0.6
-DISTANCE_THRESHOLD=50
+DISTANCE_THRESHOLD=1000
 
 #le nombre de tweets geolocalises
 NUMBER_OF_TWEETS=35906
@@ -137,7 +137,7 @@ def main(limit=3000,
 #---------------------------------------------------------------------------------------------------------------------------------------------
 #3000 tweets par jour environ sur sample
 
-#first date : "2015-07-21", last : date="2015-16-11" TODO mieux
+#first date : "2015-07-21", last : date="2015-11-16" TODO mieux
 main(limit=NUMBER_OF_TWEETS, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,date=firstdate,elasticity=ELASTICITY,geolocalisation=GEOLOCALISATION)
 
 #Ladresse du modularityoptimizer

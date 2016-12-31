@@ -1,1 +1,0 @@
-date,duration,position,radius,userNumber,tweetsNumber,importantHashtags
