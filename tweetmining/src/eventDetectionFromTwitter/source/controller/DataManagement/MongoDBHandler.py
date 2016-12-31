@@ -39,7 +39,9 @@ class MongoDBHandler :
         day = int(date.split("-")[2])
 
         start = datetime(year, month, day, 00, 00, 00)
+        print "start ", start
         end = datetime(year, month, day, 23, 59, 59)
+        print "end ", end
 
         documents=collection.find({"time" : {'$lt': end, '$gte': start}})[0:limit]
 

@@ -18,9 +18,9 @@ from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDe
 
 MIN_TERM_OCCURENCE_E=0.2
 MIN_TERM_OCCURENCE=20
-ELASTICITY=True
-REMOVE_NOISE_WITH_POISSON_LAW=True
-GEOLOCALISATION=True
+ELASTICITY=False
+REMOVE_NOISE_WITH_POISSON_LAW=False
+GEOLOCALISATION=False
 
 TIME_RESOLUTION=1800
 DISTANCE_RESOLUTION=100
@@ -41,29 +41,37 @@ def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3.csv
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
-firstdate = "2015-07-21"
+#firstdate = "2015-07-21"
 #firstdate = "2015-09-16"
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def main(limit=3000,
-	minimalTermPerTweet=MIN_TERM_OCCURENCE,
-	minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,
-	remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,
-	printEvents=True,
-	date="2015-07-21",
-	elasticity=ELASTICITY,
-	geolocalisation=False) :
+def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
+		minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,
+		remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,
+		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
+    # on charge les donnees du CSV dans MongoDB
     getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")
-
     vizuFile.write("date,duration,position,radius,userNumber,tweetsNumber,importantHashtags\n")
-
-    for i in range(120):
+	
+	# ----- on recupere tous les tweets de la base de MongoDB pour trouver la 1ere date et la derniere date ----- #
+    mongoDBHandler = MongoDBHandler()
+    tweetsAll = mongoDBHandler.getAllTweets(limit=limit)
+    minTime = maxTime = tweetsAll[0].time
+    for tweet in tweetsAll:
+        if (tweet.time < minTime):
+            minTime = tweet.time
+        if (tweet.time > maxTime): 
+            maxTime = tweet.time
+    timeTotal = maxTime-minTime
+	
+    # pour toutes les dates de nos donnees dans MongoDB
+    for i in range(timeTotal.days+1):
         mongoDBHandler = MongoDBHandler()
-        date_1 = datetime.strptime(date, "%Y-%m-%d")
-        end_date = date_1 + timedelta(days=i)
+        #date_1 = datetime.strptime(minTime, "%Y-%m-%d")
+        end_date = minTime + timedelta(days=i)
 
         datestring = end_date.strftime('%Y-%m-%d')
 
@@ -138,7 +146,7 @@ def main(limit=3000,
 #3000 tweets par jour environ sur sample
 
 #first date : "2015-07-21", last : date="2015-11-16" TODO mieux
-main(limit=NUMBER_OF_TWEETS, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,date=firstdate,elasticity=ELASTICITY,geolocalisation=GEOLOCALISATION)
+main(limit=NUMBER_OF_TWEETS, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,elasticity=ELASTICITY,geolocalisation=GEOLOCALISATION)
 
 #Ladresse du modularityoptimizer
 #https://github.com/satijalab/seurat/blob/master/java/ModularityOptimizer.java
