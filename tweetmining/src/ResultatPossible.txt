@@ -1,0 +1,30 @@
+---- Je pense que comme on n'a peu de données, vu que le fichier est simplifié  -----
+---- on ne peut pas enlever les mots qui sont régi par une loi de Poisson	-----
+---- mais peut-etre que avec les vraies données, on peut détecter certains robots ---
+
+Une sortie avec juste !elasticity & !localisationGeo : 
+"0.Base.txt" + "0.vizuFile.txt"
+
+
+Une sortie avec !elasticity & élimination par la loi de Poisson & !localisationGeo  : 
+"1.Base+Poisson.txt" & "1.vizuFile.txt"
+
+
+Une sortie avec juste elasticity & !localisationGeo :
+"2.Elasticity.txt" & "2.vizuFile.txt"
+
+
+Une sortie avec elasticity & élimination par la loi de Poisson & !localisationGeo :
+"3.Elasticity+Poisson.txt" & "3.vizuFile.txt"
+
+
+Une sortie avec juste !elasticity & localisationGeo :
+
+
+Une sortie avec !elasticity & élimination par la loi de Poisson & localisationGeo :
+
+
+Une sortie avec juste elasticity & localisationGeo :
+
+
+Une sortie avec elasticity & élimination par la loi de Poisson & localisationGeo  :
