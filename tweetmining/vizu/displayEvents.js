@@ -52,8 +52,7 @@ var color2 = d3.scale.linear()
   .range(["orange", "red"]).domain([0,50]);
 
 var opacity = d3.scale.linear()
-  .interpolate(d3.interpolateHcl)
-  .range([0,1]).domain([0,100]);
+  .domain([0,100]).range([0,1]);
 
 var tooltip = d3.select('#mapContainer').append('div')
             .attr('class', 'hidden tooltip');
@@ -106,24 +105,30 @@ function drawMap(currentDay, events) {
   });
 
   events.forEach(function(event){
-    var totPixels = (width * height);
-    var totWorldMeters = 510000000000;
-    var metersPerPixel = (totWorldMeters / totPixels);
-    var scaledRadius = 0;
-
     //scale the radius given in meters to pixels on the map
-    scaledRadius = (100 * (event.radius / metersPerPixel));
-    if(scaledRadius < 5) {
-        scaledRadius = 500;
+    var scaledRadius = event.radius ;
+    if(scaledRadius > 10000) {
+        scaledRadius = 10000;
     }
 
-    //console.log(scaledRadius);
-    var circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
+    var circle;
+    if (scaledRadius <= 1500)  {
+      circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
         color: 'red',
         fillColor: color2(event.userNumber),
         fillOpacity: opacity(event.tweetsNumbert),
         radius: scaledRadius
-    });
+      });
+    }
+    else {
+        circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
+            color: 'red',
+            fillColor: color2(event.userNumber),
+            fillOpacity: opacity(event.tweetsNumbert),
+            radius: scaledRadius
+        });
+    }
+
 
     var toDisplay =  "User number  : " +  event.userNumber + "</br>"
              + "Tweets number  : " +  event.tweetsNumbert + "</br>"
