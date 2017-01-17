@@ -66,8 +66,17 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
         if (tweet.time > maxTime): 
             maxTime = tweet.time
     timeTotal = maxTime-minTime
-	
+
+    # blackList = {} on ne peut pas la remplir au début
     # pour toutes les dates de nos donnees dans MongoDB
+        # on lance un premier clustering
+    # on stocke dans un tableau tous les hashtags pertinents
+    # on calcule le nbr d'occurence de chaque hashtags du tableau
+    # si un hashtags apparait plus de x% --> la blackList    
+    # pour toutes les dates de nos donnees dans MongoDB cad celle avec lesquelles on a fait le 1er clutering
+        # on lance un second clustering
+        # en prenant soin de ne pas garder dans les hashtags pertinents ceux qui sont dans la blackList
+        
     for i in range(timeTotal.days+1):
         mongoDBHandler = MongoDBHandler()
         #date_1 = datetime.strptime(minTime, "%Y-%m-%d")
