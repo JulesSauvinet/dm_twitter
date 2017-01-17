@@ -3,7 +3,7 @@
  */
 
 //TODO SCALE LES RADIUS D'EVENTS !
-    
+
 var width = 500, height = 500;
 var mapEvents = L.map('mapEvents').setView([40.730610,-73.935242], 11);
 
@@ -127,7 +127,16 @@ function drawMap(currentDay, events) {
 
     var toDisplay =  "User number  : " +  event.userNumber + "</br>"
              + "Tweets number  : " +  event.tweetsNumbert + "</br>"
-             + "Hashtags  : " +  event.importantHashtags;
+             + "Hashtags  : ";
+
+    var hashtags = event.importantHashtags.split("|");
+    var idx = 1;
+    hashtags.forEach(function(hashtag){
+        toDisplay+= hashtag;
+        if (idx !== hashtags.length)
+            toDisplay += ', ';
+        idx++;
+    }) ;
 
     circle.bindPopup(toDisplay);
 
