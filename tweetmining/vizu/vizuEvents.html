@@ -12,117 +12,169 @@
   <script src="//d3js.org/topojson.v1.min.js"></script>
   <style>
       body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
-        .regions {
-            stroke: #fff;
-            stroke-width: 2px;
-        }
-        .regions:hover {
-            fill: #666;
-        }
-        .hidden {
-            display: none;
-        }
-        .enter {
-            /*fill: green;*/
-          }
 
-        .update {
-          /*fill: #333;*/
-        }
-        div.tooltip {
-            color: #222;
-            background-color: #fff;
-            padding: .5em;
-            text-shadow: #f5f5f5 0 1px 0;
-            border-radius: 2px;
-            opacity: 0.9;
-            position: absolute;
-        }
-        #daydiv {
-            position: absolute;
-            left :50px;
-            top :150px;
-        }
-        #scalediv {
-            position: absolute;
-            left :50px;
-            top :200px;
-            border : 1pt solid black;
+      .regions {
+          stroke: #fff;
+          stroke-width: 2px;
+      }
+
+      .regions:hover {
+          fill: #666;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      .enter {
+          /*fill: green;*/
+      }
+
+      .update {
+        /*fill: #333;*/
+      }
+
+      /* le tooltip */
+      div.tooltip {
+          color: #222;
+          background-color: #fff;
+          padding: .5em;
+          text-shadow: #f5f5f5 0 1px 0;
+          border-radius: 2px;
+          opacity: 0.9;
+          position: absolute;
+      }
+
+      /* le changement d'echelle des maps */
+      #scalediv {
+          margin-right :50px;
+          margin-left :50px;
+          margin-top : 50px;
+          border : 1pt solid black;
           padding: 5px;
           width : 150px;
-        }
-        #scale{
-            font-size: 20px;
+      }
+
+      #scale{
+          font-size: 20px;
           font-weight: bold;
-        margin: 5px;
+          margin: 5px;
           max-width : 90px;
-        }
-        #scaleBtn{
+      }
+
+      #scaleBtn{
           font-size: 16px;
           padding : 5px;
           margin : 5px;
-        }
+      }
 
+      /* le div qui contient le slider pour changer le jour */
+      #daydiv {
+          width : 250px;
+          margin-right :50px;
+          margin-left :50px;
+          margin-top : 80px;
+      }
+
+      /* le slider de jour */
       .axis path,
       .axis line {
           fill: none;
           stroke: none;
       }
-
       .axis text {
           font-size: 12px;
           fill: #AAAAAA;
           font-weight: 400;
       }
+
+      /* le titre de la legende (inexistant for the moment) */
       .legendTitle {
           font-size: 14px;
           fill: #4F4F4F;
           font-weight: 300;
       }
 
-      path { fill: none; stroke: black; }
+      /* les lignes de frontieres */
+      path { fill: none; stroke: black;
+        z-index: 1;}
+
+      /* le conteneur des deux maps*/
+      #mapContainer{
+          position: absolute;
+          right: 28px;
+          width: 75%;
+          padding-right : 6px;
+          padding-left : 6px;
+          margin-left:6px;
+      }
+      /* le conteneur de config*/
+      #settings {
+          position:absolute;
+          left:28px;
+          width: 20%;
+      }
+      /*le conteneur d'une map*/
+      .map{
+          display: inline-block;
+          text-align: center;
+          margin:0px!important;
+          padding:0px!important;
+      }
+      circle{
+        position : relative;
+        z-index: 999;
+      }
 
   </style>
 </head>
 
 <body>
 
+  <div id = "mapContainer">
+    <div id="mapEvents" class = "map"></div>
+    <div id="mapTweets" class = "map"></div>
+  </div>
 
-<div id="mapEvents"></div>
-<div id="mapTweets"></div> 
+
+  <div id = "settings">
+
+    <div id="daydiv">
+      <input id="slider" type="range" value="1" min="1" max="120" step="1" />
+      <span id="days"></span>
+    </div>
+
+    <div id="scalediv">
+      <input id="scale" type="text" value ="30000"/>
+      <input id="scaleBtn"
+             name="updateButton"
+             type="button"
+             value="update the scale"/>
+    </div>
+
+  </div>
+
   <script>
     var width = 960,
         height = 620;
 
+    var mapWidth = 450;
+    var mapHeight =600;
 
-    var svg = d3.select( "#mapEvents" )
-      .append( "svg" )
-      .attr( "width", width )
-      .attr( "height", height );
+    var svg = d3.select("#mapEvents")
+      .append( "svg" ).attr({'width':mapWidth,'height':mapHeight,'class' : 'svgmap'});
 
     var svg2 = d3.select( "#mapTweets" )
-      .append( "svg" )
-      .attr( "width", width )
-      .attr( "height", height );
-
+      .append( "svg" ).attr({'width':mapWidth,'height':mapHeight,'class' : 'svgmap'});
 
     var projection = d3.geo.mercator()
   					.center([-73.935242,40.730610])
   					.scale(30000)
-  					.translate([(width) / 2-40, (height)/2-20]);
-
-  	var projection2 = d3.geo.mercator()
-  					.center([-73.935242,40.730610])
-  					.scale(30000)
-  					.translate([(width) / 2-40, height + (height)/2-20]);
-	
+  					.translate([(mapWidth) / 2-40, (mapHeight)/2-75]);
 
     var path = d3.geo.path()
               .projection(projection);
 
-
-    var path2 = d3.geo.path()
-              .projection(projection2);
 
     var color = d3.scale.linear()
       .interpolate(d3.interpolateHcl)
@@ -190,79 +242,73 @@
 	}
 
 	function updateScale(value, regions, events,tweets){
-        scale = d3.select('#scale')[0][0].value;
-        console.log(scale);
 
-        projection = d3.geo.mercator()
-                        .center([-73.935242,40.730610])
-                        .scale(scale)
-                        .translate([(width) / 2-40, (height)/2-20]);
 
-        path = d3.geo.path()
-                  .projection(projection);
+      projection = d3.geo.mercator()
+                      .center([-73.935242,40.730610])
+                      .scale(value)
+                      .translate([(mapWidth) / 2-40, (mapHeight)/2-20]);
 
-        projection2 = d3.geo.mercator()
-                        .center([-73.935242,40.730610])
-                        .scale(scale)
-                        .translate([(width) / 2-40,height+ (height)/2-20]);
+      path = d3.geo.path()
+                .projection(projection);
 
-        path2 = d3.geo.path()
-                  .projection(projection2);
 
       svg.selectAll(".state").remove();
-      svg2.selectAll(".state").remove();
+      svg2.selectAll(".state2").remove();
 
-      drawMap(d3.select('#days')[0][0].value, regions,events,tweets)
+
+      var day = +d3.select('#slider')[0][0].value;
+      drawMap(day, regions,events,tweets)
     }
 
 	function drawMap(currentDay, nyc, events) {
 
-        //var map = topojson.feature(nyc, nyc.objects.cty036);
-        //console.log(map);
+      //var map = topojson.feature(nyc, nyc.objects.cty036);
+      //console.log(map);
 
       var carte = svg.selectAll(".state")
 	    .data(nyc.features);
-       //.data(map.features);
-
        //.datum(topojson.mesh(nyc, nyc.arcs));
 
 	  /*carte.attr("class", "update regions")
-	    .style("fill", function(d) {
-          	var color = fillRegions(d,currentDay);
-          	return color;
-            //return "whitesmoke";
-          })
-           .on('mousemove', function(d) {
-              fillTooltip(d);
-          })
-          .on('mouseout', function() {
-              tooltip.classed('hidden', true);
-          });*/
+            .style("fill", function(d) {
+                //console.log("ici");
+                var color = fillRegions(d,currentDay);
+                return color;
+                //return "whitesmoke";
+              })
+               .on('mousemove', function(d) {
+                  fillTooltip(d);
+              })
+              .on('mouseout', function() {
+                  tooltip.classed('hidden', true);
+              });*/
 
 	  carte.enter()
           .append("path")
-          .attr("class", function(d,i){
-              return "enter regions state " + d.properties.firediv;
+          .attr({
+              "d":path,
+              "id":function(d){
+                  return "mappath1";
+              },
+              "class":function(d){
+                  return "enter regions state " + d.properties.firediv;
+              }
           })
-          .attr("d", path)
           .style("fill", function(d) {
           	var color = fillRegions(d,currentDay);
             return color;
-            //return "whitesmoke";
           })
-
            .style("stroke", "black")
            .style("stroke-width", "1px")
            .on('mousemove', function(d) {
               fillTooltip(d);
-          })
-          .on('mouseout', function() {
-              tooltip.classed('hidden', true);
-          });
-
+            })
+            .on('mouseout', function() {
+                tooltip.classed('hidden', true);
+            });
 
       carte.exit().remove();
-
 
       events = events.filter(function(e) {
         return e.date.split(" ")[0] === d3.select('#days').html();
@@ -342,84 +388,92 @@
       nodes.exit().remove();
 
       /*SECOND MAP */
-      var carte = svg2.selectAll(".state")
+      var carte2 = svg2.selectAll(".state2")
       .data(nyc.features);
 
+      carte2.enter()
+        .append("path")
+        .attr({
+            "d":path,
+            "id":function(d){
+                return "mappath2";
+            },
+            "class":function(d){
+                return "enter regions state2 " + d.properties.firediv;
+            }
+        })
+        .style("fill", function(d) {
+           var color = fillRegions(d,currentDay);
+           return color;
+        })
+        .style("stroke", "black")
+        .style("stroke-width", "1px")
+        .on('mousemove', function(d) {
+          //fillTooltip(d);
+        })
+        .on('mouseout', function() {
+          //tooltip.classed('hidden', true);
+        });
 
-      carte.enter()
-      .append("path")
-      .attr("class", function(d,i){
-        return "enter regions state " + d.properties.firediv;
-      })
-      .attr("d", path2)
-      .style("fill", function(d) {
-       var color = fillRegions(d,currentDay);
-       return color;
-            //return "whitesmoke";
-          })
+      carte2.exit().remove();
 
-      .style("stroke", "black")
-      .style("stroke-width", "1px")
-      .on('mousemove', function(d) {
-        //fillTooltip(d);
-      })
-      .on('mouseout', function() {
-        //tooltip.classed('hidden', true);
-      });
-
-
-      carte.exit().remove();
       var date = tweetsdays[currentDay];
-      console.log(dayTweet);
-      console.log(date);
-      console.log(date);
+      //console.log(dayTweet);
+      //console.log(date);
 
-      var nodes = svg2.selectAll(".tweets")
-      .data(dayTweet[date]);
 
-      nodes.attr('class', 'update circles')
-      .attr("r", function(d) {
-        return 2;
-      })
-      .attr("transform", function(d) {
-        if (d.geo_lat == "null") {
-          return;
-        }
-        return "translate(" + projection([
-          d.geo_lat,
-          d.geo_lng
-          ]) + ")";
-      })
-      .on('mousemove', function(d) {
-        //fillTooltipContent(d);
-      })
-      .on('mouseout', function() {
-        //tooltip.classed('hidden', true);
-      });
+      //console.log(dayTweet[date]);
 
-      nodes.enter()
-      .append('circle')
-      .attr('class', 'enter circles')
-      .attr("r", function(d) {
-        return 2;
-      })
-      .attr("transform", function(d) {
-        if (d.geo_lat == "null") {
-          return;
-        }
-        return "translate(" + projection([
-          d.geo_lat,
-          d.geo_lng
-          ]) + ")";
-      })
-      .on('mousemove', function(d) {
-        //fillTooltip2(d);
-      })
-      .on('mouseout', function() {
-        //tooltip.classed('hidden', true);
-      });
+      var nodes2 = svg2.selectAll(".tweets")
+        .data(dayTweet[date]);
 
-      nodes.exit().remove();
+      nodes2.attr({
+            "class":function(d){
+                return "update circles";
+            },
+            "r" : 2,
+            "transform" : function(d) {
+              if (d.geo_lat == "null") {
+                return;
+              }
+              return "translate(" + projection([
+                d.geo_lat,
+                d.geo_lng
+                ]) + ")";
+            }
+          })
+          .on('mousemove', function(d) {
+            //fillTooltipContent(d);
+          })
+          .on('mouseout', function() {
+            //tooltip.classed('hidden', true);
+          });
+
+      nodes2.enter()
+            .append('circle')
+            .attr({
+            "class":function(d){
+                return "enter circles";
+            },
+            "r" : 2,
+            "transform" : function(d) {
+                if (d.geo_lat == "null") {
+                  return;
+                }
+                return "translate(" + projection([
+                  d.geo_lat,
+                  d.geo_lng
+                  ]) + ")";
+              }
+            })
+            .on('mousemove', function(d) {
+              //fillTooltip2(d);
+            })
+            .on('mouseout', function() {
+              //tooltip.classed('hidden', true);
+            });
+
+      nodes2.exit().remove();
 	}
 
 	var scale = 30000;
@@ -453,15 +507,15 @@
         		tweetsdays.push(day);
         		nbDays++;
         	}
-        	if(dayTweet[day]==undefined){
+        	if(!dayTweet[day]){
         		dayTweet[day] = [];
         	}
         	dayTweet[day].push(tweet);
         });
 
-
-
         drawMap(1, regionsdata, eventsData,tweets);
+		d3.select('#days').html(days[0]);
+
 		//color.domain([0, d3.max(data, function(d) { return parseFloat(d["somme2014"]);})]);
 		d3.select("#slider").on("input", function() {
 			updateViz(+this.value, regionsdata, eventsData,tweets);
@@ -472,27 +526,16 @@
 		});
 	}
 
-	queue()   // permet de charger les fichiers de manière asynchrone
+	queue()
+      // chargement du fichier des district de ny
 	  .defer(d3.json, "ny_firedivisions.json")
       //.defer(d3.json, "nyTopo.json")
+      //chargement des evenements geolocalise de tweets
 	  .defer(d3.csv, "vizuFile.csv")
+      //chargement des données de tweets
 	  .defer(d3.csv, "smallTweets3.csv")
 	  .await(processData);  
   
   </script>
-
-
-  <div id="daydiv">
-  	<input id="slider" type="range" value="1" min="1" max="120" step="1" />
-  	<span id="days"></span>
-  </div>
-
-  <div id="scalediv">
-  	<input id="scale" type="text" value ="30000"/>
-    <input id="scaleBtn"
-           name="updateButton"
-           type="button"
-           value="update the scale"/>
-  </div>
 
 </body>
