@@ -95,7 +95,7 @@ var tweetIcon = L.icon({
 
     iconSize:     [25, 30], // size of the icon
     iconAnchor:   [11, 11], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-2, -20] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [2, -10] // point from which the popup should open relative to the iconAnchor
 });
 
 
@@ -153,6 +153,10 @@ function drawMap(currentDay, events) {
       if (i<=500){
           if (tweet.geo_lat !== "null") {
               var marker = L.marker([tweet.geo_lng, tweet.geo_lat], {icon : tweetIcon});
+              var toDisplay = "User : " + tweet[" username"] + '</br>' +
+                              "Date : " + tweet.timestamp_day + "-" + tweet.timestamp_month + "-" + tweet.timestamp_year + ", " + tweet.timestamp_hour + "H:"+ tweet.timestamp_minute + '</br>' +
+                              "Text (# et @) : " + tweet.text;
+              marker.bindPopup(toDisplay);
               markers.addLayer(marker);
           }
       }
