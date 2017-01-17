@@ -11,7 +11,7 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
   <script src="//d3js.org/topojson.v1.min.js"></script>
   <style>
-      body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+      body { margin:10px;position:fixed;top:0;right:0;bottom:0;left:0; }
 
       .regions {
           stroke: #fff;
@@ -73,7 +73,7 @@
           width : 250px;
           margin-right :50px;
           margin-left :50px;
-          margin-top : 80px;
+          margin-top : 50px;
       }
 
       /* le slider de jour */
@@ -106,14 +106,16 @@
           width: 75%;
           padding-right : 6px;
           padding-left : 6px;
+          margin : 25px;
           margin-left:6px;
       }
-      /* le conteneur de config*/
       #settings {
-          position:absolute;
-          left:28px;
-          width: 20%;
+        position:absolute;
+        left:28px;
+        width: 20%;
+        margin : 25px;
       }
+      /* le conteneur de config*/
       /*le conteneur d'une map*/
       .map{
           display: inline-block;
@@ -170,7 +172,7 @@
     var projection = d3.geo.mercator()
   					.center([-73.935242,40.730610])
   					.scale(30000)
-  					.translate([(mapWidth) / 2-40, (mapHeight)/2-75]);
+  					.translate([(mapWidth) / 2-30, (mapHeight)/2-100]);
 
     var path = d3.geo.path()
               .projection(projection);
@@ -190,7 +192,7 @@
       .interpolate(d3.interpolateHcl)
       .range([0,1]).domain([0,100]);
 
-    var tooltip = d3.select('body').append('div')
+    var tooltip = d3.select('#mapContainer').append('div')
                 .attr('class', 'hidden tooltip');
 
  	var days = [];
@@ -256,9 +258,10 @@
       svg.selectAll(".state").remove();
       svg2.selectAll(".state2").remove();
 
-
       var day = +d3.select('#slider')[0][0].value;
-      drawMap(day, regions,events,tweets)
+
+      console.log(day);
+      drawMap(day, regions,events)
     }
 
 	function drawMap(currentDay, nyc, events) {
@@ -302,7 +305,7 @@
            .style("stroke", "black")
            .style("stroke-width", "1px")
            .on('mousemove', function(d) {
-              fillTooltip(d);
+                fillTooltip(d);
             })
             .on('mouseout', function() {
                 tooltip.classed('hidden', true);
@@ -409,10 +412,10 @@
         .style("stroke", "black")
         .style("stroke-width", "1px")
         .on('mousemove', function(d) {
-          //fillTooltip(d);
+          fillTooltip(d);
         })
         .on('mouseout', function() {
-          //tooltip.classed('hidden', true);
+          tooltip.classed('hidden', true);
         });
 
       carte2.exit().remove();
@@ -424,12 +427,12 @@
 
       //console.log(dayTweet[date]);
 
-      var nodes2 = svg2.selectAll(".tweets")
+      var nodes2 = svg2.selectAll(".tweets2")
         .data(dayTweet[date]);
 
       nodes2.attr({
             "class":function(d){
-                return "update circles";
+                return "update tweets2";
             },
             "r" : 2,
             "transform" : function(d) {
@@ -453,7 +456,7 @@
             .append('circle')
             .attr({
             "class":function(d){
-                return "enter circles";
+                return "enter tweets2";
             },
             "r" : 2,
             "transform" : function(d) {
@@ -495,7 +498,12 @@
         	}
         	i++;
         });
-        var nbDays=0;
+      console.log(nbDays);
+
+      d3.select('#slider')[0][0].max = nbDays;
+      console.log(days);
+
+      var nbDays=0;
 
          //console.log(eventsData);
         /*
