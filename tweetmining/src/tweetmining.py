@@ -37,7 +37,7 @@ def getTweetsFromJSONRepositoryAndSave(repositoryPath="..\\data") :
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3_filtered.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
@@ -50,7 +50,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
     # on charge les donnees du CSV dans MongoDB
-    getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3.csv")
+    getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3_filtered.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")
