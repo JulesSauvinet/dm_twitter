@@ -116,7 +116,7 @@ function drawMap(currentDay, events) {
       circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
         color: 'red',
         fillColor: color2(event.userNumber),
-        fillOpacity: opacity(event.tweetsNumbert),
+        fillOpacity: opacity(event.tweetsNumber),
         radius: scaledRadius
       });
     }
@@ -124,14 +124,14 @@ function drawMap(currentDay, events) {
         circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
             color: 'red',
             fillColor: color2(event.userNumber),
-            fillOpacity: opacity(event.tweetsNumbert),
+            fillOpacity: opacity(event.tweetsNumber),
             radius: scaledRadius
         });
     }
 
 
     var toDisplay =  "User number  : " +  event.userNumber + "</br>"
-             + "Tweets number  : " +  event.tweetsNumbert + "</br>"
+             + "Tweets number  : " +  event.tweetsNumber + "</br>"
              + "Hashtags  : ";
 
     var hashtags = event.importantHashtags.split("|");
