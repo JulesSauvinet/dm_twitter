@@ -26,7 +26,7 @@ class Event :
         self.estimatedEventDuration=self.tweets[len(tweets)/10].delay(self.tweets[(9*len(tweets))/10])
 
         userIdSet=set()
-		#---------------------------------------- Calcul du centre (latitude,longitude) ----------------------------------------#
+	#----- Calcul du centre (latitude,longitude) -----#
         self.eventCenter=Position(0,0)
         for tweet in tweets :
             userIdSet.add(tweet.userId)
@@ -39,7 +39,7 @@ class Event :
         self.eventCenter.latitude/=len(tweets)
         self.eventCenter.longitude/=len(tweets)
 		
-		#---------------------------------------- Calcul de la distance angulaire maximale ----------------------------------------#
+	#---- Calcul de la distance angulaire maximale -----#
         self.eventRadius=self.eventCenter.distance(tweets[0].position)
         for tweet in tweets :
             distance=self.eventCenter.distance(tweet.position)
@@ -49,21 +49,24 @@ class Event :
         self.userNumber=len(userIdSet)        
         self.importantHashtags=self.getImportantHashtags()
 
+    #----------------------------------------------------------------------------------------------------#
+        
     def getImportantHashtags(self, topk=20) :
-		# on compte le nbr d'apparitions d'un mot dans toutes les listes d'hashtags des tweets de l'evenement
+	# on compte le nbr d'apparitions d'un mot dans toutes les listes d'hashtags des tweets de l'evenement
         dictHashtags={}
         for t in self.tweets :
             for h in t.hashtags :
                 try : dictHashtags[h.lower()]+=1
                 except KeyError : dictHashtags[h.lower()]=1
 				
-		# on renvoie la liste de touds les hashtags recuperes, on les range dans l'ordre décroissant grace à leur nbr d'occurrence
-		# et on ne garde que les 'topk' premiers hashtags de cette liste pour avoir les 'topk' hashtags les plus frequents 
-		# attention si on a moins de topk hashtags on les renvoie tous
+	# on renvoie la liste de tous les hashtags recuperes, on les range dans l'ordre décroissant grace à leur nbr d'occurrence
+	# et on ne garde que les 'topk' premiers hashtags de cette liste pour avoir les 'topk' hashtags les plus frequents 
+	# attention si on a moins de topk hashtags on les renvoie tous
         importantHashtags=sorted(list(dictHashtags), key=lambda element : dictHashtags[element], reverse=True)[0:min(topk,len(dictHashtags))]
         return importantHashtags
 
-    # ----------------------------------- Output for vizualisation ------------------------------------#
+    # ----------------------------------- Output for vizualisation -------------------------------------#
+    
     def outForVizu(self):
         SEPARATOR = ","
         NUM_DIGIT=10**2
@@ -78,6 +81,7 @@ class Event :
         return S.encode("utf-8")
 
     #---------------- Visualize -----------------------------------------------------------------------#
+    
     def __str__(self) :
         NUM_DIGIT=10**2
         SEPARATOR="\n|"

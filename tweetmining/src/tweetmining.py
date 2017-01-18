@@ -11,6 +11,7 @@ from statsmodels.stats import gof
 from eventDetectionFromTwitter.source.controller.DataManagement.MongoDBHandler import MongoDBHandler
 from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDetectorMEDBased import \
     OptimisedEventDetectorMEDBased
+from testStat import filterTweets
 
 #MIN_TERM_OCCURENCE_E -> pourcentage d'apparition d'un terme en fonction du nombre de tweet d'un cluster
 #MIN_TERM_OCCURENCE -> nombre d'occurence minimal d'un terme
@@ -39,63 +40,9 @@ def getTweetsFromJSONRepositoryAndSave(repositoryPath="..\\data") :
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3_filtered.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
-
-#---------------------------------------------------------------------------------------------------------------------------------------------
-def filterTweets(tweets):
-    tweetsFilter = []
-
-    usersTweets = {}
-    # on recupere tous les users et tous leur tweets
-    for tweet in tweets:
-        user = tweet.userId
-        try:
-            usersTweets[user].append(tweet)
-        except KeyError:
-            usersTweets[user] = [tweet]
-
-    # on recupere tous les intervalles de temps pour la loi geometrique
-    for user, userTweets in usersTweets.iteritems():
-        deleteUser = False
-        timeInterval = {}
-        nbrInterval = 0.0
-
-        for i in range(len(userTweets) - 1):
-            for j in range(i + 1, len(userTweets)):
-                tweetTime = userTweets[j].time - userTweets[i].time
-                totalMin = round(tweetTime.total_seconds() / 60.0, 0)
-
-                if (totalMin < 0.0):
-                    tweetTime = userTweets[i].time - userTweets[j].time
-                    totalMin = round(tweetTime.total_seconds() / 60.0, 0)
-
-                try:
-                    timeInterval[totalMin] += 1.0
-                except KeyError:
-                    timeInterval[totalMin] = 1.0
-                nbrInterval += 1.0
-
-        frequency = []
-        for interval, occurence in timeInterval.iteritems():
-            frequency.append(occurence / nbrInterval)
-
-        frequency = sorted(frequency, reverse=True)
-
-        (x, pval,isGeom,msg) = gof.gof_chisquare_discrete(stats.geom, (0.25,), frequency, 0.25,'Geom')
-
-        print "res"
-        print x,pval,isGeom,msg
-
-        if (isGeom == True):
-            deleteUser = True
-
-        if (not(deleteUser == True)):
-            tweetsFilter.extend(userTweets)
-
-    return tweetsFilter
-
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
@@ -104,7 +51,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
     # on charge les donnees du CSV dans MongoDB
-    #getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
+    #getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3_filtered.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")
@@ -121,6 +68,10 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
             maxTime = tweet.time
     timeTotal = maxTime-minTime
 
+    totalEvent = []
+	
+    # --------------------------------------- on fait un premier clustering ------------------------------------- #
+	
     # blackList = {} on ne peut pas la remplir au debut
     # pour toutes les dates de nos donnees dans MongoDB
         # on lance un premier clustering
@@ -141,7 +92,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
         staringTime = time.time()
         tweets = mongoDBHandler.getAllTweetsOfDate(limit=limit,date=datestring)
         print "tweet before filter : ", len(tweets)
-        tweets = filterTweets(tweets)
+        #tweets = filterTweets(tweets)
         print "tweet after filter : ", len(tweets)
 
         if (tweets):
@@ -159,50 +110,36 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
                                                  elasticity=elasticity, geolocalisation=geolocalisation)
 
                 if len(events) > 0:
-                    print("")
-                    print("-" * 40)
-                    print("{0} Event detected : ".format(len(events)))
-                    print("-" * 40)
-                    sortieFile.write("\n")
-                    sortieFile.write("----------------------------------------\n")
-                    sortieFile.write("{0} Event detected : ".format(len(events))+"\n")
-                    sortieFile.write("----------------------------------------\n")
+                    totalEvent.extend(events)
 
-                    for event in events :
-                        print(event)
-                        print("*" * 80)
-                        sortieFile.write(event.__str__()+"\n")
+    # ----------------------------------------- fin du premier clustering --------------------------------------- #
+	
+    #avec SmallTweet trie on detecte 110 evenements
+    blackList = []
+    
+    numberOfEvent = float(len(totalEvent))
+    pertinentHashtag = {}
+    numberOfHash = 0
 
-                        vizuFile.write(event.outForVizu()+"\n")
+    # on enregistre tous les hashtags avec leur nbr d'occurence
+    for event in totalEvent :
+        hashtagsEvent = event.importantHashtags
+        for hashs in hashtagsEvent :
+            try:
+                 pertinentHashtag[hashs] += 1.0
+            except KeyError:
+                pertinentHashtag[hashs] = 1.0
+                numberOfHash += 1
 
-                        sortieFile.write("********************************************************************************\n")
-                    elapsed_time=(time.time()-staringTime)
-                    print("-"*40)
-                    print("Elapsed time : {0}s".format(elapsed_time))
-                    print("-"*40)
-                    sortieFile.write("----------------------------------------\n")
-                    sortieFile.write("Elapsed time : {0}s".format(elapsed_time)+"\n")
-                    sortieFile.write("----------------------------------------\n\n\n")
-                else :
-                    print("")
-                    print("-" * 40)
-                    print("0 Event detected : ")
-                    print("-" * 40)
-                    sortieFile.write("\n")
-                    sortieFile.write("----------------------------------------\n")
-                    sortieFile.write("0 Event detected : \n")
-                    sortieFile.write("----------------------------------------\n")
-                    elapsed_time=(time.time()-staringTime)
-                    print("-"*40)
-                    print("Elapsed time : {0}s".format(elapsed_time))
-                    print("-"*40)
-                    sortieFile.write("----------------------------------------\n")
-                    sortieFile.write("Elapsed time : {0}s".format(elapsed_time)+"\n")
-                    sortieFile.write("----------------------------------------\n\n\n")
-                    
+    # on calcule la frequence d'apparition
+    for hashs,occurence in pertinentHashtag.iteritems() :
+        freq = occurence/numberOfEvent
+        if freq > 0.3 :
+            blackList.extend(hashs)
+            print hashs
 
-    vizuFile.close()
-    sortieFile.close()
+    #print blackList
+
     for f in glob.glob("output*.txt"):
         os.remove(f)
     for f in glob.glob("input*.txt"):
