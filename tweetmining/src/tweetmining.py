@@ -5,6 +5,8 @@ from datetime import timedelta, datetime
 
 # on appelle MongoDBHandler pour tout ce qui concerne la connexion a la base de donnees
 # on appelle OptimisedEventDetectorMEDBased pour ce qui concerne la construction de la matrice de similarite et la construction des clusters
+from scipy import stats
+from statsmodels.stats import gof
 
 from eventDetectionFromTwitter.source.controller.DataManagement.MongoDBHandler import MongoDBHandler
 from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDetectorMEDBased import \
@@ -13,8 +15,8 @@ from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDe
 #MIN_TERM_OCCURENCE_E -> pourcentage d'apparition d'un terme en fonction du nombre de tweet d'un cluster
 #MIN_TERM_OCCURENCE -> nombre d'occurence minimal d'un terme
 #ELASTICITY -> booleen pour savoir si on utilise MIN_TERM_OCCURENCE_E ou MIN_TERM_OCCURENCE
-#REMOVE_NOISE_WITH_POISSON_LAW -> booleen pour savoir si on supprime les termes qui sont rÃ©gis par une loi de Poisson
-#GEOLOCALISATION -> booleen pour savoir pour si on fait des clusters de densitÃ© avant de faire des clusters de similarite
+#REMOVE_NOISE_WITH_POISSON_LAW -> booleen pour savoir si on supprime les termes qui sont regis par une loi de Poisson
+#GEOLOCALISATION -> booleen pour savoir pour si on fait des clusters de densite avant de faire des clusters de similarite
 
 MIN_TERM_OCCURENCE_E=0.2
 MIN_TERM_OCCURENCE=20
@@ -42,45 +44,59 @@ def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def filterTweets(tweets,threshold=1.0) :
+def filterTweets(tweets):
+    tweetsFilter = []
+
     usersTweets = {}
     # on recupere tous les users et tous leur tweets
-    for tweet in tweets :
+    for tweet in tweets:
         user = tweet.userId
-        try :
+        try:
             usersTweets[user].append(tweet)
-        except KeyError :
+        except KeyError:
             usersTweets[user] = [tweet]
-            
+
     # on recupere tous les intervalles de temps pour la loi geometrique
-    for user,userTweets in usersTweets.iteritems() :
+    for user, userTweets in usersTweets.iteritems():
         deleteUser = False
         timeInterval = {}
-        nbrInterval = 0
-        
-        for i in range(len(userTweets)-1) :
-            for j in range(i+1,len(userTweets)) :
-                tweetTime = userTweets[j].time - userTweets[i].time
-                totalMin = round(tweetTime.total_seconds()/60,0)
-                try :
-                    timeInterval[totalMin] += 1
-                except KeyError :
-                    timeInterval[totalMin] = 1
-                nbrInterval += 1
-                
-        frequency = []
-        for interval, occurence in timeInterval.iteritems() :
-            frequency.append(occurence/nbrInterval)            
-        frequency = sorted(frequency,reverse=True)
-        
-        # on vérifie mtn que la distribution suit une loi de poiscaille
-        probTest = geom(0.5)
-        dist = getattr(spicy.stats,"geom")       
-        
-                
+        nbrInterval = 0.0
 
-#firstdate = "2015-07-21"
-#firstdate = "2015-09-16"
+        for i in range(len(userTweets) - 1):
+            for j in range(i + 1, len(userTweets)):
+                tweetTime = userTweets[j].time - userTweets[i].time
+                totalMin = round(tweetTime.total_seconds() / 60.0, 0)
+
+                if (totalMin < 0.0):
+                    tweetTime = userTweets[i].time - userTweets[j].time
+                    totalMin = round(tweetTime.total_seconds() / 60.0, 0)
+
+                try:
+                    timeInterval[totalMin] += 1.0
+                except KeyError:
+                    timeInterval[totalMin] = 1.0
+                nbrInterval += 1.0
+
+        frequency = []
+        for interval, occurence in timeInterval.iteritems():
+            frequency.append(occurence / nbrInterval)
+
+        frequency = sorted(frequency, reverse=True)
+
+        (x, pval,isGeom,msg) = gof.gof_chisquare_discrete(stats.geom, (0.25,), frequency, 0.25,'Geom')
+
+        print "res"
+        print x,pval,isGeom,msg
+
+        if (isGeom == True):
+            deleteUser = True
+
+        if (not(deleteUser == True)):
+            tweetsFilter.extend(userTweets)
+
+    return tweetsFilter
+
+
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,
@@ -88,7 +104,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
     # on charge les donnees du CSV dans MongoDB
-    getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
+    #getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")
@@ -105,7 +121,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
             maxTime = tweet.time
     timeTotal = maxTime-minTime
 
-    # blackList = {} on ne peut pas la remplir au début
+    # blackList = {} on ne peut pas la remplir au debut
     # pour toutes les dates de nos donnees dans MongoDB
         # on lance un premier clustering
     # on stocke dans un tableau tous les hashtags pertinents
@@ -124,6 +140,9 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 
         staringTime = time.time()
         tweets = mongoDBHandler.getAllTweetsOfDate(limit=limit,date=datestring)
+        print "tweet before filter : ", len(tweets)
+        tweets = filterTweets(tweets)
+        print "tweet after filter : ", len(tweets)
 
         if (tweets):
             if (len(tweets)>0) :
