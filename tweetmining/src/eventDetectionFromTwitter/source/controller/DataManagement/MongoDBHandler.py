@@ -67,10 +67,10 @@ class MongoDBHandler :
             tweets = f.readlines()
             i = 0
             for tweetLine in tweets :
-                #print (tweetLine)
                 if i != 0 :
                     try :
-                        tweet=getTweetFromCSVLine(tweetLine)
+                        tweet=getTweetFromCSVLine(tweetLine)                        
+                        #print tweet.position
                         if (not ensureHavePosition or tweet.position) : self.saveTweet(tweet)
                     except ValueError :
                         print tweet

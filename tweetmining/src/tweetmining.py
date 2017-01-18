@@ -37,9 +37,47 @@ def getTweetsFromJSONRepositoryAndSave(repositoryPath="..\\data") :
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3_filtered.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
+
+#---------------------------------------------------------------------------------------------------------------------------------------------
+def filterTweets(tweets,threshold=1.0) :
+    usersTweets = {}
+    # on recupere tous les users et tous leur tweets
+    for tweet in tweets :
+        user = tweet.userId
+        try :
+            usersTweets[user].append(tweet)
+        except KeyError :
+            usersTweets[user] = [tweet]
+            
+    # on recupere tous les intervalles de temps pour la loi geometrique
+    for user,userTweets in usersTweets.iteritems() :
+        deleteUser = False
+        timeInterval = {}
+        nbrInterval = 0
+        
+        for i in range(len(userTweets)-1) :
+            for j in range(i+1,len(userTweets)) :
+                tweetTime = userTweets[j].time - userTweets[i].time
+                totalMin = round(tweetTime.total_seconds()/60,0)
+                try :
+                    timeInterval[totalMin] += 1
+                except KeyError :
+                    timeInterval[totalMin] = 1
+                nbrInterval += 1
+                
+        frequency = []
+        for interval, occurence in timeInterval.iteritems() :
+            frequency.append(occurence/nbrInterval)            
+        frequency = sorted(frequency,reverse=True)
+        
+        # on vérifie mtn que la distribution suit une loi de poiscaille
+        probTest = geom(0.5)
+        dist = getattr(spicy.stats,"geom")       
+        
+                
 
 #firstdate = "2015-07-21"
 #firstdate = "2015-09-16"
@@ -50,7 +88,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
     # on charge les donnees du CSV dans MongoDB
-    getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3_filtered.csv")
+    getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")

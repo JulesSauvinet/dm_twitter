@@ -49,7 +49,7 @@ class Event :
         self.userNumber=len(userIdSet)        
         self.importantHashtags=self.getImportantHashtags()
 
-    def getImportantHashtags(self, topk=10) :
+    def getImportantHashtags(self, topk=20) :
 		# on compte le nbr d'apparitions d'un mot dans toutes les listes d'hashtags des tweets de l'evenement
         dictHashtags={}
         for t in self.tweets :
