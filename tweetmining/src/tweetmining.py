@@ -5,8 +5,10 @@ from datetime import timedelta, datetime
 
 # on appelle MongoDBHandler pour tout ce qui concerne la connexion a la base de donnees
 # on appelle OptimisedEventDetectorMEDBased pour ce qui concerne la construction de la matrice de similarite et la construction des clusters
+from datetime import datetime
 from scipy import stats
 from statsmodels.stats import gof
+from operator import itemgetter
 
 from eventDetectionFromTwitter.source.controller.DataManagement.MongoDBHandler import MongoDBHandler
 from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDetectorMEDBased import \
@@ -45,6 +47,7 @@ def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def filterTweets(tweets):
+
     tweetsFilter = []
 
     usersTweets = {}
@@ -77,16 +80,33 @@ def filterTweets(tweets):
                     timeInterval[totalMin] = 1.0
                 nbrInterval += 1.0
 
-        frequency = []
+        timeListDict = []
+
         for interval, occurence in timeInterval.iteritems():
-            frequency.append(occurence / nbrInterval)
+            timeListDict.append({"time" : interval, "occurence" : occurence})
 
-        frequency = sorted(frequency, reverse=True)
 
-        (x, pval,isGeom,msg) = gof.gof_chisquare_discrete(stats.geom, (0.25,), frequency, 0.25,'Geom')
+        timeListSorted = sorted(timeListDict, key=itemgetter('occurence'), reverse=True)
 
-        print "res"
-        print x,pval,isGeom,msg
+
+        times = []
+        idx = 1
+        for val in timeListSorted:
+            occurence = val["occurence"]
+            time = val["time"]
+
+            for i in range(int(occurence)) :
+                times.append(idx)
+            idx+=1
+
+        (x, pval,isGeom,msg) = gof.gof_chisquare_discrete(stats.geom, (0.23,), times, 0.70,'Geom')
+
+        print "res geom", x,pval,isGeom,msg
+
+        #geomrvs = stats.geom.rvs(0.20, size=45)
+        #print "comp"
+        #print sorted(geomrvs)
+        #print times
 
         if (isGeom == True):
             deleteUser = True
@@ -97,8 +117,9 @@ def filterTweets(tweets):
     return tweetsFilter
 
 
+
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
+def main(limit=15000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,
 		remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
@@ -112,7 +133,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 	
 	# ----- on recupere tous les tweets de la base de MongoDB pour trouver la 1ere date et la derniere date ----- #
     mongoDBHandler = MongoDBHandler()
-    tweetsAll = mongoDBHandler.getAllTweets(limit=limit)
+    tweetsAll = mongoDBHandler.getAllTweets(limit=1500000)
     minTime = maxTime = tweetsAll[0].time
     for tweet in tweetsAll:
         if (tweet.time < minTime):
@@ -130,8 +151,8 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
     # pour toutes les dates de nos donnees dans MongoDB cad celle avec lesquelles on a fait le 1er clutering
         # on lance un second clustering
         # en prenant soin de ne pas garder dans les hashtags pertinents ceux qui sont dans la blackList
-        
-    for i in range(timeTotal.days+1):
+
+    for i in range(5):#range(timeTotal.days+1):
         mongoDBHandler = MongoDBHandler()
         #date_1 = datetime.strptime(minTime, "%Y-%m-%d")
         end_date = minTime + timedelta(days=i)
