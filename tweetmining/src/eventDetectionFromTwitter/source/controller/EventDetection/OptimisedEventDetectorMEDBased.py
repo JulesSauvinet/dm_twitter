@@ -11,8 +11,8 @@ import os.path
 class OptimisedEventDetectorMEDBased:
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Class constructor
-	# 	pour faire de la detection d'evenements
-	#	il faut des tweets, un temps de resolution et une distance min de resolution, une echelle et une valeur minimale de similarite significative
+    #   pour faire de la detection d'evenements
+    #   il faut des tweets, un temps de resolution et une distance min de resolution, une echelle et une valeur minimale de similarite significative
     # -------------------------------------------------------------------------------------------------------------------------------------
     def __init__(self, tweets, timeResolution=1800, distanceResolution=100, scaleNumber=4, minSimilarity=0.5, distanceThreshold=10):
         """
@@ -43,16 +43,16 @@ class OptimisedEventDetectorMEDBased:
         if (len(self.tweets)>0):
 
             print "Detecting events ..."
-			# pour detecter un evenement, on recupere les clusters resultant du clustering pour une date donnee
+	    # pour detecter un evenement, on recupere les clusters resultant du clustering pour une date donnee
             realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
                                             remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=elasticity,geolocalisation=geolocalisation,blackList=blackList)
 											
             # on recupere dans clustersUniqueId, la liste des ID des clusters crees, methode ensembliste, une seule occurence
-			# on recupere chaque id de cluster, 
-			# on met dans tweetsOfClusterId, tous les tweets qui appartiennent a l'id du cluster que l'on traite
-			# on definit comme evenement l'ensemble de ces tweets
-			# si notre evenement est defini comme important, on l'ajoute a l'ensemble de tous les evenements
-			# on renvoie cet ensemble, qui correspond a l'ensemble des evenements pour une date donnee
+	    # on recupere chaque id de cluster, 
+	    # on met dans tweetsOfClusterId, tous les tweets qui appartiennent a l'id du cluster que l'on traite
+	    # on definit comme evenement l'ensemble de ces tweets
+	    # si notre evenement est defini comme important, on l'ajoute a l'ensemble de tous les evenements
+	    # on renvoie cet ensemble, qui correspond a l'ensemble des evenements pour une date donnee
             events = []
             if realClusters is not None:
                 if len(realClusters > 0):
@@ -75,10 +75,10 @@ class OptimisedEventDetectorMEDBased:
             return []
 
     # -------------------------------------------------------------------------------------------------------------------------------------
-	# si le nombre de personnes ayant tweete n'est pas assez important ou si il n'y a pas assez de tweets --> on renvoie faux
-	# tweetPerUserNumber contient le nombre de tweets par utilisateur
-	# maximumProportionInThisEvent contient le nombre de tweets de la personne qui a le plus tweete divise par le nbr total de tweets
-	# on renvoie vrai si la proportion de tweets par personne n'est pas exageree
+    # si le nombre de personnes ayant tweete n'est pas assez important ou si il n'y a pas assez de tweets --> on renvoie faux
+    # tweetPerUserNumber contient le nombre de tweets par utilisateur
+    # maximumProportionInThisEvent contient le nombre de tweets de la personne qui a le plus tweete divise par le nbr total de tweets
+    # on renvoie vrai si la proportion de tweets par personne n'est pas exageree
     # -------------------------------------------------------------------------------------------------------------------------------------
     def isEventImportant(self, event):
         """
@@ -96,7 +96,7 @@ class OptimisedEventDetectorMEDBased:
 
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Event vizualisation
-	#	Renvoie, un evenement sous forme d'une chaine de caracteres afin de l'afficher dans la console lors de l'execution
+    #   Renvoie, un evenement sous forme d'une chaine de caracteres afin de l'afficher dans la console lors de l'execution
     # -------------------------------------------------------------------------------------------------------------------------------------
     def getStringOfEvent(self, event):
         NUM_DIGIT = 10 ** 2
@@ -124,8 +124,8 @@ class OptimisedEventDetectorMEDBased:
 		
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Fonction pour recuperer les meilleurs evenements
-	#	affichage sous forme de tableau du resultat
-	#	on trie tous les evenements par ordre decroissant, en ne gardant que les "top" premiers, top passe en parametre
+    #	affichage sous forme de tableau du resultat
+    #	on trie tous les evenements par ordre decroissant, en ne gardant que les "top" premiers, top passe en parametre
     # -------------------------------------------------------------------------------------------------------------------------------------
     def showTopEvents(self, top=10):
         if not self.events:
@@ -150,9 +150,9 @@ class OptimisedEventDetectorMEDBased:
 
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Clustering and Similarity matrix construction
-	#	on construit un fichier d'entree et un fichier de sortie propre a la date d'entree
-	#	le fichier d'entree contient la matrice de similarite, sur une meme ligne on a un tweet i et un tweet j puis la valeur de leur similarite
-	#	le fichier de sortie contenant la matrice de correspondance est parse puis renvoye sous forme de tableau
+    #	on construit un fichier d'entree et un fichier de sortie propre a la date d'entree
+    #	le fichier d'entree contient la matrice de similarite, sur une meme ligne on a un tweet i et un tweet j puis la valeur de leur similarite
+    #	le fichier de sortie contenant la matrice de correspondance est parse puis renvoye sous forme de tableau
     # -------------------------------------------------------------------------------------------------------------------------------------
     def getClusters(self, date ,minimalTermPerTweet=5, minimalTermPerTweetElasticity=5, remove_noise_with_poisson_Law=False,elasticity=False,geolocalisation=False,blackList=[]):
         """
@@ -163,29 +163,28 @@ class OptimisedEventDetectorMEDBased:
         clusterFilePath = "output"+date+".txt"
 
         # Creating the input file
-		# on construit la matrice de similarite, et on met les donnees resultats dans le fichier d'entree
+	# on construit la matrice de similarite, et on met les donnees resultats dans le fichier d'entree
         print "\tBuilding similarity matrix ..."
         self.build(minimalTermPerTweet=minimalTermPerTweet, minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
 				   remove_noise_with_poisson_Law=remove_noise_with_poisson_Law, similarityFilePath=weightsFilePath,elasticity=elasticity,geolocalisation=geolocalisation,blackList=blackList)
 
-		# on construit mtn le fichier de sortie qui associe a chaque tweet le numero de clusters auquel il appartient
-		#
+	# on construit mtn le fichier de sortie qui associe a chaque tweet le numero de clusters auquel il appartient
         if os.path.isfile(weightsFilePath):
             fic = open(weightsFilePath, 'r')
             read = fic.readlines()
             nblines = len(read)
             fic.close()
             if nblines > 1:
-                # Creating the output file (command execution)
-					#inputFileName = weightsFilePath
-					#outputFileName = clusterFilePath
-					#modularityFunction = 1 : standard
-					#resolution = 0.5
-					#algorithm = 2 : Louvain with multilevel refinement
-					#nRandomStarts = 10
-					#nIterations = 10
-					#randomSeed = 0
-					#printOutput = 0 
+            # Creating the output file (command execution)
+		#inputFileName = weightsFilePath
+		#outputFileName = clusterFilePath
+		#modularityFunction = 1 : standard
+		#resolution = 0.5
+		#algorithm = 2 : Louvain with multilevel refinement
+		#nRandomStarts = 10
+		#nIterations = 10
+		#randomSeed = 0
+		#printOutput = 0 
                 print "\tClustering ..."
                 command = "java -jar eventDetectionFromTwitter/ModularityOptimizer.jar {0} {1} 1 0.5 2 10 10 0 0".format(weightsFilePath, clusterFilePath)
                 process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
@@ -206,7 +205,7 @@ class OptimisedEventDetectorMEDBased:
         """
         Return an upper sparse triangular matrix of similarity j>i
         """
-		# on recupere le temps, la resolution temporale, la resolution de distance, une echelle, les tweets et le pourcentage de similarite
+	# on recupere le temps, la resolution temporale, la resolution de distance, une echelle, les tweets et le pourcentage de similarite
         staringTime = time.time()
         timeResolution = self.timeResolution
         distanceResolution = self.distanceResolution
@@ -220,7 +219,7 @@ class OptimisedEventDetectorMEDBased:
         deltaDlon = float(distanceResolution) / DEG_LATITUDE_IN_METER
         print "\t\tPass 1 - Get General Information"
         # Pass 1 - Get General Information
-		# on va recuperer la date de debut et la date de fin des tweets, ainsi que la latitude et longitude min et max des tweets
+	# on va recuperer la date de debut et la date de fin des tweets, ainsi que la latitude et longitude min et max des tweets
         minTime = maxTime = tweets[0].time
         minLat = maxLat = float(tweets[0].position.latitude)
         minLon = maxLon = float(tweets[0].position.longitude)
@@ -235,18 +234,18 @@ class OptimisedEventDetectorMEDBased:
                 maxLon = float(tweet.position.longitude)
             if (tweet.time < minTime): minTime = tweet.time
             if (tweet.time > maxTime): maxTime = tweet.time
-		# on definit un carre pour localiser les tweets en calculant leftUpperCorner et rightLowerCorner
-		# minDistance est egale a la distance de resolution donnee au debut
-		# leftUpperCorner definit le coin en haut a gauche grace au valeurs minimales calculees
-		# x est la latitude maximale
-		# y est la longitude maximale
-		# rightLowerCorner definit le coin en bas a droite grace au valeurs maximales calculees x et y
-		# maxDistance est la distance euclidienne entre leftUpperCorner et rightLowerCorner
-		# on definit scalesMaxDistances comme un vecteur contenant une echelle de taille scaleNumber de distance entre minDistance et maxDistance
-		# pour calculer temporalSeriesSize, on met 2 a la puissance (le log du nbr de paquets de secondes de timeResolution)
-		# haarTransformeSize contient le minimum entre temporalSeriesSize et 2^scaleNumber
-		# maximalSupportableScale est le minimum entre scaleNumber et le log en base 2 de haarTransformeSize
-		# totalArea permet de determiner la surface totale de traitement des tweets
+	# on definit un carre pour localiser les tweets en calculant leftUpperCorner et rightLowerCorner
+	# minDistance est egale a la distance de resolution donnee au debut
+	# leftUpperCorner definit le coin en haut a gauche grace au valeurs minimales calculees
+	# x est la latitude maximale
+	# y est la longitude maximale
+	# rightLowerCorner definit le coin en bas a droite grace au valeurs maximales calculees x et y
+	# maxDistance est la distance euclidienne entre leftUpperCorner et rightLowerCorner
+	# on definit scalesMaxDistances comme un vecteur contenant une echelle de taille scaleNumber de distance entre minDistance et maxDistance
+	# pour calculer temporalSeriesSize, on met 2 a la puissance (le log du nbr de paquets de secondes de timeResolution)
+	# haarTransformeSize contient le minimum entre temporalSeriesSize et 2^scaleNumber
+	# maximalSupportableScale est le minimum entre scaleNumber et le log en base 2 de haarTransformeSize
+	# totalArea permet de determiner la surface totale de traitement des tweets
         minDistance = distanceResolution
         leftUpperCorner = Position(float(minLat) + float(deltaDlat) / 2, float(minLon) + float(deltaDlon) / 2)
         x = int(float(maxLat) / float(deltaDlat)) * float(deltaDlat) + float(deltaDlat) / 2
@@ -261,12 +260,12 @@ class OptimisedEventDetectorMEDBased:
 
         print "\t\tPass 2 - Construct TFVectors, IDFVector, tweetsPerTermMap, timeSerieMap and cellOfTweet"
         # Pass 2 - Construct TFVectors, IDFVector, tweetsPerTermMap, timeSerieMap and cellOfTweet
-		# TFIDFVectors -> stocke 1 TFVectors pour chaque tweet 
-		# TFVector -> l'ensemble des termes presents ainsi que leur frequence d'apparition relative a 1 tweet
-		# IDFVector -> stocke pour chaque terme le nbr d'occurence
-		# tweetsPerTermMap -> stocke pour chaque terme, l'ensemble des tweets qui contenait ce terme
-		# timeSerieMap -> contient pour chaque terme, pour chaque "cell", les heures des tweets qui contiennent ce terme avec un tel cell
-		# cellOfTweet -> tableau contenant toutes les "distances cell" entre chaque tweet et (minLat,minLon) 
+	# TFIDFVectors -> stocke 1 TFVectors pour chaque tweet 
+	# TFVector -> l'ensemble des termes presents ainsi que leur frequence d'apparition relative a 1 tweet
+	# IDFVector -> stocke pour chaque terme le nbr d'occurence
+	# tweetsPerTermMap -> stocke pour chaque terme, l'ensemble des tweets qui contenait ce terme
+	# timeSerieMap -> contient pour chaque terme, pour chaque "cell", les heures des tweets qui contiennent ce terme avec un tel cell
+	# cellOfTweet -> tableau contenant toutes les "distances cell" entre chaque tweet et (minLat,minLon) 
         TFIDFVectors = []
         IDFVector = {}
         tweetsPerTermMap = {}
@@ -300,7 +299,7 @@ class OptimisedEventDetectorMEDBased:
                         TFVector[term] = 1
 
             # Finalize the TF vector while constructing the IDF vector, tweetsPerTermMap and the timeSerieMap
-			# on ajoute dans timeSerieMap, pour chaque terme, pour chaque cell, les heures des tweets qui contiennent ce terme avec un tel cell
+	    # on ajoute dans timeSerieMap, pour chaque terme, pour chaque cell, les heures des tweets qui contiennent ce terme avec un tel cell
             for term, occurence in TFVector.iteritems():
                 if term in IDFVector:
                     IDFVector[term] += 1
