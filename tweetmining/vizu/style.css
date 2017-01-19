@@ -5,11 +5,26 @@ body { margin:10px;position:fixed;top:0;right:0;bottom:0;left:0; }
 #mapContainer{
     position: absolute;
     right: 28px;
-    width: 75%;
+    width: 70%;
     padding-right : 6px;
     padding-left : 6px;
     margin : 25px;
     margin-left:6px;
+}
+
+#select{
+    margin : 10px;
+    margin-top : 20px;
+
+    /*border : 1pt solid lightgrey;*/
+    padding : 12px;
+    border-radius : 8px;
+}
+
+.select{
+    width : 280px;
+    margin : 0px;
+    padding: 5px;
 }
 
 /* le conteneur de la map d'event*/
@@ -51,13 +66,14 @@ h4 {
 }
 /* le div qui contient le slider pour changer le jour */
 #daydiv {
-    border : 1pt solid lightgrey;
+    /*border : 1pt solid lightgrey;*/
+
+    padding : 10px;
     border-radius : 8px;
     width : 250px;
     margin-right :40px;
     margin-left :10px;
     margin-top : 25px;
-    padding : 10px;
 
 }
 #daydiv span{
@@ -65,7 +81,7 @@ h4 {
     font-size: 16px;
     position: absolute;
     display: inline-block;
-    bottom : 6px;
+    top : 55px;
     margin: 10px;
     line-height:1.8;
 }
@@ -92,9 +108,9 @@ h4 {
 /* le conteneur de config*/
 #settings {
     position:absolute;
-    left:15px;
-    width: 22%;
-    margin : 15px;
+    left:0px;
+    width: 25%;
+    margin : 5px;
 }
 
 circle{

@@ -66,7 +66,7 @@ class OptimisedEventDetectorMEDBased:
                     #print "realClusterslen", len(realClusters)
                     for clusterId in clustersUniqueId:
                         tweetsOfClusterId = self.tweets[realClusters == clusterId]
-                        event = Event(tweetsOfClusterId)
+                        event = Event(tweetsOfClusterId, blackList)
                         if (self.isEventImportant(event)): events.append(event)
             self.events = events
             return events

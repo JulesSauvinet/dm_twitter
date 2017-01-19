@@ -2,9 +2,8 @@
  * Created by jules on 17/01/2017.
  */
 
-//TODO SCALE LES RADIUS D'EVENTS !
 
-//TODO SCALE LES SCLES D'OPACITE ET DE COULEUR EN DYNAMIQUE !
+//TODO SCALE LES SCLES D'OPACITE ET DE COULEUR EN DYNAMIQUE !!!
 
 var width = 500, height = 500;
 var mapEvents = L.map('mapEvents').setView([40.730610,-73.935242], 11);
@@ -51,10 +50,10 @@ var color = d3.scale.linear()
 
 var color2 = d3.scale.linear()
   .interpolate(d3.interpolateHcl)
-  .range(["orange", "red"]).domain([0,50]);
+  .range(["orange", "red"]).domain([0,150]);
 
 var opacity = d3.scale.linear()
-  .domain([0,100]).range([0,1]);
+  .domain([0,300]).range([0,1]);
 
 var tooltip = d3.select('#mapContainer').append('div')
             .attr('class', 'hidden tooltip');
@@ -85,9 +84,6 @@ function removeAllCircles(){
 function updateViz(value, events, tweets){
     d3.select('#days').html(days[value-1]);
 
-    removeAllMarkers();
-    removeAllCircles();
-
     drawMap(value-1, events);
 }
 
@@ -99,78 +95,139 @@ var tweetIcon = L.icon({
     popupAnchor:  [2, -10] // point from which the popup should open relative to the iconAnchor
 });
 
+var curEvent;
 
 function drawMap(currentDay, events) {
 
-  events = events.filter(function(e) {
-    return e.date.split(" ")[0] === d3.select('#days').html();
-  });
+    events = events.filter(function(e) {
+        return e.date.split(" ")[0] === d3.select('#days').html();
+    });
 
-  events.forEach(function(event){
-    //scale the radius given in meters to pixels on the map
-    var scaledRadius = event.radius ;
-    if(scaledRadius > 10000) {
-        scaledRadius = 10000;
-    }
+    d3.selectAll('.select').remove();
 
-    var circle;
-    if (scaledRadius <= 1500)  {
-      circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
-        color: 'red',
-        fillColor: color2(event.userNumber),
-        fillOpacity: opacity(event.tweetsNumber),
-        radius: scaledRadius
-      });
-    }
-    else {
-        circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
-            color: 'red',
-            fillColor: color2(event.userNumber),
-            fillOpacity: opacity(event.tweetsNumber),
-            radius: scaledRadius
+    var select = d3.select('#select')
+      .append('select')
+        .attr('class','select')
+        .on('change',function(){
+            showEvent(events);
+            showTweets();
         });
-    }
 
+    var options = select
+      .selectAll('option')
+        .data(events).enter()
+        .append('option')
+        .attr("value", function (d) {
+            return d.eventId;
+        })
+        .text(function (d) {
+            var hashtags = d.importantHashtags.split("|");
+            var idx = 1;
+            var toDisplay = "";
+            hashtags.forEach(function(hashtag){
+                if (idx < 6){
+                    toDisplay+= hashtag;
+                    if (idx !== hashtags.length && idx == 4)
+                        toDisplay+='\n';
+                    else if (idx !== hashtags.length && idx != 6)
+                        toDisplay += ', ';
+                    idx++;
+                }
+            }) ;
+            return toDisplay;
+        });
+}
 
-    var toDisplay =  "User number  : " +  event.userNumber + "</br>"
-             + "Tweets number  : " +  event.tweetsNumber + "</br>"
-             + "Hashtags  : ";
+function showTweets(){
+  removeAllMarkers();
 
-    var hashtags = event.importantHashtags.split("|");
-    var idx = 1;
-    hashtags.forEach(function(hashtag){
-        toDisplay+= hashtag;
-        if (idx !== hashtags.length)
-            toDisplay += ', ';
-        idx++;
-    }) ;
-
-    circle.bindPopup(toDisplay);
-
-    circles.addLayer(circle);
-  });
-
-  mapEvents.addLayer(circles);
-
+    var currentDay = +d3.select('#slider')[0][0].value-1;
   var date = tweetsdays[currentDay];
+
+  var importantHashtags = curEvent.importantHashtags.split("|");
 
   //TEMPORAIRE
   var i = 0;
   dayTweet[date].forEach(function(tweet){
-      if (i<=2000){
+      //if (i<=2000){
           if (tweet.geo_lat !== "null") {
-              var marker = L.marker([tweet.geo_lng, tweet.geo_lat], {icon : tweetIcon});
-              var toDisplay = "User : " + tweet[" username"] + '</br>' +
-                              "Date : " + tweet.timestamp_day + "-" + tweet.timestamp_month + "-" + tweet.timestamp_year + ", " + tweet.timestamp_hour + "H:"+ tweet.timestamp_minute + '</br>' +
-                              "Text (# et @) : " + tweet.text;
-              marker.bindPopup(toDisplay);
-              markers.addLayer(marker);
+              var hashtags = tweet.text.split(" ");
+                  //console.log("hashtags", hashtags);
+
+              var hasCommonHashtag = false;
+              for (var i in hashtags){
+                  if (importantHashtags.includes(hashtags[i])){
+                      hasCommonHashtag=true;
+                  }
+              }
+              if (hasCommonHashtag){
+                  var marker = L.marker([tweet.geo_lng, tweet.geo_lat], {icon : tweetIcon});
+                  var toDisplay = "User : " + tweet[" username"] + '</br>' +
+                                  "Date : " + tweet.timestamp_day + "-" + tweet.timestamp_month + "-" + tweet.timestamp_year + ", " + tweet.timestamp_hour + "H:"+ tweet.timestamp_minute + '</br>' +
+                                  "Text (# et @) : " + tweet.text;
+                  marker.bindPopup(toDisplay);
+                  markers.addLayer(marker);
+              }
           }
-      }
+      //}
       i++;
   });
   mapTweets.addLayer(markers);
 }
+
+function showEvent(events) {
+    removeAllCircles();
+    var selectId = d3.select('select').property('value');
+    events.forEach(function(event){
+        if (event.eventId ==selectId){
+            curEvent = event;
+            mapEvents.panTo(new L.LatLng(event.position.split(";")[1],event.position.split(";")[0]));
+            mapTweets.panTo(new L.LatLng(event.position.split(";")[1],event.position.split(";")[0]));
+            //scale the radius given in meters to pixels on the map
+            var scaledRadius = event.radius ;
+            if(scaledRadius > 10000) {
+                scaledRadius = 10000;
+            }
+
+            var circle;
+            if (scaledRadius <= 1500)  {
+              circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
+                color: 'red',
+                fillColor: color2(event.userNumber),
+                fillOpacity: opacity(event.tweetsNumber),
+                radius: scaledRadius
+              });
+            }
+            else {
+                circle = L.circle([ event.position.split(";")[1],event.position.split(";")[0]], {
+                    color: 'red',
+                    fillColor: color2(event.userNumber),
+                    fillOpacity: opacity(event.tweetsNumber),
+                    radius: scaledRadius
+                });
+            }
+
+
+            var toDisplay =  "User number  : " +  event.userNumber + "</br>"
+                     + "Tweets number  : " +  event.tweetsNumber + "</br>"
+                     + "Hashtags  : ";
+
+            var hashtags = event.importantHashtags.split("|");
+            var idx = 1;
+            hashtags.forEach(function(hashtag){
+                toDisplay+= hashtag;
+                if (idx !== hashtags.length)
+                    toDisplay += ', ';
+                idx++;
+            }) ;
+
+            circle.bindPopup(toDisplay);
+
+            circles.addLayer(circle);
+        }
+    });
+    mapEvents.addLayer(circles);
+};
 
 function processData(error,eventsData, tweets) {
 
@@ -211,14 +268,18 @@ function processData(error,eventsData, tweets) {
 
     d3.select("#slider").on("input", function() {
         updateViz(+this.value, eventsData);
+        showEvent(eventsData);
+        showTweets();
     });
 
     updateViz(1, eventsData);
+    showEvent(eventsData);
+    showTweets();
 }
 
 queue()
   //chargement des evenements geolocalise de tweets
-  .defer(d3.csv, "vizuFile2.csv")
+  .defer(d3.csv, "vizuFile4.csv")
   //chargement des données de tweets
   .defer(d3.csv, "smallTweets3.csv")
   .await(processData);

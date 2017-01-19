@@ -135,20 +135,20 @@ def main(limit=15000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
     # on charge les donnees du CSV dans MongoDB
-    getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
+    #getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")
-    vizuFile.write("date,duration,position,radius,userNumber,tweetsNumber,importantHashtags\n")
+    vizuFile.write("eventId,date,duration,position,radius,userNumber,tweetsNumber,importantHashtags\n")
 	
 	# ----- on recupere tous les tweets de la base de MongoDB pour trouver la 1ere date et la derniere date ----- #
     mongoDBHandler = MongoDBHandler()
-    tweetsAll = mongoDBHandler.getAllTweets(limit=NUMBER_OF_ALL_TWEETS) #mongoDBHandler.getAllTweets(limit=1500000)
+    tweetsAll = mongoDBHandler.getAllTweets(limit=50000) #mongoDBHandler.getAllTweets(limit=NUMBER_OF_ALL_TWEETS)
     minTime = maxTime = tweetsAll[0].time
     for tweet in tweetsAll:
         if (tweet.time < minTime):
             minTime = tweet.time
-        if (tweet.time > maxTime): 
+        if (tweet.time > maxTime):
             maxTime = tweet.time
     timeTotal = maxTime-minTime
 
@@ -159,7 +159,7 @@ def main(limit=15000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 
     usersToDelete = []
 
-    for i in range(20):#range(timeTotal.days+1):
+    for i in range(10):#range(timeTotal.days+1):
         mongoDBHandler = MongoDBHandler()
         #date_1 = datetime.strptime(minTime, "%Y-%m-%d")
         end_date = minTime + timedelta(days=i)
@@ -205,11 +205,11 @@ def main(limit=15000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
     # on calcule la frequence d'apparition
     for hashs,occurence in pertinentHashtag.iteritems() :
         freq = occurence/numberOfEvent
-        if freq > 0.15 :
+        if freq > 0.125 :
             blackList.append(hashs)
 
     # ---------------------------------------- on fait un second clustering ------------------------------------- #
-    for i in range(20): #range(timeTotal.days+1):
+    for i in range(10): #range(timeTotal.days+1):
         mongoDBHandler = MongoDBHandler()
         end_date = minTime + timedelta(days=i)
 
@@ -262,11 +262,11 @@ def main(limit=15000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
                 else :
                     print("")
                     print("-" * 40)
-                    print("0 Event detected : ")
+                    print("No Events detected : ")
                     print("-" * 40)
                     sortieFile.write("\n")
                     sortieFile.write("----------------------------------------\n")
-                    sortieFile.write("0 Event detected : \n")
+                    sortieFile.write("No Events detected : \n")
                     sortieFile.write("----------------------------------------\n")
                     elapsed_time=(time.time()-staringTime)
                     print("-"*40)
