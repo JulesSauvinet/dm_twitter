@@ -40,7 +40,7 @@ def getTweetsFromJSONRepositoryAndSave(repositoryPath="..\\data") :
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3_filtered.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
@@ -51,7 +51,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 		printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
 
     # on charge les donnees du CSV dans MongoDB
-    #getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3_filtered.csv")
+    getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
 
     sortieFile = open("sortieFile.txt","w")
     vizuFile = open("vizuFile.txt","w")
@@ -114,7 +114,7 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
 
     # ----------------------------------------- fin du premier clustering --------------------------------------- #
 	
-    #avec SmallTweet trie on detecte 110 evenements    
+    #avec SmallTweet trie on detecte 110 evenements
     numberOfEvent = float(len(totalEvent))
     pertinentHashtag = {}
     numberOfHash = 0
