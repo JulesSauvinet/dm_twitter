@@ -9,11 +9,10 @@ from eventDetectionFromTwitter.source.model.Tweet import Tweet
 
 
 def filterTweets(tweets):
-
     tweetsFilter = []
 
     usersTweets = {}
-    # on recupere tous les users et tous leur tweets
+    # on recupere tous les users et tous leurs tweets dans une map
     for tweet in tweets:
         user = tweet.userId
         try:
@@ -21,12 +20,14 @@ def filterTweets(tweets):
         except KeyError:
             usersTweets[user] = [tweet]
 
-    # on recupere tous les intervalles de temps pour la loi geometrique
+    # on recupere tous les intervalles d'apparition des tweets pour un meme user
     for user, userTweets in usersTweets.iteritems():
         deleteUser = False
         timeInterval = {}
         nbrInterval = 0.0
 
+		# on stocke dans une map tous les intervalles de temps d'apparition des tweets 
+		# et le nombre de fois ou l'on publie avec ce meme intervalle de temps
         for i in range(len(userTweets) - 1):
             for j in range(i + 1, len(userTweets)):
                 tweetTime = userTweets[j].time - userTweets[i].time
@@ -43,7 +44,6 @@ def filterTweets(tweets):
                 nbrInterval += 1.0
 
         timeListDict = []
-
         for interval, occurence in timeInterval.iteritems():
             timeListDict.append({"time" : interval, "occurence" : occurence})
 
@@ -63,6 +63,7 @@ def filterTweets(tweets):
             idx+=1
 
         (x, pval,isGeom,msg) = gof.gof_chisquare_discrete(stats.geom, (0.23,), times, 0.23,'Geom')
+
 
         print "res geom", x,pval,isGeom,msg
 
@@ -107,7 +108,7 @@ def fillTweets():
 
     return tweets
 
-tweets = fillTweets()
-tweetsFiltered = filterTweets(tweets)
-for t in tweetsFiltered:
-    print t
+#tweets = fillTweets()
+#tweetsFiltered = filterTweets(tweets)
+#for t in tweetsFiltered:
+#    print t

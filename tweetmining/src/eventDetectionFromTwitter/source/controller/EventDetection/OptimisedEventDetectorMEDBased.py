@@ -30,11 +30,11 @@ class OptimisedEventDetectorMEDBased:
 
     # -------------------------------------------------------------------------------------------------------------------------------------
     #   Event detection
-	# pour detecter un evenement, on recupere les clusters resultant du clustering pour une date donnee
+    # pour detecter un evenement, on recupere les clusters resultant du clustering pour une date donnee
     # on recupere la liste des ID des clusters crees, methode ensembliste, une seule occurence
-	# et on renvoie un ensemble, qui correspond a l'ensemble des evenements pour une date donnee
+    # et on renvoie un ensemble, qui correspond a l'ensemble des evenements pour une date donnee
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getEvents(self, date, minimalTermPerTweet=5, minimalTermPerTweetElasticity=5,remove_noise_with_poisson_Law=False,elasticity=False,geolocalisation=False):
+    def getEvents(self, date, minimalTermPerTweet=5, minimalTermPerTweetElasticity=5,remove_noise_with_poisson_Law=False,elasticity=False,geolocalisation=False,blackList=[]):
         """
         get the list of important events
         """
@@ -45,13 +45,13 @@ class OptimisedEventDetectorMEDBased:
             print "Detecting events ..."
 			# pour detecter un evenement, on recupere les clusters resultant du clustering pour une date donnee
             realClusters = self.getClusters(date, minimalTermPerTweet=minimalTermPerTweet,minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
-                                            remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=elasticity,geolocalisation=geolocalisation)
+                                            remove_noise_with_poisson_Law=remove_noise_with_poisson_Law,elasticity=elasticity,geolocalisation=geolocalisation,blackList=blackList)
 											
             # on recupere dans clustersUniqueId, la liste des ID des clusters crees, methode ensembliste, une seule occurence
 			# on recupere chaque id de cluster, 
-			#	on met dans tweetsOfClusterId, tous les tweets qui appartiennent a l'id du cluster que l'on traite
-			#	on definit comme evenement l'ensemble de ces tweets
-			#	si notre evenement est defini comme important, on l'ajoute a l'ensemble de tous les evenements
+			# on met dans tweetsOfClusterId, tous les tweets qui appartiennent a l'id du cluster que l'on traite
+			# on definit comme evenement l'ensemble de ces tweets
+			# si notre evenement est defini comme important, on l'ajoute a l'ensemble de tous les evenements
 			# on renvoie cet ensemble, qui correspond a l'ensemble des evenements pour une date donnee
             events = []
             if realClusters is not None:
@@ -154,7 +154,7 @@ class OptimisedEventDetectorMEDBased:
 	#	le fichier d'entree contient la matrice de similarite, sur une meme ligne on a un tweet i et un tweet j puis la valeur de leur similarite
 	#	le fichier de sortie contenant la matrice de correspondance est parse puis renvoye sous forme de tableau
     # -------------------------------------------------------------------------------------------------------------------------------------
-    def getClusters(self, date ,minimalTermPerTweet=5, minimalTermPerTweetElasticity=5, remove_noise_with_poisson_Law=False,elasticity=False,geolocalisation=False):
+    def getClusters(self, date ,minimalTermPerTweet=5, minimalTermPerTweetElasticity=5, remove_noise_with_poisson_Law=False,elasticity=False,geolocalisation=False,blackList=[]):
         """
         This method use ModularityOptimizer.jar
         """
@@ -166,7 +166,7 @@ class OptimisedEventDetectorMEDBased:
 		# on construit la matrice de similarite, et on met les donnees resultats dans le fichier d'entree
         print "\tBuilding similarity matrix ..."
         self.build(minimalTermPerTweet=minimalTermPerTweet, minimalTermPerTweetElasticity=minimalTermPerTweetElasticity,
-				   remove_noise_with_poisson_Law=remove_noise_with_poisson_Law, similarityFilePath=weightsFilePath,elasticity=elasticity,geolocalisation=geolocalisation)
+				   remove_noise_with_poisson_Law=remove_noise_with_poisson_Law, similarityFilePath=weightsFilePath,elasticity=elasticity,geolocalisation=geolocalisation,blackList=blackList)
 
 		# on construit mtn le fichier de sortie qui associe a chaque tweet le numero de clusters auquel il appartient
 		#
@@ -202,7 +202,7 @@ class OptimisedEventDetectorMEDBased:
 
 		
 	# construit la meme matrice que MED, juste que au lieu de renvoyer une matrice au sens propre du terme, on ecrit dans un fichier
-    def build(self, minimalTermPerTweet=5, minimalTermPerTweetElasticity=1, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt",elasticity=False,geolocalisation=False):
+    def build(self, minimalTermPerTweet=5, minimalTermPerTweetElasticity=1, remove_noise_with_poisson_Law=False, similarityFilePath="input.txt",elasticity=False,geolocalisation=False,blackList=[]):
         """
         Return an upper sparse triangular matrix of similarity j>i
         """
@@ -340,7 +340,9 @@ class OptimisedEventDetectorMEDBased:
             tweetsOfTerm = list(tweetsPerTermMap[term])
 
             # Eliminate term that appear less than minimalTermPerTweet
-            if (elasticity == False and numberOfTweetOfThisTerm < minimalTermPerTweet) :
+            if term in blackList :
+                termToDelete = True
+            elif (elasticity == False and numberOfTweetOfThisTerm < minimalTermPerTweet) :
                 termToDelete = True
             elif (elasticity == True and numberOfTweetOfThisTerm < int(minimalTermPerTweetElasticity*numberOfTweets)) :
                 termToDelete = True
