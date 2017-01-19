@@ -2,7 +2,6 @@
  * Created by jules on 17/01/2017.
  */
 
-
 //TODO SCALE LES SCLES D'OPACITE ET DE COULEUR EN DYNAMIQUE !!!
 
 var width = 500, height = 500;

@@ -3,7 +3,6 @@ from scipy import stats
 from statsmodels.stats import gof
 from operator import itemgetter
 
-
 from eventDetectionFromTwitter.source.model.Position import Position
 from eventDetectionFromTwitter.source.model.Tweet import Tweet
 

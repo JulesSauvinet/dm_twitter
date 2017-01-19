@@ -16,28 +16,13 @@ from eventDetectionFromTwitter.source.controller.EventDetection.OptimisedEventDe
 #REMOVE_NOISE_WITH_POISSON_LAW -> booleen pour savoir si on supprime les termes qui sont régis par une loi de Poisson
 #GEOLOCALISATION -> booleen pour savoir pour si on fait des clusters de densité avant de faire des clusters de similarite
 
-MIN_TERM_OCCURENCE_E=0.2
-MIN_TERM_OCCURENCE=20
-ELASTICITY=False
-REMOVE_NOISE_WITH_POISSON_LAW=False
-GEOLOCALISATION=False
-
-TIME_RESOLUTION=1800
-DISTANCE_RESOLUTION=100
-SCALE_NUMBER=4
-MIN_SIMILARITY=0.6
-DISTANCE_THRESHOLD=1000
-
-#le nombre de tweets geolocalises
-NUMBER_OF_TWEETS=35906
-
 #---------------------------------------------------------------------------------------------------------------------------------------------
 def getTweetsFromJSONRepositoryAndSave(repositoryPath="..\\data") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3_filtered.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
@@ -52,8 +37,8 @@ def main(limit=3000, minimalTermPerTweet=MIN_TERM_OCCURENCE,
     # on charge les donnees du CSV dans MongoDB
     #getTweetsFromCSVRepositoryAndSave("..\\data\\smallTweets3_filtered.csv")
 
-    sortieFile = open("sortieFile.txt","w")
-    vizuFile = open("vizuFile.txt","w")
+    sortieFile = open("clusterSansPreTraitement.txt","w")
+    vizuFile = open("vizuFileSansPreTraitement.txt","w")
     vizuFile.write("date,duration,position,radius,userNumber,tweetsNumber,importantHashtags\n")
 	
 	# ----- on recupere tous les tweets de la base de MongoDB pour trouver la 1ere date et la derniere date ----- #
