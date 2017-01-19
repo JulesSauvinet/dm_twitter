@@ -4,6 +4,8 @@
 
 //TODO SCALE LES RADIUS D'EVENTS !
 
+//TODO SCALE LES SCLES D'OPACITE ET DE COULEUR EN DYNAMIQUE !
+
 var width = 500, height = 500;
 var mapEvents = L.map('mapEvents').setView([40.730610,-73.935242], 11);
 
@@ -155,7 +157,7 @@ function drawMap(currentDay, events) {
   //TEMPORAIRE
   var i = 0;
   dayTweet[date].forEach(function(tweet){
-      if (i<=500){
+      if (i<=2000){
           if (tweet.geo_lat !== "null") {
               var marker = L.marker([tweet.geo_lng, tweet.geo_lat], {icon : tweetIcon});
               var toDisplay = "User : " + tweet[" username"] + '</br>' +
@@ -186,6 +188,7 @@ function processData(error,eventsData, tweets) {
         i++;
     });
 
+    days = days.sort();
     d3.select('#slider')[0][0].max = nbDays;
 
     var nbDays=0;
@@ -209,11 +212,13 @@ function processData(error,eventsData, tweets) {
     d3.select("#slider").on("input", function() {
         updateViz(+this.value, eventsData);
     });
+
+    updateViz(1, eventsData);
 }
 
 queue()
   //chargement des evenements geolocalise de tweets
-  .defer(d3.csv, "vizuFile.csv")
+  .defer(d3.csv, "vizuFile2.csv")
   //chargement des données de tweets
   .defer(d3.csv, "smallTweets3.csv")
   .await(processData);
