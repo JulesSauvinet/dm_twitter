@@ -117,6 +117,8 @@ Les flux de donn\'ees provenant des plates-formes de r\'eseaux sociaux contienne
 \paragraph{}
 Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
 
+\paragraph{}
+Nous appelerons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'es. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
@@ -124,7 +126,7 @@ Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets e
 \textit{Source du fichier}
 
 \paragraph{}
-Nous avons effectu\'e notre d\'etection d'\'ev\`evenent \`a partir d'un fichier de 1,7 Go comportant 10982005 tweets  r\'ecup\'er\'es sur Twitter. Chaque tweet contient les informations suivantes :
+Nous avons effectu\'e notre d\'etection d'\'ev\`evenent \`a partir d'un fichier de 1,7 Go comportant 10982005 tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'e dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 jullet 2015 au 13 novembre 2015. Chaque tweet contient les informations suivantes :
 \begin{itemize}
 	\item un identifiant
 	\item la date et l'heure \`a laquelle le tweet a \'et\'e post\'e
@@ -148,7 +150,7 @@ tweet, des hashtags, de la date et de la position d'envoi du tweet.
 \section{Le pr\'e-traitement des donn\'ees}
 
 \paragraph{}
-Nous avons utiliser Knime pour effectuer un premier filtrage nous permettant d'augmenter la pertinence des \'ev\`enements d\'etect\'es. Nous supprimons les 0.5\% d'utilisateur qui tweetent les plus. Cela nous permet d'homog\'en\'eiser nos donn\'ees. 
+Nous avons utilis\'e Knime pour effectuer un premier filtrage nous permettant d'augmenter la pertinence des \'ev\`enements d\'etect\'es. Nous supprimons les 0.5\% d'utilisateur qui tweetent les plus. Cela nous permet d'homog\'en\'eiser nos donn\'ees. 
 D'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste une tr\'es forte quantit\'e de tweet soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`a celle des autres utilisateur avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`a dire des tweets nous donnant aucune informations sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. Cette technique \'etant tr\`es appromative, nous ne l'utilisons que pour filtrer une quantit\'e peu importante d'utilisateurs.
 \newline
 Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
@@ -158,7 +160,6 @@ La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering,
 \newline
 Nous n'avons \'a la fin plus que 1,600,000 de tweets et un fichier de 250Mo. 
 
-\newpage
 
 \section{L'approche globale}
 
@@ -188,15 +189,23 @@ de l'\'ev\'enement.
 \paragraph{}
 La technique de d\'etection d'\'evenement n'est autre que celle \'evoqu\'ee dans l'article \cite{Multievents}.
 
-L'algorithme calcule la matrice de similarit\'e
-et construit les clusters.
+L'algorithme calcule la matrice de similarit\'e et construit les clusters.
 
+MOI
+\newline 
+MOI 
+\newline
+MOI
 
-\section{Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}
+\newpage
+
+\section{Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}
+
+\subsection{Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}
 
 \textbf{Le tweet}
 \newline
-On d\'ecrit un tweet par : 
+Un tweet est d\'ecrit par : 
 
 \begin{itemize}
 \item son identifiant
@@ -207,8 +216,7 @@ On d\'ecrit un tweet par :
 \item La date
 \end{itemize}
 
-On d\'ecoupe nos donn\'ees par date c'est \`a dire par journ\'ee.
-Une date est caract\'eris\'ee par une journ\'ee, un mois et une ann\'ee.
+Notre jeu de donn\'ees de tweets s'\'etale sur 103 jours. Puisque nous voulons faire de la d\'etection d'\'ev`enements (ponctuels) localis\'es -entre autres- dans le temps, nous avons d\'ecoup'e notre jeu de donn\'ee initial en paquets jour par jour qui contiennent chacun plus de 15000 tweets.
 
 \textbf{La matrice de similarit\'e}
 \newline
@@ -236,9 +244,9 @@ les positions (moyenne des longitudes, moyenne des longitudes)
 \end{itemize}
 
 
-\section{Algorithme de la d\'etection d'\'ev\'enements}
 
-
+\textbf{a placer ou il faut}
+\newline
 on traite ensuite tous les tweets d'une m\^eme journ\'ee
 \newline
 on enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (a voir)
@@ -271,27 +279,16 @@ module d'\'ex\'ecution.
 \textbf{La loi de Poisson g\'eographique}
 
 
-
-\section{La visualisation du r\'esultat}
-
-\textbf{L'utilit\'e de la visualisation}
-
-D\'ecrire
-
-\textbf{La source de donn\'ees}
-D\'ecrire
-
-\textbf{L'organisation de la visualisation}
-D\'ecrire
-
-\section{Interpr\'etation de nos r\'esultats}
+\section{La d\'etection d\'ev\`enement avec DBScan}
 
 
-\section{Notre essai sur DBScan}
+\section{R\'esultats}
+
 
 
 \section{Conclusion}
 Les combinaisons int\'eressantes
+\newline
 Quand, comment
 
 

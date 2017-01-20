@@ -1,0 +1,12 @@
+\BOOKMARK [1][]{toc.1}{Contents}{}% 1
+\BOOKMARK [1][]{section.1}{1 Introduction}{}% 2
+\BOOKMARK [1][]{section.2}{2 Description de nos donn\351es}{}% 3
+\BOOKMARK [1][]{section.3}{3 Le pr\351-traitement des donn\351es}{}% 4
+\BOOKMARK [1][]{section.4}{4 L'approche globale}{}% 5
+\BOOKMARK [1][]{section.5}{5 La d\351tection d'\351v\350nement multi-chelle}{}% 6
+\BOOKMARK [1][]{section.6}{6 Adaptation de l'algorithme de d\351tection multi-\351chelle et int\351gration du filtrage des robots}{}% 7
+\BOOKMARK [2][]{subsection.6.1}{6.1 Description des \351l\351ments utiles \340 la d\351tection d'\351v\351nements}{section.6}% 8
+\BOOKMARK [1][]{section.7}{7 Les options sur le clustering}{}% 9
+\BOOKMARK [1][]{section.8}{8 La d\351tection d\351v\350nement avec DBScan}{}% 10
+\BOOKMARK [1][]{section.9}{9 R\351sultats}{}% 11
+\BOOKMARK [1][]{section.10}{10 Conclusion}{}% 12
