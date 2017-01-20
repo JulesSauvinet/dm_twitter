@@ -99,7 +99,7 @@ Marc \textsc{Plantevit} % Supervisor's Name
 La d\'etection d'\'ev\`enements est un des sujets de recherche les plus importants dans l'analyse des r\'eseaux sociaux.
 Les flux de donn\'ees provenant des plates-formes de ces r\'eseaux contiennent, la plupart du temps, beaucoup d'informations. On peut traiter et analyser ces informations dans le but de faire de la d\'etection d'\'ev\`enement(s). 
 \newline
-N\'eanmoins, une grande partie des donn\'ees à traiter est bruit\'ee, notamment par des comptes Twitter entretenus par des robots. Ces comptes postent des tweets en masse avec une fr\'equence de publication constante, ce qui nous emp\^echent de donner une bonne description d\' un \'ev\'enement ou alors on peut cr\'eer de faux \'ev\`enements. 
+N\'eanmoins, une grande partie des donn\'ees \`a traiter est bruit\'ee, notamment par des comptes Twitter entretenus par des robots. Ces comptes postent des tweets en masse avec une fr\'equence de publication constante, ce qui nous emp\^echent de donner une bonne description d\' un \'ev\'enement ou alors on peut cr\'eer de faux \'ev\`enements. 
 \newline
 Voila pourquoi il est important de comprendre comment att\'enuer l'influence du bruit pour faire de la d\'etection \'ev\`enements. Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles en essayant d'\'ecarter les tweets de robots. 
 \end{abstract}
@@ -160,7 +160,7 @@ Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtr
 \paragraph{}
 La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique dans le module Knime.
 \newline
-Nous avons donc donn\'e en entrée \`{a} Knime notre fichier de 1,7 Go contenant \nombre{10982005} tweets et nous avons obtenu, \`{a} la fin du traitement, un fichier de 250Mo contenant \nombre{1600000} tweets. 
+Nous avons donc donn\'e en entr\'ee \`{a} Knime notre fichier de 1,7 Go contenant \nombre{10982005} tweets et nous avons obtenu, \`{a} la fin du traitement, un fichier de 250 Mo contenant \nombre{1600000} tweets. 
 \paragraph{}
 Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
 
@@ -203,7 +203,6 @@ MOI
 
 \subsection{Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}
 
-\newline
 on enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (ici ou dans pretraitement des donnees)
 
 \newpage
