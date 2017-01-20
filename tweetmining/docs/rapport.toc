@@ -1,4 +1,5 @@
 \select@language {french}
+\select@language {french}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
 \contentsline {paragraph}{}{2}{section*.2}
 \contentsline {paragraph}{}{2}{section*.3}

@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\usepackage[autolanguage]{numprint}
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -122,15 +123,13 @@ Voila pourquoi il est important de comprendre comment att\'enuer l'influence du 
 Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
 
 \paragraph{}
-Nous appelerons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'es. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
+Nous appelerons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'e. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
 
-\textit{Source du fichier}
-
 \paragraph{}
-Nous avons effectu\'e notre d\'etection d'\'ev\`evenent \`a partir d'un fichier de 1,7 Go comportant 10982005 tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'e dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 jullet 2015 au 13 novembre 2015. Chaque tweet contient les informations suivantes :
+Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier de 1,7 Go comportant \nombre{10982005} tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'e dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 jullet 2015 au 13 novembre 2015. Chaque tweet contient les informations suivantes :
 \begin{itemize}
 	\item un identifiant
 	\item la date et l'heure \`a laquelle le tweet a \'et\'e post\'e
