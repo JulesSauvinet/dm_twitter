@@ -127,9 +127,8 @@ Nous appelerons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
-
 \paragraph{}
-Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier de 1,7 Go comportant \nombre{10982005} tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'e dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 jullet 2015 au 13 novembre 2015. Chaque tweet contient les informations suivantes :
+Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier de 1,7 Go comportant \nombre{10982005} tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'e dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 juillet 2015 au 13 novembre 2015. Chaque tweet contient les informations suivantes :
 \begin{itemize}
 	\item un identifiant
 	\item la date et l'heure \`a laquelle le tweet a \'et\'e post\'e
@@ -146,15 +145,15 @@ Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier
 	\item le nombre d'amis de la personne qui a post\'e le tweet
 	\item le nombre de tweet d\'ej\`a post\'e par la personne qui a post\'e le tweet
 \end{itemize}
-
-Pour le d\'etection d'\'ev\`enement, nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
+\paragraph{}
+Pour le d\'etection d'\'ev\`enements, nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
 tweet, des hashtags, de la date et de la position d'envoi du tweet.
 
 \section{Le pr\'e-traitement des donn\'ees}
 
 \paragraph{}
-Nous avons utilis\'e Knime pour effectuer un premier filtrage nous permettant d'augmenter la pertinence des \'ev\`enements d\'etect\'es. Nous supprimons les 0.5\% d'utilisateur qui tweetent les plus. Cela nous permet d'homog\'en\'eiser nos donn\'ees. 
-D'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste une tr\'es forte quantit\'e de tweet soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`a celle des autres utilisateur avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`a dire des tweets nous donnant aucune informations sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. Cette technique \'etant tr\`es appromative, nous ne l'utilisons que pour filtrer une quantit\'e peu importante d'utilisateurs.
+Nous avons utilis\'e Knime pour effectuer un premier filtrage des robots. Ainsi, nous supprimons les 0.5\% d'utilisateur qui tweetent les plus. nous permettant ainsi d'augmenter la pertinence des \'ev\`enements d\'etect\'es. Cela nous permet d'homog\'en\'eiser nos donn\'ees. 
+D'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste une tr\'es forte quantit\'e de tweet soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`a celle des autres utilisateur avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`a dire des tweets nous donnant aucune information sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtrer une quantit\'e peu importante d'utilisateurs.
 \newline
 Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
 
