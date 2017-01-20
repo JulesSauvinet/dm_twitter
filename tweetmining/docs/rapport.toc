@@ -14,13 +14,15 @@
 \contentsline {section}{\numberline {4}L'approche globale}{3}{section.4}
 \contentsline {paragraph}{}{3}{section*.10}
 \contentsline {paragraph}{}{3}{section*.11}
-\contentsline {paragraph}{}{3}{section*.12}
 \contentsline {section}{\numberline {5}La d\'etection d'\'ev\`enement multi-\'chelle}{4}{section.5}
-\contentsline {paragraph}{}{4}{section*.13}
+\contentsline {paragraph}{}{4}{section*.12}
 \contentsline {section}{\numberline {6}Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}{5}{section.6}
-\contentsline {subsection}{\numberline {6.1}Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}{5}{subsection.6.1}
-\contentsline {section}{\numberline {7}Les options sur le clustering}{5}{section.7}
-\contentsline {paragraph}{}{5}{section*.14}
+\contentsline {subsection}{\numberline {6.1}Le tweet}{5}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}La matrice de similarit\'e}{5}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Le clustering}{5}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}L'\'ev\'enement}{5}{subsection.6.4}
+\contentsline {section}{\numberline {7}Les options sur le clustering}{6}{section.7}
+\contentsline {paragraph}{}{6}{section*.13}
 \contentsline {section}{\numberline {8}La d\'etection d\'ev\`enement avec DBScan}{6}{section.8}
 \contentsline {section}{\numberline {9}R\'esultats}{6}{section.9}
 \contentsline {section}{\numberline {10}Conclusion}{6}{section.10}

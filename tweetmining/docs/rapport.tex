@@ -169,15 +169,14 @@ Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtr
 
 \paragraph{}
 Pour notre premier algorithme, nous faisons des sous-ensembles de tweets en d\'ecoupant
-nos donn\'ees par date. On a ainsi un ensemble de tweets par jour. On applique sur chaque
+nos donn\'ees par date. On a ainsi un ensemble de tweets par jour. On applique, sur chaque
 ensemble journalier de tweets, l'algorithme de d\'etection d'\'ev\`enement multi-\'echelle.
 
 \paragraph{}
 Pour notre second algorithme, nous supprimons avant tout traitement, les comptes robots
 que nous sommes susceptibles d'avoir dans nos donn\'ees. Il est fort probable qu'ils
 faussent notre clustering.
-
-\paragraph{}
+\newline
 De plus, chacun de nos \'ev\'enements est d\'ecrit par 20 hashtags pertinents. Ces hashtags
 pertinents sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans
 l'\'ev\'enement. Cependant, certains hashtags sont pr\'esents dans la description de
@@ -205,10 +204,7 @@ MOI
 
 \section{Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}
 
-\subsection{Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}
-
-\textbf{Le tweet}
-\newline
+\subsection{Le tweet}
 Un tweet est d\'ecrit par : 
 
 \begin{itemize}
@@ -216,28 +212,25 @@ Un tweet est d\'ecrit par :
 \item le nom du Tweetos
 \item les hashtags
 \item la date et l'heure \`a laquelle le Tweetos a tweet\'e
-\item sa position en latitude/longitude au moment du tweet
+\item sa position au format latitude/longitude au moment du tweet
 \item La date
 \end{itemize}
 
-Notre jeu de donn\'ees de tweets s'\'etale sur 103 jours. Puisque nous voulons faire de la d\'etection d'\'ev`enements (ponctuels) localis\'es -entre autres- dans le temps, nous avons d\'ecoup'e notre jeu de donn\'ee initial en paquets jour par jour qui contiennent chacun plus de 15000 tweets.
+Notre jeu de donn\'ees de tweets s'\'etale sur 103 jours. Puisque nous voulons faire de la d\'etection d'\'ev\`enements (ponctuels) localis\'es - entre autres - dans le temps, nous avons d\'ecoup\'e notre jeu de donn\'ee initial en paquets jour par jour qui contiennent chacun plus de 15000 tweets.
 
-\textbf{La matrice de similarit\'e}
-\newline
+\subsection{La matrice de similarit\'e}
 La matrice de similarit\'e est une matrice triangulaire sup\'erieure de taille (nombre de
 tweets) * (nombre de tweets).
 D\'ecrire construction
 Citer l'article en parlant rapidement de la compression de Haar
 
-\textbf{Le clustering}
-\newline
+\subsection{Le clustering}
 Le clustering se fait \`a partir de la matrice de similarit\'e.
 D\'ecrire mieux l'algo
 \newline
 Citer le jar et expliquer rapidement ce qu'on maximise / minimise dans l'algorithme
 
-\textbf{L'\'ev\'enement}
-\newline
+\subsection{L'\'ev\'enement}
 On d\'ecrit un \'ev\'enement par :
 \begin{itemize}
 \item une heure de d\'ebut et une heure de fin qui permettent de calculer une dur\'ee
