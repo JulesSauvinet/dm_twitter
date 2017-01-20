@@ -24,7 +24,7 @@
 
 \graphicspath{{figures/}}   
 % \renewcommand{\figurename}{Fig.}
-\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsfrench{\renewcommand{\figurename}{Fig.}}
 
 \begin{document}
 
@@ -95,8 +95,7 @@ Marc \textsc{Plantevit} % Supervisor's Name
 \end{titlepage}
 
 \begin{abstract}
-L'objectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles.
-Notre approche utilise la d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche... et d\'evelopp\'e par ... . Nous avons adapt\'e cette version \`a nos donn\'ees et nous avons ajout\'e des m\'ecanismes permettant le filtrage de robots.
+L'objectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
 \end{abstract}
 
 %\begin{spacing}{1.15}
@@ -112,6 +111,7 @@ Notre approche utilise la d\'etection d'\'ev\'enements multi-\'echelles dans les
 % \listoftables 
 %\end{spacing}
 
+\section{Introduction}
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
@@ -286,13 +286,24 @@ Quand, comment
 Nos remerciements vont \`a Marc Plantevit pour l'enseignement de son cours "Data Mining" \`a l'Universit\'e Claude Bernard Lyon I et son accompagnement durant ce projet.
 
 
-\bibliographystyle{abbrv-doi}
-%\bibliographystyle{abbrv-doi-narrow}
-%\bibliographystyle{abbrv-doi-hyperref}
-%\bibliographystyle{abbrv-doi-hyperref-narrow}
 
+\bibliographystyle{abbrv}
 \bibliography{dataminingbib}
 
 \appendix
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
