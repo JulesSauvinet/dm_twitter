@@ -174,7 +174,7 @@ ensemble journalier de tweets, l'algorithme de d\'etection d'\'ev\`enement multi
 
 \paragraph{}
 Pour notre second algorithme, nous appliquons le premier algorithme mais nous supprimons avant tout traitement, les comptes robots
-que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide du module Knime d\'ecrit pr\'ec\'edemment 
+que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide du module Knime décrit pr\'ec\'edemment 
 puis par autre filtre que nous d\'ecrirons plus tard. 
 En effet, comme expliqu\'e dans la partie pr\'ec\'edente, il est fort probable qu'ils faussent notre clustering.
 \newline
@@ -188,10 +188,10 @@ de l'\'ev\'enement.
 \newpage
 
 
-\section{La d\'etection d'\'ev\`enements multi-\'chelle}
+\section{La d\'etection d'\'ev\`enement multi-\'chelle}
 
 \paragraph{}
-La technique de d\'etection d'\'evenements n'est autre que celle \'evoqu\'ee dans l'article \cite{Multievents}.
+La technique de d\'etection d'\'evenement n'est autre que celle \'evoqu\'ee dans l'article \cite{Multievents}.
 
 L'algorithme calcule la matrice de similarit\'e et construit les clusters.
 
@@ -203,12 +203,9 @@ MOI
 
 \subsection{Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}
 
-\newline
-on enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (ici ou dans pretraitement des donnees)
-
 \newpage
 
-\section{Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}
+\section{Description des \'el\'ements utiles \`a la détection d'\'ev\'enements}
 \subsection{Le tweet}
 Un tweet est d\'ecrit par : 
 
@@ -221,29 +218,19 @@ Un tweet est d\'ecrit par :
 \item La date
 \end{itemize}
 
-Notre jeu de donn\'ees de tweets s'\'etale sur 103 jours. Puisque nous voulons faire de la d\'etection d'\'ev\`enements journaliers et localis\'es, nous avons d\'ecoup\'e notre jeu de donn\'ee initial en 103 sous-ensemble journaliers. Chaque sous-ensemble de tweets contiennent, approximativement, plus de \nombre{15000} tweets.
-\newline
-Nous appliquons donc notre algorithme de d\'etection d'\'evenements sur chacun de nos sous-ensemble de tweets journaliers.
+Notre jeu de donn\'ees de tweets s'\'etale sur 103 jours. Puisque nous voulons faire de la d\'etection d'\'ev\`enements (ponctuels) localis\'es - entre autres - dans le temps, nous avons d\'ecoup\'e notre jeu de donn\'ee initial en paquets jour par jour qui contiennent chacun plus de 15000 tweets.
 
 \subsection{La matrice de similarit\'e}
 La matrice de similarit\'e est une matrice triangulaire sup\'erieure de taille (nombre de
 tweets) * (nombre de tweets).
-\newline
-Rappeler ce qui a ete dit dans la partie 5
-\begin{itemize}
-	\item D\'ecrire construction
-	\item reciter l'article en parlant rapidement de la compression de Haar
-\end{itemize}
+D\'ecrire construction
+Citer l'article en parlant rapidement de la compression de Haar
 
 \subsection{Le clustering}
-Le clustering se fait \`a partir de la matrice de similarit\'e qui elle m\^eme a \'et\'e obtenue en traitant 
-un sous-ensemble de tweets journaliers.
+Le clustering se fait \`a partir de la matrice de similarit\'e.
+D\'ecrire mieux l'algo
 \newline
-Rappeler ce qui a ete dit dans la partie 5
-\begin{itemize}
-	\item Redonner l'algo
-	\item Citer le jar et expliquer rapidement ce qu'on maximise / minimise dans l'algorithme
-\end{itemize}
+Citer le jar et expliquer rapidement ce qu'on maximise / minimise dans l'algorithme
 
 \subsection{L'\'ev\'enement}
 On d\'ecrit un \'ev\'enement par :
@@ -254,16 +241,21 @@ les positions (moyenne des longitudes, moyenne des longitudes)
 \item le nombre de personnes diff\'erentes ayant post\'e des tweets
 \item la liste des 20 hashtags les plus importants permettant de le d\'ecrire
 \end{itemize}
-\paragraph{}
-Nous r\'ecup\'erons tous les clusters obtenus lors du clustering et ne gardons que les clusters pertinents. 
-Un cluster est pertinent si le nombre de personnes ayant tweet\'e est assez important, s'il y a assez de tweets et 
-si la proportion de tweets par personne n'est pas \'exag\'er\'ee. Ce cluster devient alors un \'ev\'enement.
 
-\newpage
+
+
+\textbf{a placer ou il faut}
+\newline
+on traite ensuite tous les tweets d'une m\^eme journ\'ee
+\newline
+on enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (a voir)
+\newline
+on fait du clustering sur les tweets et on renvoie les clusters pertinents sous forme
+d'\'ev\'enements
 
 \section{Les options sur le clustering}
 
-\subsection{L'\'elasticit\'e}
+\textbf{L'\'elasticit\'e}
 
 \paragraph{}
 On suppose qu'un hashtag est fr\'equent pour un ensemble de tweets donn\'e s'il apparait
@@ -274,16 +266,16 @@ une journ\'ee o\`u il y a eu peu de tweets. A l'inverse, on d\'etecte beaucoup d
 une journ\'ee o\`u il y a eu beaucoup de tweets.
 Cela peut \^etre int\'eressant, mais il est parfois plus judicieux de d'adapter au nombre de
 tweets post\'es dans une m\^eme journ\'ee. Ainsi, on d\'efinit un hashtag fr\'equent s'il apparait
-dans plus de 20\% des tweets.
+dans plus de 20% des tweets.
 Pour coder cette option nous avons d\'efinit un bool\'een, que l'on met \`a Vrai pour activer
 l'\'elasticit\'e et \`a Faux pour ne pas l'activer.
-Les valeurs 20 et 20\% peuvent \^etre modif\'ees gr\^ace aux variables globales d\'efinies au d\'ebut du
-module d'\'ex\'ecution Python.
+Les valeurs 20 et 20% peuvent \^etre modif\'ees grâce aux variables globales au d\'ebut du
+module d'\'ex\'ecution.
 
-\subsection{La g\'eolocalisation}
+\textbf{La g\'eolocalisation}
 
 
-\subsection{La loi de Poisson g\'eographique}
+\textbf{La loi de Poisson g\'eographique}
 
 
 \section{La d\'etection d\'ev\`enement avec DBScan}
