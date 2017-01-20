@@ -60,7 +60,7 @@
 \emph{Auteurs:}\\
 Gregory \textsc{Howard} \textit{11207726} \\ 
 Marine \textsc{Ruiz} \textit{11208141} \\ 
-Jules \textsc{Sauvinet} \textit{p1412086}
+Jules \textsc{Sauvinet} \textit{11412086}
 \end{flushleft}
 \end{minipage}
 ~
@@ -173,9 +173,10 @@ nos donn\'ees par date. On a ainsi un ensemble de tweets par jour. On applique, 
 ensemble journalier de tweets, l'algorithme de d\'etection d'\'ev\`enement multi-\'echelle.
 
 \paragraph{}
-Pour notre second algorithme, nous supprimons avant tout traitement, les comptes robots
-que nous sommes susceptibles d'avoir dans nos donn\'ees. Il est fort probable qu'ils
-faussent notre clustering.
+Pour notre second algorithme, nous appliquons le premier algorithme mais nous supprimons avant tout traitement, les comptes robots
+que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide du module Knime décrit pr\'ec\'edemment 
+puis par autre filtre que nous d\'ecrirons plus tard. 
+En effet, comme expliqu\'e dans la partie pr\'ec\'edente, il est fort probable qu'ils faussent notre clustering.
 \newline
 De plus, chacun de nos \'ev\'enements est d\'ecrit par 20 hashtags pertinents. Ces hashtags
 pertinents sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans

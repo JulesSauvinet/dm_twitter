@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.7)  21 JAN 2017 00:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.7)  21 JAN 2017 00:20
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -1553,8 +1553,22 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+
+! Package inputenc Error: Unicode char écr (U+DE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...donn\'ees \`a l'aide du module Knime décr
+                                                  it pr\'ec\'edemment
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [3] [4]
-Overfull \hbox (4.25467pt too wide) in paragraph at lines 205--205
+Overfull \hbox (4.25467pt too wide) in paragraph at lines 206--206
 []\OT1/cmr/bx/n/17.28 Adaptation de l'al-go-rithme de detection multi-echelle
  []
 
@@ -1565,22 +1579,22 @@ Overfull \hbox (4.25467pt too wide) in paragraph at lines 205--205
 ) 
 AED: lastpage setting LastPage
 [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
  (rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 180401908ED1B3556907AA03A620962E;1029.
 Package rerunfilecheck Info: File `rapport.brf' has not changed.
 (rerunfilecheck)             Checksum: 61BF68329DD3EB09E39EAE97D42F7726;91.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 303.
  ) 
 Here is how much of TeX's memory you used:
- 21414 strings out of 493333
- 386017 string characters out of 3139192
+ 21415 strings out of 493333
+ 386023 string characters out of 3139192
  469568 words of memory out of 3000000
- 24502 multiletter control sequences out of 15000+200000
+ 24503 multiletter control sequences out of 15000+200000
  12820 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,5n,92p,867b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1589,7 +1603,7 @@ Here is how much of TeX's memory you used:
  2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmti12.pfb>
-Output written on rapport.pdf (7 pages, 867201 bytes).
+Output written on rapport.pdf (7 pages, 866961 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
