@@ -1,0 +1,296 @@
+\documentclass[12pt]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage[euler]{textgreek}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+%\usepackage{subfigure}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage{lastpage}
+\usepackage[colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = true,citecolor = black,pagebackref = true,urlcolor = black] {hyperref}
+\usepackage{setspace}
+\usepackage{silence}
+\WarningFilter{latex}{Text page}
+\usepackage{parskip}
+\newcommand{\cms}{~cm\textsuperscript{-2}s\textsuperscript{-1} }
+
+\graphicspath{{figures/}}   
+% \renewcommand{\figurename}{Fig.}
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Universit\'e Claude Bernard Lyon I}\\[1.5cm] % Name of your university/college
+\textsc{\Large Master Data Science}\\[0.5cm] % Major heading such as course name
+\textsc{\large Projet Data Mining}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries D\'etection d'\'ev\'enements sur Twitter}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs:}\\
+Gregory \textsc{Howard} \textit{11207726} \\ 
+Marine \textsc{Ruiz} \textit{11208141} \\ 
+Jules \textsc{Sauvinet} \textit{p1412086}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Professeur:} \\
+Marc \textsc{Plantevit} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[1cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[height=5cm]{ucbl}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\begin{abstract}
+L'objectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles.
+Notre approche utilise la d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche... et d\'evelopp\'e par ... . Nous avons adapt\'e cette version \`a nos donn\'ees et nous avons ajout\'e des m\'ecanismes permettant le filtrage de robots.
+\end{abstract}
+
+%\begin{spacing}{1.15}
+\pdfbookmark[1]{Contents}{toc}
+\small{
+\tableofcontents 
+}
+
+
+\newpage
+% \listoffigures
+% \newpage
+% \listoftables 
+%\end{spacing}
+
+
+\section{Description de nos donn\'ees}
+\label{sec:desc_donnees}
+
+\textit{Source du fichier}
+
+\paragraph{}
+Nous avons un fichier de tweets r\'ecup\'er\'es \`a partir de Twitter. Nous avons les informations
+suivantes sur chaque tweet :
+\begin{itemize}
+	\item l'identifiant du tweet
+	\item la date et l'heure \`a laquelle le tweet a \'et\'e post\'e
+	\item la position de la personne quand le tweet a \'et\'e post\'e (en latitude et longitude)
+	\item identifiant du district (en fonction de la position)
+	\item l'ensemble des r\'ef\'erences et hashtags du tweet
+	\item l'identifiant de la personne qui a post\'e le tweet
+	\item le pseudo de la personne qui a post\'e le tweet
+	\item le nom complet de la personne qui a post\'e le tweet
+	\item l'identifiant du lieu de cr\'eation du compte de la personne qui a post\'e le tweet
+	\item certifi\'e si le compte est officiel ou si son identit\'e a \'et\'e prouv\'ee
+	\item nombre de personnes qui suivent la personne qui a post\'e le tweet
+	\item nombre d'amis de la personne qui a post\'e le tweet
+	\item nombre de tweet d\'ej\`a post\'e par la personne qui a post\'e le tweet
+	\item lieu du tweet au moment o\`u il a \'et\'e post\'e
+\end{itemize}
+
+Nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
+tweet, des hashtags, de la date et de la position d'envoi du tweet.
+
+
+\section{L'objectif}
+
+\paragraph{}
+Nous avons pour objectif de d\'etecter des \'ev\'enements journaliers \`a l'aide des tweets de
+notre fichier de donn\'ees. Nous allons test\'e deux algorithmes diff\'erents puis comparer les
+r\'esultats afin de tester les performances de chacun et de garder le meilleur.
+
+\textit{A d\'etailler}
+
+\newpage
+
+\section{L'approche}
+
+\paragraph{}
+Pour notre premier algorithme, nous faisons des sous-ensembles de tweets en d\'ecoupant
+nos donn\'ees par date. On a ainsi un ensemble de tweets par jour. On applique sur chaque
+ensemble journalier de tweets, l'algorithme de clustering qui calcule la matrice de similarit\'e
+et construit les clusters.
+
+\paragraph{}
+Pour notre second algorithme, nous supprimons avant tout traitement, les comptes robots
+que nous sommes susceptibles d'avoir dans nos donn\'ees. Il est fort probable qu'ils
+faussent notre clustering.
+
+\paragraph{}
+De plus, chacun de nos \'ev\'enements est d\'ecrit par 20 hashtags pertinents. Ces hashtags
+pertinents sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans
+l'\'ev\'enement. Cependant, certains hashtags sont pr\'esents dans la description de
+beaucoup d'autres \'ev\'enements, ce qui les rend moins pertinents. Nous voulons les
+d\'etecter et ne pas les prendre en compte lors du clustering afin d'avoir une vraie description
+de l'\'ev\'enement.
+
+\newpage
+
+\section{Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}
+
+\textbf{Le tweet}
+\newline
+On d\'ecrit un tweet par : 
+
+\begin{itemize}
+\item son identifiant
+\item le nom du Tweetos
+\item les hashtags
+\item la date et l'heure \`a laquelle le Tweetos a tweet\'e
+\item sa position en latitude/longitude au moment du tweet
+\item La date
+\end{itemize}
+
+On d\'ecoupe nos donn\'ees par date c'est \`a dire par journ\'ee.
+Une date est caract\'eris\'ee par une journ\'ee, un mois et une ann\'ee.
+
+\textbf{La matrice de similarit\'e}
+\newline
+La matrice de similarit\'e est une matrice triangulaire sup\'erieure de taille (nombre de
+tweets) * (nombre de tweets).
+D\'ecrire construction
+Citer l'article en parlant rapidement de la compression de Haar
+
+\textbf{Le clustering}
+\newline
+Le clustering se fait \`a partir de la matrice de similarit\'e.
+D\'ecrire mieux l'algo
+\newline
+Citer le jar et expliquer rapidement ce qu'on maximise / minimise dans l'algorithme
+
+\textbf{L'\'ev\'enement}
+\newline
+On d\'ecrit un \'ev\'enement par :
+\begin{itemize}
+\item une heure de d\'ebut et une heure de fin qui permettent de calculer une dur\'ee
+\item une position centrale (longitude, latitude) calcul\'ee \`a partir de la moyenne de toutes
+les positions (moyenne des longitudes, moyenne des longitudes)
+\item le nombre de personnes diff\'erentes ayant post\'e des tweets
+\item la liste des 20 hashtags les plus importants permettant de le d\'ecrire
+\end{itemize}
+
+
+\section{Algorithme de la d\'etection d'\'ev\'enements}
+
+\paragraph{}
+on utilise Knime pour filtrer les robots \'evidents --> ceux qui tweet beaucoup trop par
+rapport aux autres
+\newline
+on traite ensuite tous les tweets d'une m\^eme journ\'ee
+\newline
+on enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (a voir)
+\newline
+on fait du clustering sur les tweets et on renvoie les clusters pertinents sous forme
+d'\'ev\'enements
+
+\section{Les options sur le clustering}
+
+\textbf{L'\'elasticit\'e}
+
+\paragraph{}
+On suppose qu'un hashtag est fr\'equent pour un ensemble de tweets donn\'e s'il apparait
+plus de 20 fois.
+\newline
+Ce nombre est statique, ce qui ne permettrait pas de d\'etecter de petits \'ev\'enements dans
+une journ\'ee o\`u il y a eu peu de tweets. A l'inverse, on d\'etecte beaucoup d'\'ev\'enements sur
+une journ\'ee o\`u il y a eu beaucoup de tweets.
+Cela peut \^etre int\'eressant, mais il est parfois plus judicieux de d'adapter au nombre de
+tweets post\'es dans une m\^eme journ\'ee. Ainsi, on d\'efinit un hashtag fr\'equent s'il apparait
+dans plus de 20% des tweets.
+Pour coder cette option nous avons d\'efinit un bool\'een, que l'on met \`a Vrai pour activer
+l'\'elasticit\'e et \`a Faux pour ne pas l'activer.
+Les valeurs 20 et 20% peuvent \^etre modif\'ees grâce aux variables globales au d\'ebut du
+module d'\'ex\'ecution.
+
+\textbf{La g\'eolocalisation}
+
+
+\textbf{La loi de Poisson g\'eographique}
+
+
+
+\section{La visualisation du r\'esultat}
+
+\textbf{L'utilit\'e de la visualisation}
+
+D\'ecrire
+
+\textbf{La source de donn\'ees}
+D\'ecrire
+
+\textbf{L'organisation de la visualisation}
+D\'ecrire
+
+\section{Interpr\'etation de nos r\'esultats}
+
+
+\section{Notre essai sur DBScan}
+
+
+\section{Conclusion}
+Les combinaisons int\'eressantes
+Quand, comment
+
+
+\section*{Acknowledgments}
+Nos remerciements vont \`a Marc Plantevit pour l'enseignement de son cours "Data Mining" \`a l'Universit\'e Claude Bernard Lyon I et son accompagnement durant ce projet.
+
+
+\bibliographystyle{abbrv-doi}
+%\bibliographystyle{abbrv-doi-narrow}
+%\bibliographystyle{abbrv-doi-hyperref}
+%\bibliographystyle{abbrv-doi-hyperref-narrow}
+
+\bibliography{dataminingbib}
+
+\appendix
+
+\end{document}
