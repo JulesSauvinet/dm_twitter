@@ -9,16 +9,18 @@
 \contentsline {section}{\numberline {3}Le pr\'e-traitement des donn\'ees}{3}{section.3}
 \contentsline {paragraph}{}{3}{section*.6}
 \contentsline {paragraph}{}{3}{section*.7}
-\contentsline {section}{\numberline {4}L'approche globale}{3}{section.4}
 \contentsline {paragraph}{}{3}{section*.8}
 \contentsline {paragraph}{}{3}{section*.9}
+\contentsline {section}{\numberline {4}L'approche globale}{3}{section.4}
 \contentsline {paragraph}{}{3}{section*.10}
+\contentsline {paragraph}{}{3}{section*.11}
+\contentsline {paragraph}{}{3}{section*.12}
 \contentsline {section}{\numberline {5}La d\'etection d'\'ev\`enement multi-\'chelle}{4}{section.5}
-\contentsline {paragraph}{}{4}{section*.11}
+\contentsline {paragraph}{}{4}{section*.13}
 \contentsline {section}{\numberline {6}Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}{5}{section.6}
 \contentsline {subsection}{\numberline {6.1}Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}{5}{subsection.6.1}
 \contentsline {section}{\numberline {7}Les options sur le clustering}{5}{section.7}
-\contentsline {paragraph}{}{5}{section*.12}
+\contentsline {paragraph}{}{5}{section*.14}
 \contentsline {section}{\numberline {8}La d\'etection d\'ev\`enement avec DBScan}{6}{section.8}
 \contentsline {section}{\numberline {9}R\'esultats}{6}{section.9}
 \contentsline {section}{\numberline {10}Conclusion}{6}{section.10}

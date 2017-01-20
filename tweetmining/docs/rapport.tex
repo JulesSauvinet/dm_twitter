@@ -152,15 +152,17 @@ tweet, des hashtags, de la date et de la position d'envoi du tweet.
 \section{Le pr\'e-traitement des donn\'ees}
 
 \paragraph{}
-Nous avons utilis\'e Knime pour effectuer un premier filtrage des robots. Ainsi, nous supprimons les 0.5\% d'utilisateur qui tweetent les plus. nous permettant ainsi d'augmenter la pertinence des \'ev\`enements d\'etect\'es. Cela nous permet d'homog\'en\'eiser nos donn\'ees. 
-D'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste une tr\'es forte quantit\'e de tweet soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`a celle des autres utilisateur avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`a dire des tweets nous donnant aucune information sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtrer une quantit\'e peu importante d'utilisateurs.
-\newline
-Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
-
+Nous avons utilis\'e Knime pour effectuer un premier filtrage des robots. Pour cela, nous classons dans l'ordre d\'ecroissant les utilisateurs en fonction du nombre de tweets qu'ils ont post\'es. Puis, nous supprimons les 0.5\% premiers utilisateurs \`{a} partir de ce classement. Ce pr\'e-traitement nous permet d'homog\'en\'eiser nos donn\'ees mais aussi d'augmenter de fa\c{c}on \'evidente la pertinence des \'ev\`enements d\'etect\'es. 
 \paragraph{}
-La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique sur le lieu de leur envoi.
+Nous avons bas\'e ce choix de filtrage sur les deux crit\`eres suivants. En effet, d'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste en tr\`es grande quantit\'e des tweets soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`{a} celle des autres utilisateurs, avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`{a} dire des tweets nous donnant aucune information sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. 
 \newline
-Nous n'avons \'a la fin plus que 1,600,000 de tweets et un fichier de 250Mo. 
+Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtrer les utilisateurs qui publient, vraiment de fa\c{c}on \'evidente, plus que tous les autres utilisateurs.
+\paragraph{}
+La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique dans le module Knime.
+\newline
+Nous avons donc donn\'e en entrée \`{a} Knime notre fichier de 1,7 Go contenant \nombre{10982005} tweets et nous avons obtenu, \`{a} la fin du traitement, un fichier de 250Mo contenant \nombre{1600000} tweets. 
+\paragraph{}
+Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
 
 
 \section{L'approche globale}
