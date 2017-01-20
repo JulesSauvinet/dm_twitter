@@ -95,7 +95,7 @@ Marc \textsc{Plantevit} % Supervisor's Name
 \end{titlepage}
 
 \begin{abstract}
-L'objectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
+L'objectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. 
 \end{abstract}
 
 %\begin{spacing}{1.15}
@@ -113,43 +113,49 @@ L'objectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploita
 
 \section{Introduction}
 
+\paragraph{}
+Lobjectif est de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
+
+
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
 
 \textit{Source du fichier}
 
 \paragraph{}
-Nous avons un fichier de tweets r\'ecup\'er\'es \`a partir de Twitter. Nous avons les informations
-suivantes sur chaque tweet :
+Nous avons effectu\'e notre d\'etection d'\'ev\`evenent \`a partir d'un fichier de 1,7 Go comportant 10982005 tweets  r\'ecup\'er\'es sur Twitter. Chaque tweet contient les informations suivantes :
 \begin{itemize}
-	\item l'identifiant du tweet
+	\item un identifiant
 	\item la date et l'heure \`a laquelle le tweet a \'et\'e post\'e
-	\item la position de la personne quand le tweet a \'et\'e post\'e (en latitude et longitude)
-	\item identifiant du district (en fonction de la position)
+	\item la position de la personne quand le tweet a \'et\'e post\'e (latitude et longitude)
+	\item l'identifiant du lieu g\'eographique o\`u a \'et\'e post\'e le tweet
+	\item le lieu du tweet au moment o\`u il a \'et\'e post\'e
 	\item l'ensemble des r\'ef\'erences et hashtags du tweet
 	\item l'identifiant de la personne qui a post\'e le tweet
 	\item le pseudo de la personne qui a post\'e le tweet
 	\item le nom complet de la personne qui a post\'e le tweet
 	\item l'identifiant du lieu de cr\'eation du compte de la personne qui a post\'e le tweet
-	\item certifi\'e si le compte est officiel ou si son identit\'e a \'et\'e prouv\'ee
-	\item nombre de personnes qui suivent la personne qui a post\'e le tweet
-	\item nombre d'amis de la personne qui a post\'e le tweet
-	\item nombre de tweet d\'ej\`a post\'e par la personne qui a post\'e le tweet
-	\item lieu du tweet au moment o\`u il a \'et\'e post\'e
+	\item l'information de la certification ou non du compte de l'utilisateur ayant post\'e le tweet
+	\item le nombre de personnes qui suivent la personne qui a post\'e le tweet
+	\item le nombre d'amis de la personne qui a post\'e le tweet
+	\item le nombre de tweet d\'ej\`a post\'e par la personne qui a post\'e le tweet
 \end{itemize}
 
-Nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
+Pour le d\'etection d'\'ev\`enement, nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
 tweet, des hashtags, de la date et de la position d'envoi du tweet.
 
-
-\section{L'objectif}
+\section{Le pr\'e-traitement des donn\'ees}
 
 \paragraph{}
-Nous avons pour objectif de d\'etecter des \'ev\'enements journaliers \`a l'aide des tweets de
-notre fichier de donn\'ees. Nous allons test\'e deux algorithmes diff\'erents puis comparer les
-r\'esultats afin de tester les performances de chacun et de garder le meilleur.
+Nous avons utiliser Knime pour effectuer un premier filtrage nous permettant d'augmenter la pertinence des \'ev\`enements d\'etect\'es. Nous supprimons les 0.5\% d'utilisateur qui tweetent les plus. Cela nous permet d'homog\'en\'eiser nos donn\'ees. 
+D'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste une tr\'es forte quantit\'e de tweet soit un robot. D'autre part, nous nous sommes dit qu'une utilisateur réel ayant une activit\'e sur Twitter bien sup\'erieur \`a celle des autres utilisateur avait en moyenne moins des contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`a dire des tweets nous donnant aucune informations sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "#lol", ou encore "#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. Cette technique \'etant tr\`es appromative, nous ne l'utilisons que pour filtrer une quantit\'e peu importante d'utilisateur.
+\newline
+Nous avons joint le workflow Knime robotFilter.knwf \`a l'archive de rendu du projet.
 
-\textit{A d\'etailler}
+\paragraph{}
+La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique sur le lieu de leur envoi.
+\newline
+Nous n'avons \'a la fin plus que 1,600,000 de tweets et un fichier de 250Mo. 
 
 \newpage
 
@@ -222,9 +228,7 @@ les positions (moyenne des longitudes, moyenne des longitudes)
 
 \section{Algorithme de la d\'etection d'\'ev\'enements}
 
-\paragraph{}
-on utilise Knime pour filtrer les robots \'evidents --> ceux qui tweet beaucoup trop par
-rapport aux autres
+
 \newline
 on traite ensuite tous les tweets d'une m\^eme journ\'ee
 \newline
