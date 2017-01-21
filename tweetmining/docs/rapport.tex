@@ -122,14 +122,28 @@ Voila pourquoi il est important de comprendre comment att\'enuer l'influence du 
 
 \section{Introduction}
 
-Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
+Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Les comptes automatisés, appel\'es robots, abusent des r\'eseaux sociaux en affichant du contenu non-\'ethique [1], soutenant des activit\'es parrain\'ees ou utilisant leur compte pour de la vente [17]. Il est fort probable qu'ils faussent notre clustering pour la d\'etection des \'ev\`enements.
 
-Nous appelerons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'e. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
+Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
+
+Nous appelons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'e. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
+
+
+\section{L'approche globale}
+
+Pour notre premier algorithme nous appliquons, sur chaque ensemble journalier de tweets l'algorithme de d\'etection d'\'ev\`enement multi-\'echelle décrite ici \autoref{sec:multiscale}.
+
+Pour notre second algorithme, nous appliquons le premier algorithme mais nous supprimons en amont les comptes robots
+que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide d'un worlflow Knime bas\'e sur le nombre de tweets post\'es par les utilisateurs puis par autre filtre bas\'e sur la r\'ecurrence de post des tweets. 
+
+De plus, chacun de nos \'ev\'enements est d\'ecrit par des hashtags pertinents. Ces hashtags sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans l'\'ev\'enement. Cependant, certains hashtags sont pr\'esents dans la description de
+beaucoup d'autres \'ev\'enements, ce qui les rend moins pertinents. Nous voulons donc les d\'etecter et ne pas les prendre en compte lors du clustering afin d'avoir une vraie description de l'\'ev\'enement.
+
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
 
-Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier de 1,7 Go comportant \nombre{10982005} tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'es dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 juillet 2015 au 16 novembre 2015. Chaque tweet contient les informations suivantes :
+Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier de 1,7 Go comportant \nombre{10982005} tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'es dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du \textit{21 juillet 2015} au \textit{16 novembre 2015}. Chaque tweet contient les informations suivantes :
 
 \begin{itemize}
 	\item un identifiant
@@ -166,28 +180,11 @@ La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering,
 
 Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
 
-\section{L'approche globale}
-
-Pour notre premier algorithme, nous faisons des sous-ensembles de tweets en d\'ecoupant
-nos donn\'ees par date. On a ainsi un ensemble de tweets par jour. On applique, sur chaque
-ensemble journalier de tweets, l'algorithme de d\'etection d'\'ev\`enement multi-\'echelle.
-
-Pour notre second algorithme, nous appliquons le premier algorithme mais nous supprimons avant tout traitement, les comptes robots
-que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide du module Knime d\'ecrit pr\'ec\'edemment 
-puis par autre filtre que nous d\'ecrirons plus tard. 
-En effet, comme expliqu\'e dans la partie pr\'ec\'edente, il est fort probable qu'ils faussent notre clustering.
-
-De plus, chacun de nos \'ev\'enements est d\'ecrit par 20 hashtags pertinents. Ces hashtags
-pertinents sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans
-l'\'ev\'enement. Cependant, certains hashtags sont pr\'esents dans la description de
-beaucoup d'autres \'ev\'enements, ce qui les rend moins pertinents. Nous voulons les
-d\'etecter et ne pas les prendre en compte lors du clustering afin d'avoir une vraie description
-de l'\'ev\'enement.
-
 \vfill
 \newpage
 
 \section{La d\'etection d'\'ev\`enements multi-\'chelle}
+\label{sec:multiscale}
 
 La technique de d\'etection d'\'evenements n'est autre que celle \'evoqu\'ee dans l'article \cite{Multievents}.
 
