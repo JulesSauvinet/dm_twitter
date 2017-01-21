@@ -128,6 +128,7 @@ Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporel
 
 Nous appelons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'e. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
 
+\newpage
 
 \section{L'approche globale}
 
@@ -166,14 +167,13 @@ Pour le d\'etection d'\'ev\`enements, nous nous sommes servi de l'identifiant du
 tweet, des hashtags, de la date et de la position d'envoi du tweet.
 
 \vfill
-\newpage
 
 \section{Le pr\'e-traitement des donn\'ees}
 
 Nous avons utilis\'e Knime pour effectuer un premier filtrage des robots. Pour cela, nous classons dans l'ordre d\'ecroissant les utilisateurs en fonction du nombre de tweets qu'ils ont post\'es. Puis, nous supprimons les 0.5\% premiers utilisateurs \`{a} partir de ce classement. Ce pr\'e-traitement nous permet d'homog\'en\'eiser nos donn\'ees mais aussi d'augmenter de fa\c{c}on \'evidente la pertinence des \'ev\`enements d\'etect\'es. 
 
 Nous avons bas\'e ce choix de filtrage sur les deux crit\`eres suivants. En effet, d'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste en tr\`es grande quantit\'e des tweets soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`{a} celle des autres utilisateurs, avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`{a} dire des tweets nous donnant aucune information sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. 
-
+\newline
 Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtrer les utilisateurs qui publient, vraiment de fa\c{c}on \'evidente, plus que tous les autres utilisateurs.
 
 La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique dans le module Knime. Nous avons donc donn\'e en entr\'ee \`{a} Knime notre fichier de 1,7 Go contenant \nombre{10982005} tweets et nous avons obtenu, \`{a} la fin du traitement, un fichier de 250 Mo contenant \nombre{1600000} tweets. 
