@@ -2,7 +2,11 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
 \contentsline {section}{\numberline {2}L'approche globale}{2}{section.2}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {3}Description de nos donn\'ees}{2}{section.3}
+=======
+\contentsline {section}{\numberline {3}Description de nos donn\'ees}{3}{section.3}
+>>>>>>> a629511e07cf733954ce57bc166caafa64644de0
 \contentsline {section}{\numberline {4}Le pr\'e-traitement des donn\'ees}{3}{section.4}
 \contentsline {section}{\numberline {5}La d\'etection d'\'ev\`enements multi-\'chelle}{5}{section.5}
 \contentsline {subsection}{\numberline {5.1}Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}{5}{subsection.5.1}
@@ -11,6 +15,7 @@
 \contentsline {subsection}{\numberline {6.2}La matrice de similarit\'e}{6}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Le clustering}{6}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}L'\'ev\'enement}{6}{subsection.6.4}
+<<<<<<< HEAD
 \contentsline {paragraph}{}{6}{section*.2}
 \contentsline {section}{\numberline {7}Les options sur le clustering}{7}{section.7}
 \contentsline {subsection}{\numberline {7.1}L'\'elasticit\'e}{7}{subsection.7.1}
@@ -19,3 +24,13 @@
 \contentsline {section}{\numberline {8}La d\'etection d\'ev\`enement avec DBScan}{7}{section.8}
 \contentsline {section}{\numberline {9}R\'esultats}{7}{section.9}
 \contentsline {section}{\numberline {10}Conclusion}{7}{section.10}
+=======
+\contentsline {paragraph}{}{7}{section*.2}
+\contentsline {section}{\numberline {7}Les options sur le clustering}{8}{section.7}
+\contentsline {subsection}{\numberline {7.1}L'\'elasticit\'e}{8}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}La g\'eolocalisation}{8}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}La loi de Poisson g\'eographique}{8}{subsection.7.3}
+\contentsline {section}{\numberline {8}La d\'etection d\'ev\`enement avec DBScan}{8}{section.8}
+\contentsline {section}{\numberline {9}R\'esultats}{8}{section.9}
+\contentsline {section}{\numberline {10}Conclusion}{8}{section.10}
+>>>>>>> a629511e07cf733954ce57bc166caafa64644de0

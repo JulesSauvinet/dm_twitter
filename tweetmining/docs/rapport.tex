@@ -128,7 +128,6 @@ Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporel
 
 Nous appelons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'e. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
 
-
 \section{L'approche globale}
 
 Pour notre premier algorithme nous appliquons, sur chaque ensemble journalier de tweets l'algorithme de d\'etection d'\'ev\`enement multi-\'echelle décrite ici \autoref{sec:multiscale}.
@@ -139,6 +138,7 @@ que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide d'un worlflow
 De plus, chacun de nos \'ev\'enements est d\'ecrit par des hashtags pertinents. Ces hashtags sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans l'\'ev\'enement. Cependant, certains hashtags sont pr\'esents dans la description de
 beaucoup d'autres \'ev\'enements, ce qui les rend moins pertinents. Nous voulons donc les d\'etecter et ne pas les prendre en compte lors du clustering afin d'avoir une vraie description de l'\'ev\'enement.
 
+\newpage
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
@@ -163,8 +163,6 @@ Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier
 
 Pour le d\'etection d'\'ev\`enements, nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
 tweet, des hashtags, de la date et de la position d'envoi du tweet.
-
-
 
 \section{Le pr\'e-traitement des donn\'ees}
 
