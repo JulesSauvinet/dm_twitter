@@ -53,7 +53,7 @@ class Event :
     #----------------------------------------------------------------------------------------------------#
         
     def getImportantHashtags(self, topk=10, blacklist=[], onlyImportant = True) :
-	    # on compte le nbr d'apparitions d'un mot dans toutes les listes d'hashtags des tweets de l'evenement
+	# on compte le nbr d'apparitions d'un mot dans toutes les listes d'hashtags des tweets de l'evenement
         dictHashtags={}
         for t in self.tweets :
             for h in t.hashtags :
