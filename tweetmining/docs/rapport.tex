@@ -27,11 +27,15 @@
 % \renewcommand{\figurename}{Fig.}
 \addto\captionsfrench{\renewcommand{\figurename}{Fig.}}
 
+\setlength{\parskip}{4mm plus2mm minus2mm}
+\setlength{\parindent}{1cm}
+
 \begin{document}
 
 \begin{titlepage}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
 
 \center % Center everything on the page
  
@@ -110,7 +114,6 @@ Voila pourquoi il est important de comprendre comment att\'enuer l'influence du 
 \tableofcontents 
 }
 
-
 \newpage
 % \listoffigures
 % \newpage
@@ -119,16 +122,15 @@ Voila pourquoi il est important de comprendre comment att\'enuer l'influence du 
 
 \section{Introduction}
 
-\paragraph{}
 Notre objectif a \'et\'e de d\'etecter des \'ev\`enements \`a partir de tweets en exploitant des informations spatio-temporelles et textuelles. Notre approche utilise la technique de d\'etection d'\'ev\'enements multi-\'echelles dans les r\'eseaux sociaux introduite dans l'article de recherche \cite{Multievents} et d\'evelopp\'e par \textsc{Ahmed Anes Bendimerad} et \textsc{Aimene Belfodil}. Nous avons adapt\'e cette version \`a nos donn\'ees \`a laquelle nous avons ajout\'e des m\'ecanismes permettant de filtrer les tweets envoy\'es par des robots en amont du clustering permettant la d\'etection d'\'ev\`enements. Nous avons \'egalement d\'evelopp\'e une approche de d\'etection spatio-temporelle d'\'ev\`enements avec l'algorithme de clustering DBScan puis nous avons compar\'e les r\'esultats des deux types de clustering.
 
-\paragraph{}
 Nous appelerons \'ev\`evenement (au sens \'ev\`evenement que nous souhaitons d\'etecter) un ph\'enom\`ene physique survenant en un point et pendant une dur\'ee bien d\'etermin\'e. Un \'ev\'enement est int\'eressant s'il suscite un nombre suffisant de tweets. Ces tweets peuvent se situer sur le lieu de l'\'ev\`enement ou bien ailleurs, notamment si celui-ci est retransmis par les m\'edias. Les tweets sur l'\'ev\`enement peuvent se produire avant, pendant et apr\`es l'\'ev\'enement. Ainsi, la d\'etection d'\'ev\`enement doit r\'eussir \`a int\'egrer ces dispersions pour localiser dans les temps et l'espace les \'ev\`enements et c'est ce qui la rend complexe.
 
 \section{Description de nos donn\'ees}
 \label{sec:desc_donnees}
-\paragraph{}
+
 Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier de 1,7 Go comportant \nombre{10982005} tweets  r\'ecup\'er\'es sur Twitter. Ces tweets ont \'et\'e post\'es dans l'agglom\'eration newyorkaise ou par des utilisateurs newyorkais du 21 juillet 2015 au 16 novembre 2015. Chaque tweet contient les informations suivantes :
+
 \begin{itemize}
 	\item un identifiant
 	\item la date et l'heure \`a laquelle le tweet a \'et\'e post\'e
@@ -145,39 +147,36 @@ Nous avons effectu\'e notre d\'etection d'\'ev\`evenents \`a partir d'un fichier
 	\item le nombre d'amis de la personne qui a post\'e le tweet
 	\item le nombre de tweet d\'ej\`a post\'e par la personne qui a post\'e le tweet
 \end{itemize}
-\paragraph{}
+
 Pour le d\'etection d'\'ev\`enements, nous nous sommes servi de l'identifiant du tweet, du nom de la personne qui a post\'e le
 tweet, des hashtags, de la date et de la position d'envoi du tweet.
 
+\vfill
+\newpage
+
 \section{Le pr\'e-traitement des donn\'ees}
 
-\paragraph{}
 Nous avons utilis\'e Knime pour effectuer un premier filtrage des robots. Pour cela, nous classons dans l'ordre d\'ecroissant les utilisateurs en fonction du nombre de tweets qu'ils ont post\'es. Puis, nous supprimons les 0.5\% premiers utilisateurs \`{a} partir de ce classement. Ce pr\'e-traitement nous permet d'homog\'en\'eiser nos donn\'ees mais aussi d'augmenter de fa\c{c}on \'evidente la pertinence des \'ev\`enements d\'etect\'es. 
-\paragraph{}
-Nous avons bas\'e ce choix de filtrage sur les deux crit\`eres suivants. En effet, d'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste en tr\`es grande quantit\'e des tweets soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`{a} celle des autres utilisateurs, avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`{a} dire des tweets nous donnant aucune information sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. 
-\newline
-Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtrer les utilisateurs qui publient, vraiment de fa\c{c}on \'evidente, plus que tous les autres utilisateurs.
-\paragraph{}
-La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique dans le module Knime.
-\newline
-Nous avons donc donn\'e en entr\'ee \`{a} Knime notre fichier de 1,7 Go contenant \nombre{10982005} tweets et nous avons obtenu, \`{a} la fin du traitement, un fichier de 250 Mo contenant \nombre{1600000} tweets. 
-\paragraph{}
-Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
 
+Nous avons bas\'e ce choix de filtrage sur les deux crit\`eres suivants. En effet, d'une part, il y a une probabilit\'e importante qu'un utilisateur qui poste en tr\`es grande quantit\'e des tweets soit un robot. D'autre part, nous nous sommes dit qu'un utilisateur r\'eel ayant une activit\'e sur Twitter bien sup\'erieure \`{a} celle des autres utilisateurs, avait en moyenne moins de contenu descriptif d'\'ev\`evenement dans ses tweets et plus de "tweets bruits", c'est \`{a} dire des tweets nous donnant aucune information sur le d\'eroulement d'un quelconque \'ev\`evenement (e.g "\#lol", ou encore "\#oklm avec mon refr\'e"). Nous avons ensuite confirm\'e cette intuition empiriquement en observant notre jeu de donn\'ees. 
+
+Cette technique \'etant tr\`es approximative, nous ne l'utilisons que pour filtrer les utilisateurs qui publient, vraiment de fa\c{c}on \'evidente, plus que tous les autres utilisateurs.
+
+La dimension g\'eographique \'etant cruciale dans notre m\'ethode de clustering, nous avons \'egalement filtr\'e les tweets ne poss\'edant pas de position g\'eographique dans le module Knime. Nous avons donc donn\'e en entr\'ee \`{a} Knime notre fichier de 1,7 Go contenant \nombre{10982005} tweets et nous avons obtenu, \`{a} la fin du traitement, un fichier de 250 Mo contenant \nombre{1600000} tweets. 
+
+Nous avons joint le workflow Knime robotFilter.knwf permettant de faire ce filtrage \`a l'archive de rendu du projet.
 
 \section{L'approche globale}
 
-\paragraph{}
 Pour notre premier algorithme, nous faisons des sous-ensembles de tweets en d\'ecoupant
 nos donn\'ees par date. On a ainsi un ensemble de tweets par jour. On applique, sur chaque
 ensemble journalier de tweets, l'algorithme de d\'etection d'\'ev\`enement multi-\'echelle.
 
-\paragraph{}
 Pour notre second algorithme, nous appliquons le premier algorithme mais nous supprimons avant tout traitement, les comptes robots
 que nous sommes susceptibles d'avoir dans nos donn\'ees \`a l'aide du module Knime d\'ecrit pr\'ec\'edemment 
 puis par autre filtre que nous d\'ecrirons plus tard. 
 En effet, comme expliqu\'e dans la partie pr\'ec\'edente, il est fort probable qu'ils faussent notre clustering.
-\newline
+
 De plus, chacun de nos \'ev\'enements est d\'ecrit par 20 hashtags pertinents. Ces hashtags
 pertinents sont d\'efinis comme \'etant les plus r\'ecurrents dans les tweets contenus dans
 l'\'ev\'enement. Cependant, certains hashtags sont pr\'esents dans la description de
@@ -185,12 +184,11 @@ beaucoup d'autres \'ev\'enements, ce qui les rend moins pertinents. Nous voulons
 d\'etecter et ne pas les prendre en compte lors du clustering afin d'avoir une vraie description
 de l'\'ev\'enement.
 
+\vfill
 \newpage
-
 
 \section{La d\'etection d'\'ev\`enements multi-\'chelle}
 
-\paragraph{}
 La technique de d\'etection d'\'evenements n'est autre que celle \'evoqu\'ee dans l'article \cite{Multievents}.
 
 L'algorithme calcule la matrice de similarit\'e et construit les clusters.
@@ -203,11 +201,12 @@ MOI
 
 \subsection{Adaptation de l'algorithme de d\'etection multi-\'echelle et int\'egration du filtrage des robots}
 
-on enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (ici ou dans pretraitement des donnees)
+On enl\`eve ceux qui sont r\'egi par une loi G\'eom\'etrique (ici ou dans pretraitement des donnees)
 
 \newpage
 
 \section{Description des \'el\'ements utiles \`a la d\'etection d'\'ev\'enements}
+
 \subsection{Le tweet}
 Un tweet est d\'ecrit par : 
 
@@ -264,18 +263,19 @@ si la proportion de tweets par personne n'est pas \'exag\'er\'ee. Ce cluster dev
 
 \subsection{L'\'elasticit\'e}
 
-\paragraph{}
 On suppose qu'un hashtag est fr\'equent pour un ensemble de tweets donn\'e s'il apparait
 plus de 20 fois.
-\newline
+
 Ce nombre est statique, ce qui ne permettrait pas de d\'etecter de petits \'ev\'enements dans
 une journ\'ee o\`u il y a eu peu de tweets. A l'inverse, on d\'etecte beaucoup d'\'ev\'enements sur
 une journ\'ee o\`u il y a eu beaucoup de tweets.
 Cela peut \^etre int\'eressant, mais il est parfois plus judicieux de d'adapter au nombre de
 tweets post\'es dans une m\^eme journ\'ee. Ainsi, on d\'efinit un hashtag fr\'equent s'il apparait
 dans plus de 20\% des tweets.
+
 Pour coder cette option nous avons d\'efinit un bool\'een, que l'on met \`a Vrai pour activer
 l'\'elasticit\'e et \`a Faux pour ne pas l'activer.
+
 Les valeurs 20 et 20\% peuvent \^etre modif\'ees gr\^ace aux variables globales d\'efinies au d\'ebut du
 module d'\'ex\'ecution Python.
 
