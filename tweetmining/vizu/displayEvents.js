@@ -278,7 +278,7 @@ function processData(error,eventsData, tweets) {
 
 queue()
   //chargement des evenements geolocalise de tweets
-  .defer(d3.csv, "_vizuFileAvecTraitement6.csv")
+  .defer(d3.csv, "11_09_AvecTraitement.csv")
   //chargement des données de tweets
-  .defer(d3.csv, "smalltweets3.csv")
+  .defer(d3.csv, "tweetSeptembre.csv")
   .await(processData);
