@@ -1,6 +1,8 @@
 ------ video de 5 mn maximum ------- 
 -- une vidéo présentant le projet --
 
+
+----------------------------------------------------------------------------------
 -> bien détailler les objectifs 
 
 détecter des évènements à partir de tweets :
@@ -10,16 +12,42 @@ détecter des évènements à partir de tweets :
 		- ils créent de faux évènements
 		- ils faussent les statistiques sur les hashtags pertinents
 
+on a un amélioré un algo de Ahmed Anes Bendimerad et Aimene Belfodil
++
+on a développé une approche avec DBScan 
+----------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------
 -> expliquer et justifier notre approche
 
+détection d'évèvenents à partir d'un fichier de 1,7 Go comportant 10 982 005 tweets 
+	- récupérés sur Twitter. 
+	- postés dans l'agglomération newyorkaise ou par des utilisateurs newyorkais 
+	- du 21 juillet 2015 au 16 novembre 2015
 
+---> Montrer l'intérieur du fichier avec les colonnes et le contenu
+
+prétraitement des données avec Knime 
+	- suppression des plus gros utilisateurs
+	- suppression des tweets non géolocalisés
+
+---> Montrer le workflow avec la succession de noeuds
+
+----------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------
 -> l'architecture du projet
 
+----------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------
 -> comment on lance le projet
 
+----------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------
 -> ou est-ce-que l'on peut visualiser les résultats
 
+affichage de nos résultats avec notre visualisation de données
 
+---> Montrer la visualisation, où mettre les fichiers et où les remplacer dans le JavaScript
