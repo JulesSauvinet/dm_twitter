@@ -1,5 +1,6 @@
 /dataset
 tweetmining/src/__pycache__
-tweetmining/.idea/*
+tweetmining/.idea
 tweetmining/src/input*.*
 tweetmining/src/output*.*
+tweetmining/data

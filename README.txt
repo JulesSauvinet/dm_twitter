@@ -1,38 +1,69 @@
------------------------------------------------------------- Dossier tweetmining ------------------------------------------------------------ 
+*************************************************
+* 		PROJET DATA MINING      	*
+*						*
+*     Detection d'evenement a partir de tweets  *
+*						*
+*						*
+*  Date : 22 janvier 2015			*
+*  Auteurs : Marine Ruiz			*
+*	     Gregory Howard			*
+*	     Jules Sauvinet			*
+*						*
+*  Lien GitHub : 				*
+*  https://github.com/JulesSauvinet/dm_twitter	*
+*						*
+*************************************************
 
-On trouve plusieurs sous-dossiers dans ce dossier :
-	un dossier data avec tous nos fichiers de donnees
-	un dossier docs contenant l'architecture et les captures d'ecran pour le rapport latex 
-	un dossier src contenant tout le code Python et le module d'execution
-	un dossier vizu contenant tous les elements necessaires a la visualisation de nos donnees
+-------- /docs ------- 
+Rapport_HOWARD_RUIZ_SAUVINET.pdf :
+le rapport du projet
 
-
-
----------------------------------------------------------------- Dossier src ---------------------------------------------------------------- 
-
-On trouve plusieurs sous-dossiers dans ce dossier :
-	un dossier eventDetectionFromTwitter contenant tout le code que nous avons recuperes et modifies
-	un dossier scikitlearn contenant nos tests et essais avec DBScan
-	un dossier SortieFile contenant toutes nos sorties de fichiers pour nos tests avec les booleens d'elasticite et de geolocalisation
-	un dossier SortieFileResultat contenant les sorties fichiers sur le gros fichiers de tweets
-
-
-
-------------------------------------------------------------------- Knime ------------------------------------------------------------------- 
-
-on fait un pretraitement des donnees avec Knime 
-	- suppression des plus gros utilisateurs avec la 1ere succession de noeuds
-	- puis suppression des tweets non geolocalises apres la jointure
+dmkd2015.pdf :
+l'article de recherche sur la detection d'evenement multi scalaire a l'origine du developpement du module de detection que nous utilisons
 
 
+-------- /video ------- 
+VideoPresentation.mp4 :
+-> la vidéo de présentation du projet
 
------------------------------------------------------- L'execution de notre algorithme ------------------------------------------------------ 
+
+-------- /tweetmining ------- 
+
+/tweetmining/data :
+-> nos fichiers de donnees
+/tweetmining/src :
+-> le code Python et le module d'execution
+/tweetmining/vizu :
+-> tous les elements necessaires a la visualisation de nos donnees
+
+---------  /tweetmining/src  ------------- 
+
+/eventDetectionFromTwitter :
+-> contient tout le code que nous avons recuperes et modifies
+/scikitlearn :
+-> contient nos tests et essais avec DBScan
+/SortieFile :
+-> contient toutes nos sorties de fichiers pour nos tests avec les options d'elasticite et de geolocalisation notamment
+/SortieFileResultat :
+-> contenant les sorties de détection d'evenement sur le gros fichiers de tweets
+
+
+----------- /knime ------------
+
+robotFilter.knwf : 
+-> suppression des plus gros utilisateurs avec la 1ere succession de noeuds
+-> puis suppression des tweets non geolocalises apres la jointure
+
+tweetClusteringWithKMeans.knwf:
+un premier test d'un clustering géographique sur les tweets avec la méthode des kmeans
+
+
+----------- L'execution  ----------- 
 
 Nous chargons nos donnees de tweets a partir de la base de donnees MongoDB
 Il faut donc pour commencer lancer mongoD.exe puis mongo.exe.
 
-
-on ouvre le module tweetmining du dossier src. Ce module execute deux algorithmes :
+On ouvre le module tweetmining du dossier src. Ce module execute deux algorithmes :
 	- le clustering sans pretraitement ni filtre sur les donnees
 	- le clustering avec le filtre sur loi de Pearson et la blackList
 
