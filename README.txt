@@ -7,6 +7,7 @@ On trouve plusieurs sous-dossiers dans ce dossier :
 	un dossier vizu contenant tous les elements necessaires a la visualisation de nos donnees
 
 
+
 ---------------------------------------------------------------- Dossier src ---------------------------------------------------------------- 
 
 On trouve plusieurs sous-dossiers dans ce dossier :
@@ -14,6 +15,14 @@ On trouve plusieurs sous-dossiers dans ce dossier :
 	un dossier scikitlearn contenant nos tests et essais avec DBScan
 	un dossier SortieFile contenant toutes nos sorties de fichiers pour nos tests avec les booleens d'elasticite et de geolocalisation
 	un dossier SortieFileResultat contenant les sorties fichiers sur le gros fichiers de tweets
+
+
+
+------------------------------------------------------------------- Knime ------------------------------------------------------------------- 
+
+on fait un pretraitement des donnees avec Knime 
+	- suppression des plus gros utilisateurs avec la 1ere succession de noeuds
+	- puis suppression des tweets non geolocalises apres la jointure
 
 
 
@@ -27,9 +36,8 @@ on ouvre le module tweetmining du dossier src. Ce module execute deux algorithme
 	- le clustering sans pretraitement ni filtre sur les donnees
 	- le clustering avec le filtre sur loi de Pearson et la blackList
 
-ATTENTION : il faut verifier sur quel jeu de donn?es du dossier data on veut faire l'ex?cution
+ATTENTION : il faut verifier sur quel jeu de donnees l'execution va se faire avant d'executer le fichier
 
-----------------------------------------------------------------------------------
 
 
 ---------------------------------------------------------- Projet.py (scikitlearn) ---------------------------------------------------------- 
@@ -40,56 +48,29 @@ Il faut que le fichier soit correct en entrée (même nombre de colonne dans chaqu
 
 
 
+--------------------------------------------------------- Visualisation du resultat --------------------------------------------------------- 
+ou est-ce-que l'on peut visualiser les resultats ? 
+	-> de deux manieres differents a deux endroits differents
 
+- dans le dossier src plusieurs fichiers sont crees :
+	- clustering & evenements avec _clusterAvecTraitement.txt et _clusterSansPreTraitement.txt
+	- la blacklist avec _blackList.txt
+	- les utilisateurs supprimes avec _userDeleted.txt
 
+  les autres fichiers textes doivent etre transformes en fichier csv pour la partie suivante de la visualisation des resultats
 
+- affichage de nos resultats avec notre visualisation d'evenements
+	- il faut aller dans le dossier vizu 
+	- ouvrir le fichier displayEvents.js
+	- aller a la ligne 293 pour changer le csv des evenements (csv qui doit etre dans le dossier vizu)
+	- aller a la ligne 295 pour changer le csv des tweets originaux (csv qui doit etre dans le dossier vizu)
 
-----------------------------------------------------------------------------------
--> expliquer et justifier notre approche
+	pour lancer le serveur, il faut taper la commande suivante :
+	- python -m SimpleHTTPServer pour python 2.7 
+	- python -m http.server pour Python 3.X
 
-d?tection d'?v?venents ? partir d'un fichier de 1,7 Go comportant 10 982 005 tweets 
-	- r?cup?r?s sur Twitter. 
-	- post?s dans l'agglom?ration newyorkaise ou par des utilisateurs newyorkais 
-	- du 21 juillet 2015 au 16 novembre 2015
-
----> Montrer l'int?rieur du fichier avec les colonnes et le contenu
-
-pr?traitement des donn?es avec Knime 
-	- suppression des plus gros utilisateurs
-	- suppression des tweets non g?olocalis?s
-
----> Montrer le workflow avec la succession de noeuds
-----------------------------------------------------------------------------------
-
-
-
-----------------------------------------------------------------------------------
--> comment on lance le projet
-
-lancer mongoD.exe
-lancer mongo.exe
-
-
-
-on lance ---- montrer ce que on obtient quand tout est fini
-----------------------------------------------------------------------------------
-
-
-
-----------------------------------------------------------------------------------
--> ou est-ce-que l'on peut visualiser les r?sultats
-
-affichage de nos r?sultats avec notre visualisation de donn?es
-	- la carte des clusters
-	- la carte des tweets
-	- le slider pour changer la date
-
----> Montrer la visualisation, o? mettre les fichiers et o? les remplacer dans le JavaScript
-
-affichage des r?sultats :
-	- clustering & evenements
-	- la blacklist
-	- les utilisateurs supprim?s
-
----> Montrer o? trouver ses fichiers dans le dossier
-----------------------------------------------------------------------------------
+	puis ouvrir un navigateur et charger la page : localhost:8000/vizuEvents.html
+	on peut alors voir :
+		- la carte des d'evenements a gauche
+		- la carte des tweets a droite
+		- le slider pour changer la date en haut a gauche
