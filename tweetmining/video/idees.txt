@@ -1,0 +1,18 @@
+------ video de 5 mn maximum ------- 
+-- une vidéo présentant le projet --
+
+-> bien détailler les objectifs 
+
+
+-> expliquer et justifier notre approche
+
+
+-> l'architecture du projet
+
+
+-> comment on lance le projet
+
+
+-> ou est-ce-que l'on peut visualiser les résultats
+
+
