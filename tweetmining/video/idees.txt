@@ -3,6 +3,13 @@
 
 -> bien détailler les objectifs 
 
+détecter des évènements à partir de tweets :
+	- en exploitant des informations spatio-temporelles --> latitude, longitude
+	- en exploitant des informations textuelles --> hashtags	
+	- en supprimant les robots qui brouillent les résultats car :
+		- ils créent de faux évènements
+		- ils faussent les statistiques sur les hashtags pertinents
+
 
 -> expliquer et justifier notre approche
 
