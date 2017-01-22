@@ -17,6 +17,8 @@ on a un amélioré un algo de Ahmed Anes Bendimerad et Aimene Belfodil
 on a développé une approche avec DBScan 
 ----------------------------------------------------------------------------------
 
+
+
 ----------------------------------------------------------------------------------
 -> expliquer et justifier notre approche
 
@@ -32,22 +34,63 @@ prétraitement des données avec Knime
 	- suppression des tweets non géolocalisés
 
 ---> Montrer le workflow avec la succession de noeuds
-
 ----------------------------------------------------------------------------------
+
+
 
 ----------------------------------------------------------------------------------
 -> l'architecture du projet
 
+un dossier data avec tous nos fichiers de données
+un dossier docs contenant l'architecture et les captures d'écran pour le rapport latex 
+un dossier src contenant tout le code Python et le fichier d'exécution
+un dossier vizu contenant tous les éléments nécessaires à la visualisation de nos données
+
+---> Montrer le dossier tweetmining
+
+dans src on a :
+blackList_Sample contenant des tests pour déterminer le % de filtrage dans la blackList
+eventDetectionFromTwitter contenant tout le code que nous avons récupérés et modifiés
+scikitlearn contenant nos tests et essais avec DBScan
+SortieFile contenant toutes nos sorties de fichiers pour nos tests
+SortieFileResultat contenant les sorties fichiers sur le gros fichiers de tweets
+
+---> Montrer le dossier src
 ----------------------------------------------------------------------------------
+
+
 
 ----------------------------------------------------------------------------------
 -> comment on lance le projet
 
+lancer mongoD.exe
+lancer mongo.exe
+
+on ouvre tweetmining qui exécute :
+	- le clustering sans prétraitement ni filtre sur les données
+	- le clustering avec filtre loi de Pearson + blackList
+
+on vérifie sur quel jeu de données du dossier data on veut faire l'exécution
+
+on lance ---- montrer ce que on obtient quand tout est fini
 ----------------------------------------------------------------------------------
+
+
 
 ----------------------------------------------------------------------------------
 -> ou est-ce-que l'on peut visualiser les résultats
 
 affichage de nos résultats avec notre visualisation de données
+	- la carte des clusters
+	- la carte des tweets
+	- le slider pour changer la date
 
 ---> Montrer la visualisation, où mettre les fichiers et où les remplacer dans le JavaScript
+
+affichage des résultats :
+	- clustering & evenements
+	- la blacklist
+	- les utilisateurs supprimés
+
+---> Montrer où trouver ses fichiers dans le dossier
+----------------------------------------------------------------------------------
