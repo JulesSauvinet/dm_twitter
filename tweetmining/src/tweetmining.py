@@ -41,7 +41,7 @@ def getTweetsFromJSONRepositoryAndSave(repositoryPath="..\\data") :
     mongoDBHandler.saveTweetsFromJSONRepository(repositoryPath)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
-def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\smallTweets3_filtered.csv") :
+def getTweetsFromCSVRepositoryAndSave(repositoryPath="..\\data\\tweets5.csv") :
     mongoDBHandler=MongoDBHandler()
     mongoDBHandler.saveTweetsFromCSVRepository(repositoryPath)
 
@@ -146,12 +146,12 @@ def main(limit=30000, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweet
 	remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True, elasticity=ELASTICITY, geolocalisation=False) :
     
     # on charge les donnees du CSV dans MongoDB
-    # getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
+    getTweetsFromCSVRepositoryAndSave("..\\data\\tweets5.csv")
 
     print "CHARGEMENT DES DONNEES FINI\n\n"
 
-    #sansPreTraitement(limit=30000, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,
-    #                remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True, elasticity=ELASTICITY, geolocalisation=False)
+    sansPreTraitement(limit=30000, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweetElasticity=MIN_TERM_OCCURENCE_E,
+                    remove_noise_with_poisson_Law=REMOVE_NOISE_WITH_POISSON_LAW,printEvents=True, elasticity=ELASTICITY, geolocalisation=False)
 
     sortieFile = open("_clusterAvecTraitement.txt","w")
     blacklistFile = open("_blackList.txt","w")
@@ -180,7 +180,7 @@ def main(limit=30000, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweet
 
     usersToDelete = []
 
-    for i in range(40,60): #range(10):#
+    for i in range(timeTotal.days+1): #range(10):#
         end_date = minTime + timedelta(days=i)
         datestring = end_date.strftime('%Y-%m-%d')
         staringTime = time.time()
@@ -232,7 +232,7 @@ def main(limit=30000, minimalTermPerTweet=MIN_TERM_OCCURENCE,minimalTermPerTweet
     # ---------------------------------------- on fait un second clustering ------------------------------------- #
 
 
-    for i in range(40,60): #range(10):#
+    for i in range(timeTotal.days+1): #range(10):#
         end_date = minTime + timedelta(days=i)
 
         datestring = end_date.strftime('%Y-%m-%d')

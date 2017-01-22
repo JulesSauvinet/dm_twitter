@@ -101,6 +101,9 @@ function drawMap(currentDay, events) {
     events = events.filter(function(e) {
         return e.date.split(" ")[0] === d3.select('#days').html();
     });
+	
+	
+	d3.select('#nbEvent').html(events.length + " évènements détectés");
 
     d3.selectAll('.select').remove();
 
@@ -140,43 +143,46 @@ function drawMap(currentDay, events) {
 function showTweets(){
   removeAllMarkers();
 
-    var currentDay = +d3.select('#slider')[0][0].value-1;
-  var date = tweetsdays[currentDay];
+  var date = d3.select('#days').html();
 
-  var importantHashtags = curEvent.importantHashtags.split("|");
+  
+  if (dayTweet[date]){	  
+		var importantHashtags = curEvent.importantHashtags.split("|");
+	  var i = 0;
+	  dayTweet[date].forEach(function(tweet){
+		  //if (i<=2000){
+			  if (tweet.geo_lat !== "null") {
+				  var hashtags = tweet.text.split(" ");
+					  //console.log("hashtags", hashtags);
 
-  //TEMPORAIRE
-  var i = 0;
-  dayTweet[date].forEach(function(tweet){
-      //if (i<=2000){
-          if (tweet.geo_lat !== "null") {
-              var hashtags = tweet.text.split(" ");
-                  //console.log("hashtags", hashtags);
+				  var hasCommonHashtag = false;
+				  for (var i in hashtags){
+					  if (importantHashtags.includes(hashtags[i])){
+						  hasCommonHashtag=true;
+					  }
+				  }
+				  if (hasCommonHashtag){
+					  var marker = L.marker([tweet.geo_lng, tweet.geo_lat], {icon : tweetIcon});
+					  var toDisplay = "User : " + tweet[" username"] + '</br>' +
+									  "Date : " + tweet.timestamp_day + "-" + tweet.timestamp_month + "-" + tweet.timestamp_year + ", " + tweet.timestamp_hour + "H:"+ tweet.timestamp_minute + '</br>' +
+									  "Text (# et @) : " + tweet.text;
+					  marker.bindPopup(toDisplay);
+					  markers.addLayer(marker);
+				  }
+			  }
+		  //}
+		  i++;
+	  });
+	  mapTweets.addLayer(markers);
+  }
 
-              var hasCommonHashtag = false;
-              for (var i in hashtags){
-                  if (importantHashtags.includes(hashtags[i])){
-                      hasCommonHashtag=true;
-                  }
-              }
-              if (hasCommonHashtag){
-                  var marker = L.marker([tweet.geo_lng, tweet.geo_lat], {icon : tweetIcon});
-                  var toDisplay = "User : " + tweet[" username"] + '</br>' +
-                                  "Date : " + tweet.timestamp_day + "-" + tweet.timestamp_month + "-" + tweet.timestamp_year + ", " + tweet.timestamp_hour + "H:"+ tweet.timestamp_minute + '</br>' +
-                                  "Text (# et @) : " + tweet.text;
-                  marker.bindPopup(toDisplay);
-                  markers.addLayer(marker);
-              }
-          }
-      //}
-      i++;
-  });
-  mapTweets.addLayer(markers);
 }
 
 function showEvent(events) {
     removeAllCircles();
     var selectId = d3.select('select').property('value');
+	
+	
     events.forEach(function(event){
         if (event.eventId ==selectId){
             curEvent = event;
@@ -244,7 +250,12 @@ function processData(error,eventsData, tweets) {
         i++;
     });
 
-    days = days.sort();
+	days = days.sort(function(a,b){
+	  // Turn your strings into dates, and then subtract them
+	  // to get a value that is either negative, positive, or zero.
+	  return new Date(a.split("-")[0],a.split("-")[1],a.split("-")[2]) - new Date(b.split("-")[0],b.split("-")[1],b.split("-")[2]);
+	});
+
     d3.select('#slider')[0][0].max = nbDays;
 
     var nbDays=0;
@@ -260,6 +271,7 @@ function processData(error,eventsData, tweets) {
         }
         dayTweet[day].push(tweet);
     });
+	
 
     drawMap(1, eventsData);
 
@@ -278,7 +290,7 @@ function processData(error,eventsData, tweets) {
 
 queue()
   //chargement des evenements geolocalise de tweets
-  .defer(d3.csv, "_vizuFileAvecTraitement6.csv")
+  .defer(d3.csv, "11_09_SansTraitement.csv")
   //chargement des données de tweets
-  .defer(d3.csv, "smalltweets3.csv")
+  .defer(d3.csv, "tweetSeptembre.csv")
   .await(processData);

@@ -1,0 +1,98 @@
+
+date : 2015-09-11
+----------------------------------------
+10 Event detected : 
+----------------------------------------
+->Temps median : 2015-09-11 15:33:00
+|Duree estimee : 44940
+|Position du centre de l'event : (-73.9974502845,40.7410826839)
+|Rayon de l'event : 14243.93
+|Nombre de twittos : 235
+|Nombre de tweets : 348
+|Hashtags importants : #nyfw,#backstage,#ootd,#silasshootsnyfw,#fashionshow,#pier59studios,#jasonwu,#mjxgloss,#party,#zimmermann,#karigam,#production,#runway,#rooftop,#stylesendersgoestonyfw,#streetstyle,#newyorkfashionweek,#nyfw15,#runwayshow,#custobarcelona
+|
+********************************************************************************
+->Temps median : 2015-09-11 12:53:00
+|Duree estimee : 31080
+|Position du centre de l'event : (-74.6225393074,41.3771581095)
+|Rayon de l'event : 517375.25
+|Nombre de twittos : 145
+|Nombre de tweets : 283
+|Hashtags importants : #job,#hiring,#careerarc,#jobs,#rochester,#albany,#jerseycity,#sales,#veterans,#hospitality,#businessmgmt,#it,#retail,#nursing,#labor,#customerservice,#internship,#art,#marketing,#healthcare
+|
+********************************************************************************
+->Temps median : 2015-09-11 15:27:00
+|Duree estimee : 54120
+|Position du centre de l'event : (-73.9944808385,40.7352519615)
+|Rayon de l'event : 31682.41
+|Nombre de twittos : 221
+|Nombre de tweets : 260
+|Hashtags importants : #neverforget,#911,#911memorial,#september11,#repost,#worldtradecenter,#usa,#freedomtower,#twintowers,#groundzero,#9,#wtc,#iloveny,#neverforget911,#godblessamerica,#nyfw,#remember,#oneworldtradecenter,#coneyisland,#rolling
+|
+********************************************************************************
+->Temps median : 2015-09-11 15:30:00
+|Duree estimee : 46080
+|Position du centre de l'event : (-73.9910475543,40.7388226957)
+|Rayon de l'event : 66460.46
+|Nombre de twittos : 122
+|Nombre de tweets : 184
+|Hashtags importants : #nyfw,#fashion,#ss16,#fashionweek,#love,#tgif,#style,#runway,#model,#models,#hair,#catwalk,#nyfw15,#ootd,#blogger,#chrisgelinas,#giulietta,#wesgordon,#apm,#bts
+|
+********************************************************************************
+->Temps median : 2015-09-11 19:19:00
+|Duree estimee : 55440
+|Position du centre de l'event : (-73.9816626613,40.7354746129)
+|Rayon de l'event : 12857.28
+|Nombre de twittos : 49
+|Nombre de tweets : 62
+|Hashtags importants : #manhattan,#love,#art,#fallback,#flstudio,#fruityloops,#ableton,#tgif,#producer,#progressivehouse,#nochill,#dvbbs,#savage,#friday,#soho,#wtc,#inspiration,#bigapple,#fun,#centralpark
+|
+********************************************************************************
+->Temps median : 2015-09-11 01:15:00
+|Duree estimee : 26880
+|Position du centre de l'event : (-73.971600625,40.7416226667)
+|Rayon de l'event : 21682.64
+|Nombre de twittos : 19
+|Nombre de tweets : 24
+|Hashtags importants : #nyfw,#marcjacobs,#fashionblogger,#gloss,#bookmarc,#stylish,#fashionista,#bloggerstyle,#mrssizzle,#nyfw2015,#instastyle,#aussietakeover,#models,#yesterday,#nyfl,#streetfashion,#hermes,#tatiana,#ss2016,#bagatellepourelle
+|
+********************************************************************************
+->Temps median : 2015-09-11 20:19:00
+|Duree estimee : 15060
+|Position du centre de l'event : (-74.0123728333,40.720750375)
+|Rayon de l'event : 2695.98
+|Nombre de twittos : 18
+|Nombre de tweets : 24
+|Hashtags importants : #givenchy,#nyfw,#grtnyc17,#nycfw,#newyorkfashionweek,#marinaabramovic,#nyfw2015,#911,#jmljournal,#ss16,#fashion,#accessrunway,#performance,#fashionshow,#louiferry,#riccardotisci,#neverforget,#ricardotisci,#hair,#shalomaleichem
+|
+********************************************************************************
+->Temps median : 2015-09-11 14:15:00
+|Duree estimee : 59400
+|Position du centre de l'event : (-73.95761925,40.7331158)
+|Rayon de l'event : 573.05
+|Nombre de twittos : 13
+|Nombre de tweets : 20
+|Hashtags importants : #29rooms,#refinery29,#nyfw,#minniestyle,#youth,#reluxed,#kisses,#sky,#blue,#daydreaming,#bubblegumpop,#dance,#ootd,#vr,#bubbles,#greenpoint,#pink,#flourshop,#masterbaker,#clouds
+|
+********************************************************************************
+->Temps median : 2015-09-11 22:14:00
+|Duree estimee : 9360
+|Position du centre de l'event : (-73.9421117,40.774457)
+|Rayon de l'event : 6478.29
+|Nombre de twittos : 7
+|Nombre de tweets : 10
+|Hashtags importants : #music,#art,#concert,#dreambig,#reggae,#walking,#richardlong,#emotional,#reverbnation,#lovingyou,#inwood,#leaves,#musicmatters,#hudsonriver,#fridaynight,#gravity,#emotionalrollercoaster,#funtime,#eharlem,#g
+|
+********************************************************************************
+->Temps median : 2015-09-11 11:37:00
+|Duree estimee : 14640
+|Position du centre de l'event : (-74.007226,40.729238)
+|Rayon de l'event : 5879.03
+|Nombre de twittos : 8
+|Nombre de tweets : 8
+|Hashtags importants : #wtc,#manhattan,#neverforget,#remember911,#batterypark,#2001,#ig,#september11th,#icapture,#911memorial,#oneworldtrade,#building,#freedomtower,#neverforget911,#groundzero,#911,#freedom,#twintowers,#batteryparkcity,#lightower
+|
+********************************************************************************
+----------------------------------------
+Elapsed time : 14.1610000134s
+----------------------------------------
